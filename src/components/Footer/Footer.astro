@@ -1,0 +1,66 @@
+---
+import logo_gold from "assets/logo-gold.svg"
+import facebook_icon from "assets/icons/FacebookIcon.svg"
+import instagram_icon from "assets/icons/InstagramIcon.svg"
+import twitter_icon from "assets/icons/TwitterIcon.svg"
+---
+
+<footer
+  class="w-full bg-[#31392F] flex flex-col justify-center items-center text-white"
+>
+  <div
+    class="container flex flex-col md:flex-row gap-10 justify-between p-4 md:py-10"
+  >
+    <div class="flex gap-6 flex-col">
+      <img src={logo_gold.src} alt="Logo firmy" class="w-36" />
+      <h3 class="text-2xl text-white font-primary">
+        Twoje chwile spokoju <br /> w zgiełku dnia.
+      </h3>
+      <div class="flex gap-2">
+        <a href="https://facebook.com" target="_blank">
+          <img src={facebook_icon.src} />
+        </a>
+        <a href="https://instagram.com" target="_blank">
+          <img src={instagram_icon.src} />
+        </a>
+        <a href="https://twitter.com" target="_blank">
+          <img src={twitter_icon.src} />
+        </a>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row gap-10">
+      <div class="flex flex-col gap-4 text-white">
+        <h5 class="font-primary text-2xl">Kontakt</h5>
+        <p>
+          1487 Rocky Horse Carrefour 1487 Rocky
+          <br />
+           HorseArlington, TX 16819 United
+        </p>
+        <p>+8 520-150-001</p>
+        <p>kontakt@beauty-essence.pl</p>
+      </div>
+
+      <div class="flex flex-col gap-2 text-white">
+        <h5 class="font-primary text-2xl">Menu</h5>
+        <a href="/">Home</a>
+        <a href="/">O nas</a>
+        <a href="/">Cennik</a>
+        <a href="/">Kontakt</a>
+        <a href="/">Galeria</a>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="border-t border-white w-full flex justify-center items-center p-4"
+  >
+    <div class="container flex justify-between text-sm">
+      <p>© {new Date().getFullYear()} All Rights Reserved.</p>
+      <p class="text-right">
+        Created by
+        <a href="https://patrocreations.com">ModernityCloud</a>
+      </p>
+    </div>
+  </div>
+</footer>

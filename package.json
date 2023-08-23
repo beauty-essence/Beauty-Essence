@@ -1,5 +1,5 @@
 {
-  "name": "second-solstice",
+  "name": "beauty-essence",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^4.0.0",
+    "@fontsource/cormorant-garamond": "^5.0.8",
+    "@fontsource/jost": "^5.0.8",
     "astro": "^2.10.12",
     "tailwind-merge": "^1.14.0",
     "tailwindcss": "^3.0.24"
@@ -20,6 +22,7 @@
     "eslint": "^8.47.0",
     "eslint-plugin-astro": "^0.28.0",
     "prettier": "^3.0.2",
-    "prettier-plugin-astro": "^0.11.1"
+    "prettier-plugin-astro": "^0.11.1",
+    "prettier-plugin-tailwindcss": "^0.5.3"
   }
 }
