@@ -5,14 +5,14 @@ import facebook_icon from "assets/icons/FacebookIcon.svg"
 import instagram_icon from "assets/icons/InstagramIcon.svg"
 import twitter_icon from "assets/icons/TwitterIcon.svg"
 import arrowsdown_icon from "assets/icons/ArrowsDownIcon.svg"
-import Navigation from "components/Navigation/Navigation.astro"
+import Navigation from "components/Navigation/Navigation"
 ---
 
 <header class="relative w-full">
-  <Navigation />
+  <Navigation client:load />
   <Image
     src={HeroBackgroundImage}
-    alt=""
+    alt="Kobieta na której wykonywany jest masaż"
     class="w-full h-screen object-cover"
   />
   <div
@@ -46,7 +46,7 @@ import Navigation from "components/Navigation/Navigation.astro"
       </a>
     </div>
     <div class="w-1/2 align-center">
-      <img src={arrowsdown_icon.src} alt="scroll down icon" />
+      <img src={arrowsdown_icon.src} alt="Ikona Scrollowania" />
     </div>
   </div>
 </header>
