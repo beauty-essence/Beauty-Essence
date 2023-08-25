@@ -1,6 +1,53 @@
 ---
 import HeroBackgroundImage from "assets/HeroBackgroundImage.png"
 import { Image } from "astro:assets"
+import facebook_icon from "assets/icons/FacebookIcon.svg"
+import instagram_icon from "assets/icons/InstagramIcon.svg"
+import twitter_icon from "assets/icons/TwitterIcon.svg"
+import arrowsdown_icon from "assets/icons/ArrowsDownIcon.svg"
+import Navigation from "components/Navigation/Navigation"
+---
+
+<header class="relative w-full">
+  <Navigation client:load />
+  <Image
+    src={HeroBackgroundImage}
+    alt="Kobieta na której wykonywany jest masaż"
+    class="w-full h-screen object-cover"
+  />
+  <div
+    class="h-full absolute top-0 flex flex-col items-start justify-center ml-10 md:ml-20 before:content-[''] before:absolute before:h-72 before:w-[2px] before:-left-6 before:bg-white"
+  >
+    <p class="font-secondary text-white text-xl leading-[132.9%]">
+      Lorem ipsum dolor sit amet
+    </p>
+    <h1
+      class="font-primary text-white text-5xl md:text-6xl my-5 font-bold leading-[1.1] md:leading-tight tracking-wider"
+    >
+      Twoje chwile spokoju <br /> w zgiełku dnia.
+    </h1>
+    <button
+      class="bg-primary py-4 md:py-5 px-16 md:px-20 text-button-dark font-medium text-xl- leading-[132.9%]"
+      >Zobacz ofertę</button
+    >
+  </div>
+  <div
+    class="w-full absolute bottom-0 pl-8 pb-8 pr-8 flex justify-between flex-row"
+  >
+    <div class="flex gap-3 self-end w-1/2">
+      <a href="" target="_blank">
+        <img src={facebook_icon.src} alt="Ikona Facebook" />
+      </a>
+      <a href="" target="_blank">
+        <img src={instagram_icon.src} alt="Ikona Instagram" />
+      </a>
+      <a href="" target="_blank">
+        <img src={twitter_icon.src} alt="Ikona Twitter" />
+      </a>
+    </div>
+    <div class="w-1/2 align-center">
+      <img src={arrowsdown_icon.src} alt="Ikona Scrollowania" />
+    </div>
 ---
 
 <header class="relative w-full">
