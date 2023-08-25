@@ -604,10 +604,6 @@
   resolved "https://registry.yarnpkg.com/@fontsource/jost/-/jost-5.0.8.tgz#9a28d8e7164df35bf6196487615795295f6d3b37"
   integrity sha512-60U/r/yliOWT2bdc+iUpUNZ2Pn62nqybYRe2h0KM1d84xHDwW99RFOLIp9Opi/UPExtglTWym/zZvyZpJI1r4g==
 
-"@fontsource/montserrat@^5.0.8":
-  version "5.0.8"
-  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-5.0.8.tgz#04d162d8929d2911c126e6dafbd218e67c8bb63d"
-  integrity sha512-bNj6wfiWXXbsxb2ffatjpX+GBv30cWZ1lwNXW9qTeX2FnzPomsGRV4HdPrf3TqyTiVqX6fLo80zrQcMi7r8+fA=
 "@humanwhocodes/config-array@^0.11.10":
   version "0.11.10"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.10.tgz#5a3ffe32cc9306365fb3fd572596cd602d5e12d2"
