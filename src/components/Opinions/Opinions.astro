@@ -1,10 +1,7 @@
----
-import OpinionsBackground from "assets/OpinionsBackground.png"
-import avatar from "assets/icons/avatar.png"
-import arrow_right from "assets/icons/arrow_right.svg"
-import arrow_left from "assets/icons/arrow_left.svg"
-import { Image } from "astro:assets"
----
+import OpinionsBackground from "assets/OpinionsBackground.png" import avatar
+from "assets/icons/avatar.png" import arrow_right from
+"assets/icons/arrow_right.svg" import arrow_left from
+"assets/icons/arrow_left.svg" import {Image} from "astro:assets"
 
 <section
   class="relative w-full flex justify-center items-center lg:py-16 overflow-hidden"
@@ -25,7 +22,14 @@ import { Image } from "astro:assets"
     </div>
 
     <div class="relative">
-      <img src={arrow_left.src} class="absolute" />
+      <img
+        src={arrow_left.src}
+        class="hidden w-8 h-8 absolute top-1/2 -left-12"
+      />
+      <img
+        src={arrow_right.src}
+        class="hidden w-8 h-8 absolute top-1/2 -right-12"
+      />
 
       <div class="flex gap-2 items-center font-primary">
         <Image src={avatar} alt="avatar" class="w-12" />
