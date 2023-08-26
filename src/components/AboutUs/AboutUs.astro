@@ -3,10 +3,14 @@ import aboutus_photo from "assets/aboutus-photo.png"
 ---
 
 <div
-  class="w-full flex flex-col justify-center items-center mx-auto pt-28 pb-28"
+  class="w-full flex flex-col justify-center items-center mx-auto py-10 lg:py-28"
 >
-  <div class="container w-full p-4 md:py-10 flex items-center justify-center">
-    <div class="w-full max-w-xl bg-primary-light py-16 pl-12 pr-28 left-0">
+  <div
+    class="container w-full md:py-10 flex flex-col-reverse lg:flex-row items-center justify-center p-4"
+  >
+    <div
+      class="w-full max-w-[548px] lg:max-w-xl bg-primary-light p-10 lg:py-16 lg:pl-12 lg:pr-28 left-0"
+    >
       <p class="text-xl text-secondary-text leading-[130%] mb-5">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut odio sapien,
         congue a purus vitae, ultricies consequat nibh. Nulla facilisi.
@@ -25,17 +29,21 @@ import aboutus_photo from "assets/aboutus-photo.png"
         >Czytaj więcej</button
       >
     </div>
-    <div class="relative flex flex-col -translate-x-24 translate-y-16">
-      <h1 class="text-9xl font-primary font-bold text-button-dark mb-12">
+    <div
+      class="relative flex flex-col lg:-translate-x-24 lg:translate-y-16 items-center items-[unset]"
+    >
+      <h1
+        class="text-8xl lg:text-9xl font-primary font-bold text-button-dark mb-12"
+      >
         O nas
       </h1>
       <img
         src={aboutus_photo.src}
         alt="Zdjęcie kobiety która jest masowana"
-        class="max-w-[548px]"
+        class="lg:max-w-[548px]"
       />
       <div
-        class="absolute w-full max-w-sm before:h-full h-96 rounded-full bg-primary-light -z-10 -right-24 top-28"
+        class="hidden lg:block absolute w-full max-w-sm before:h-full h-96 rounded-full bg-primary-light -z-10 -right-24 top-28"
       >
       </div>
     </div>
