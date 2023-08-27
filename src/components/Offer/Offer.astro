@@ -4,6 +4,7 @@ import candles_icon from "assets/icons/Offer/candles-icon.svg"
 import hands_icon from "assets/icons/Offer/hands-icon.svg"
 import foot_icon from "assets/icons/Offer/foot-icon.svg"
 import olive_icon from "assets/icons/Offer/olive-icon.svg"
+import face_icon from "assets/icons/Offer/face-icon.svg"
 
 const CardsContent = [
   {
@@ -39,7 +40,7 @@ const CardsContent = [
     destination: "/"
   },
   {
-    image: hands_icon,
+    image: face_icon,
     alt: "asd",
     title: "Zabiegi na twarz i ciało",
     description:
@@ -56,7 +57,7 @@ const CardsContent = [
     >
       Oferta
     </h3>
-    <div class="flex flex-wrap justify-center gap-16">
+    <div class="flex flex-wrap justify-center gap-16 xl:gap-0">
       {
         CardsContent.map((card, index) => (
           <OfferCard
