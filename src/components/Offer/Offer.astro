@@ -6,7 +6,7 @@ import foot_icon from "assets/icons/Offer/foot-icon.svg"
 import olive_icon from "assets/icons/Offer/olive-icon.svg"
 import face_icon from "assets/icons/Offer/face-icon.svg"
 
-const CardsContent = [
+const CARDS_CONTENT = [
   {
     image: candles_icon,
     alt: "asd",
@@ -59,7 +59,7 @@ const CardsContent = [
     </h3>
     <div class="flex flex-wrap justify-center gap-16 xl:gap-0">
       {
-        CardsContent.map((card, index) => (
+        CARDS_CONTENT.map((card, index) => (
           <OfferCard
             image={card.image.src}
             alt={card.alt}
