@@ -1,0 +1,74 @@
+---
+import OfferCard from "./OfferCard/OfferCard.astro"
+import candles_icon from "assets/icons/Offer/candles-icon.svg"
+import hands_icon from "assets/icons/Offer/hands-icon.svg"
+import foot_icon from "assets/icons/Offer/foot-icon.svg"
+import olive_icon from "assets/icons/Offer/olive-icon.svg"
+import face_icon from "assets/icons/Offer/face-icon.svg"
+
+const CARDS_CONTENT = [
+  {
+    image: candles_icon,
+    alt: "asd",
+    title: "Masaże intensywne",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    destination: "/"
+  },
+  {
+    image: hands_icon,
+    alt: "asd",
+    title: "Masaże relaksacyjne",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    destination: "/"
+  },
+  {
+    image: foot_icon,
+    alt: "asd",
+    title: "Masaże rozgrzewające",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    destination: "/"
+  },
+  {
+    image: olive_icon,
+    alt: "asd",
+    title: "Masaże dla dwojga",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    destination: "/"
+  },
+  {
+    image: face_icon,
+    alt: "asd",
+    title: "Zabiegi na twarz i ciało",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    destination: "/"
+  }
+]
+---
+
+<section class="w-full bg-primary-light p-10 lg:py-32 lg:px-40">
+  <div class="container mx-auto">
+    <h3
+      class="text-7xl font-primary font-bold text-button-dark mb-12 text-center md: text"
+    >
+      Oferta
+    </h3>
+    <div class="flex flex-wrap justify-center gap-16 xl:gap-0">
+      {
+        CARDS_CONTENT.map((card, index) => (
+          <OfferCard
+            image={card.image.src}
+            alt={card.alt}
+            title={card.title}
+            description={card.description}
+            destination={card.destination}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

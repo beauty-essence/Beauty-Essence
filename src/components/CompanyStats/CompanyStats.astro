@@ -1,0 +1,58 @@
+---
+import CompanyStatsCard from "./CompanyStatsCard.astro"
+import candle_thing_icon from "assets/icons/CompanyStats/candle-thing-icon.svg"
+import heart_icon from "assets/icons/CompanyStats/heart-icon.svg"
+import face_icon from "assets/icons/CompanyStats/face-icon.svg"
+import medal_icon from "assets/icons/CompanyStats/medal-icon.svg"
+import hourglass_icon from "assets/icons/CompanyStats/hourglass-icon.svg"
+
+const CompanyStatsContent = [
+  {
+    icon: candle_thing_icon,
+    alt: "Świeczka",
+    title: "100%",
+    description: "Naturalnych składników"
+  },
+  {
+    icon: heart_icon,
+    alt: "Świeczka",
+    title: "100%",
+    description: "Naturalnych składników"
+  },
+  {
+    icon: face_icon,
+    alt: "Świeczka",
+    title: "100%",
+    description: "Naturalnych składników"
+  },
+  {
+    icon: medal_icon,
+    alt: "Świeczka",
+    title: "100%",
+    description: "Naturalnych składników"
+  },
+  {
+    icon: hourglass_icon,
+    alt: "Świeczka",
+    title: "100%",
+    description: "Naturalnych składników"
+  }
+]
+---
+
+<section class="w-full py-24">
+  <div class="container mx-auto">
+    <div class="flex flex-wrap items-center justify-center gap-16">
+      {
+        CompanyStatsContent.map(card => (
+          <CompanyStatsCard
+            image={card.icon.src}
+            alt={card.alt}
+            title={card.title}
+            description={card.description}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>
