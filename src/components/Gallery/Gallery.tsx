@@ -8,10 +8,32 @@ import five from "assets/gallery/five.png"
 import arrow_right from "assets/icons/arrow_right.svg"
 import arrow_left from "assets/icons/arrow_left.svg"
 import close from "assets/icons/close.svg"
+import { twMerge } from "tailwind-merge"
 
-const images = [one, two, three, four, five]
+const images = [
+  one,
+  two,
+  three,
+  four,
+  five,
+  one,
+  two,
+  three,
+  four,
+  five,
+  one,
+  two,
+  three,
+  four,
+  five,
+  one,
+  two,
+  three,
+  four,
+  five
+]
 
-const Gallery = () => {
+const Gallery = (props: { isGalleryPage?: boolean }) => {
   const [previewImageIndex, setPreviewImageIndex] = React.useState(0)
   const [showPreview, setShowPreview] = React.useState(false)
 
@@ -38,7 +60,14 @@ const Gallery = () => {
 
   return (
     <>
-      <section className="relative w-full flex justify-center items-center lg:py-16 bg-[#31392F]">
+      <section
+        className={twMerge(
+          "relative w-full flex justify-center items-center lg:py-16",
+          props.isGalleryPage
+            ? "bg-white text-white"
+            : "bg-[#31392F] text-white"
+        )}
+      >
         <div className="container md:flex md:gap-5 justify-center flex flex-col items-center p-10">
           <div className="flex flex-col items-center gap-4">
             <h1 className="text-5xl font-primary font-bold text-white mb-2">
@@ -59,12 +88,14 @@ const Gallery = () => {
               />
             ))}
           </Masonry>
-          <a
-            href="/galeria"
-            className="mt-10 bg-primary px-10 py-4 hover:opacity-90 transition-opacity"
-          >
-            Zobacz więcej zdjęć
-          </a>
+          {props.isGalleryPage ? null : (
+            <a
+              href="/galeria"
+              className="mt-10 bg-primary px-10 py-4 hover:opacity-90 transition-opacity"
+            >
+              Zobacz więcej zdjęć
+            </a>
+          )}
         </div>
       </section>
       {showPreview && (
