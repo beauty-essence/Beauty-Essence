@@ -93,7 +93,7 @@ const Opinions = () => {
               animate={{ x: -currentSlide * 100 + "%" }}
               transition={{ duration: 0.3 }}
               className={twMerge(
-                "relative flex w-full",
+                "relative flex w-full z-10",
                 isPointerDown ? "cursor-grabbing" : "cursor-default"
               )}
               drag="x"
