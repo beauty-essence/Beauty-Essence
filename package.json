@@ -17,6 +17,7 @@
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "astro": "^2.10.12",
+    "framer-motion": "^10.16.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "tailwind-merge": "^1.14.0",
@@ -26,8 +27,8 @@
     "@typescript-eslint/parser": "^6.4.0",
     "eslint": "^8.47.0",
     "eslint-plugin-astro": "^0.28.0",
-    "prettier": "^3.0.2",
-    "prettier-plugin-astro": "^0.11.1",
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0",
     "prettier-plugin-tailwindcss": "^0.5.3"
   }
 }

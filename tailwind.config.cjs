@@ -4,8 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       primary: ["Cormorant Garamond", "sans-serif"],
-      secondary: ["Jost", "sans-serif"],
-      detail: ["Montserrat", "sans-serif"]
+      secondary: ["Jost", "sans-serif"]
     },
     colors: {
       primary: "#F1CD84",

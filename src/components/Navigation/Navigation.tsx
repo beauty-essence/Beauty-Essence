@@ -5,6 +5,7 @@ import MobileNavigationList from "./MobileNavigationList"
 
 const Navigation = () => {
   const [toggled, setIsToggleed] = useState(false)
+
   return (
     <nav className="fixed w-full z-20">
       <div className="w-full hidden md:flex pt-12 justify-center gap-10 z-10">

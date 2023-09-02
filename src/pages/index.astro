@@ -1,6 +1,7 @@
 ---
 import Hero from "../components/Hero/Hero.astro"
 import Contact from "../components/Contact/Contact.astro"
+import Opinions from "../components/Opinions/Opinions"
 import Layout from "../layouts/Layout.astro"
 import CompanyStats from "components/CompanyStats/CompanyStats.astro"
 import AboutUs from "../components/AboutUs/AboutUs.astro"
@@ -12,5 +13,6 @@ import Offer from "components/Offer/Offer.astro"
   <AboutUs />
   <Offer />
   <CompanyStats />
+  <Opinions client:load />
   <Contact />
 </Layout>

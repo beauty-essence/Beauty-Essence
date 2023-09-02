@@ -1,7 +1,7 @@
 ---
 import Footer from "components/Footer/Footer.astro"
-import '@fontsource/cormorant-garamond';
-import '@fontsource/jost';
+import "@fontsource/cormorant-garamond"
+import "@fontsource/jost"
 ---
 
 <!DOCTYPE html>
@@ -15,14 +15,14 @@ import '@fontsource/jost';
   <body>
     <slot />
   </body>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<title>Beauty Essence</title>
-	</head>
-	<body>
-		<slot />
-		<Footer/>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Beauty Essence</title>
+  </head>
+  <body>
+    <slot />
+    <Footer />
+  </body>
 </html>
