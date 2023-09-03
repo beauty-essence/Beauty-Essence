@@ -1,3 +1,5 @@
+import { ROUTES } from "helpers/ROUTES"
+
 interface MobileNavigationListProps extends React.HTMLProps<HTMLDivElement> {
   isOpen: boolean
 }
@@ -14,27 +16,27 @@ const MobileNavigationList = ({
       {...rest}
     >
       <ul className="flex flex-col gap-10 items-center">
-        <a href="">
+        <a href={ROUTES.aboutUs}>
           <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
             O nas
           </li>
         </a>
-        <a href="">
+        <a href={ROUTES.pricing}>
           <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
             Cennik
           </li>
         </a>
-        <a href="">
+        <a href={ROUTES.gallery}>
           <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
             Galeria
           </li>
         </a>
-        <a href="">
+        <a href={ROUTES.contact}>
           <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
             Kontakt
           </li>
         </a>
-        <a href="">
+        <a href={ROUTES.offer}>
           <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
             Oferta
           </li>

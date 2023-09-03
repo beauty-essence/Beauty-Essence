@@ -3,18 +3,24 @@ import Worker from "./Worker.astro"
 import worker_photo from "assets/photos/workers/worker.png"
 ---
 
-<section class="w-full flex flex-col justify-center items-center mx-auto py-10 lg:py-28">
-  <div class="container w-full md:py-10 flex flex-col">
-    <div class="flex flex-col gap-5">
+<section class="w-full flex flex-col justify-center items-center py-10 lg:py-28 bg-primary-light">
+  <div class="container-xl max-w-[1280px] w-full md:py-10 flex flex-col justify-center">
+    <div class="text-center xl:text-left flex flex-col gap-5 xl:ml-[10%]">
         <h3
         class="text-7xl font-primary font-bold text-button-dark"
-      >
+        >
         Nasi pracownicy
       </h3>
       <p class="font-secondary text-2xl font-normal text-secondary-text">Lorem ipsum dolor sit amet</p>
     </div>
-    <div class="flex flex-wrap">
-      <Worker image={worker_photo.src} alt="Zdjęcie pracownika" title="Patrycja Nowak" description="Lorem ipsum dolor sit amet" />
+    <div class="flex flex-wrap justify-center gap-6">
+      <Worker image={worker_photo} alt="Zdjęcie pracownika" title="Patrycja Nowak" description="Manager zespołu masażystów" />
+      <Worker image={worker_photo} alt="Zdjęcie pracownika" title="Patrycja Nowak" description="Manager zespołu masażystów" />
+      <Worker image={worker_photo} alt="Zdjęcie pracownika" title="Patrycja Nowak" description="Manager zespołu masażystów" />
+      <Worker image={worker_photo} alt="Zdjęcie pracownika" title="Patrycja Nowak" description="Manager zespołu masażystów" />
+      <Worker image={worker_photo} alt="Zdjęcie pracownika" title="Patrycja Nowak" description="Manager zespołu masażystów" />
+      <Worker image={worker_photo} alt="Zdjęcie pracownika" title="Patrycja Nowak" description="Manager zespołu masażystów" />
+
     </div>
   </div>
 </section>
