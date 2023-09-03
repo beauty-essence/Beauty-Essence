@@ -1,5 +1,6 @@
 ---
 import aboutus_photo from "assets/aboutus-photo.png"
+import { Image } from "astro:assets";
 ---
 
 <div
@@ -37,8 +38,8 @@ import aboutus_photo from "assets/aboutus-photo.png"
       >
         O nas
       </h1>
-      <img
-        src={aboutus_photo.src}
+      <Image
+        src={aboutus_photo}
         alt="Zdjęcie kobiety która jest masowana"
         class="lg:max-w-[548px]"
       />
