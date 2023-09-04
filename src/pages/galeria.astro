@@ -4,5 +4,5 @@ import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout>
-  <Gallery client:load isGalleryPage />
+  <Gallery client:only="react" isGalleryPage />
 </Layout>
