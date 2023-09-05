@@ -7,37 +7,59 @@ import { Image } from "astro:assets"
 
 <section class="w-full flex flex-col justify-center items-center py-10 lg:py-28">
     <div class="container mx-auto w-full md:py-10 flex flex-col justify-center">
-      <h3 class="text-7xl font-primary font-bold text-button-dark mb-12">
-      Masaż tajski
+      <h3 class="text-7xl font-primary font-bold text-button-dark mb-12 text-center xl:text-left mt-28 xl:mt-[unset] ml-[4%] xl:ml-[11%]">
+        Masaż tajski
       </h3>
       <div class="relative">
-      <div class="relative flex justify-center items-start">
-        <Image src={massager_photo} alt="dupa" class="" />
-        <div class="-z-10 max-w-[548px] lg:max-w-xl bg-primary-light pt-24 pr-10 pb-96 pl-40 -translate-x-24 translate-y-24">
-        <p class="text-xl text-secondary-text leading-[130%] mb-5">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut odio sapien,
-          congue a purus vitae, ultricies consequat nibh. Nulla facilisi.
-          Vestibulum euismod cursus congue. Praesent placerat imperdiet magna et
-          mollis. Integer urna dui, semper quis arcu et, placerat placerat velit.
-          Cras in felis nec nisi dictum blandit eget ut nisl.
-        </p>
-        <p class="text-xl text-secondary-text leading-[130%] mb-12">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut odio sapien,
-          congue a purus vitae, ultricies consequat nibh. Nulla facilisi.
-          Vestibulum euismod cursus congue. Praesent placerat imperdiet magna et
-          mollis. Integer urna dui, semper quis arcu et, placerat placerat velit.
-          Cras in felis nec nisi dictum blandit eget ut nisl.
-        </p>
-        <button class="bg-primary py-5 px-20 text-button-dark font-medium"
-          >Czytaj więcej</button
-        >
-      </div>
-      </div>
-      <div class="relative flex justify-center items-start">
-        <div class="hidden lg:block absolute w-full max-w-sm before:h-full h-96 rounded-full bg-primary-light -z-10 left-64 -top-72"></div>
-        <Image src={human_back_photo} alt="dupa" class="-translate-y-48" />
-      </div>
+        <div class="relative justify-center items-start hidden xl:flex">
+          <Image src={massager_photo} alt="" class="" />
+          <div class="-z-10 max-w-[548px] lg:max-w-xl bg-primary-light pt-24 pr-10 pb-96 pl-40 -translate-x-24 translate-y-24">
+          <p class="text-xl text-secondary-text leading-[130%] mb-5">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut odio sapien,
+            congue a purus vitae, ultricies consequat nibh. Nulla facilisi.
+            Vestibulum euismod cursus congue. Praesent placerat imperdiet magna et
+            mollis. Integer urna dui, semper quis arcu et, placerat placerat velit.
+            Cras in felis nec nisi dictum blandit eget ut nisl.
+          </p>
+          <p class="text-xl text-secondary-text leading-[130%] mb-12">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut odio sapien,
+            congue a purus vitae, ultricies consequat nibh. Nulla facilisi.
+            Vestibulum euismod cursus congue. Praesent placerat imperdiet magna et
+            mollis. Integer urna dui, semper quis arcu et, placerat placerat velit.
+            Cras in felis nec nisi dictum blandit eget ut nisl.
+          </p>
+          <button class="bg-primary py-5 px-20 text-button-dark font-medium"
+            >Czytaj więcej</button
+          >
+        </div>
+        </div>
+        <div class="relative justify-center items-start hidden xl:flex ">
+          <div class="hidden lg:block absolute w-full max-w-sm before:h-full h-96 rounded-full bg-primary-light -z-10 left-64 -top-72"></div>
+          <Image src={human_back_photo} alt="dupa" class="-translate-y-48" />
+        </div>
 
+        <div class="flex flex-col items-center p-4 xl:hidden">
+          <Image src={human_back_photo} alt="dupa" class="md:max-w-[548px]" />
+          <div class="-z-10 md:max-w-[548px] bg-primary-light p-10">
+            <p class="text-xl text-secondary-text leading-[130%] mb-5">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut odio sapien,
+              congue a purus vitae, ultricies consequat nibh. Nulla facilisi.
+              Vestibulum euismod cursus congue. Praesent placerat imperdiet magna et
+              mollis. Integer urna dui, semper quis arcu et, placerat placerat velit.
+              Cras in felis nec nisi dictum blandit eget ut nisl.
+            </p>
+            <p class="text-xl text-secondary-text leading-[130%] mb-12">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut odio sapien,
+              congue a purus vitae, ultricies consequat nibh. Nulla facilisi.
+              Vestibulum euismod cursus congue. Praesent placerat imperdiet magna et
+              mollis. Integer urna dui, semper quis arcu et, placerat placerat velit.
+              Cras in felis nec nisi dictum blandit eget ut nisl.
+            </p>
+            <button class="bg-primary py-5 px-20 text-button-dark font-medium"
+              >Czytaj więcej</button
+            >
+          </div>
+        </div>
     </div>
     </div>
 </section>
