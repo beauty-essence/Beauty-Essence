@@ -1,3 +1,4 @@
+import HeroBackgroundImage from "assets/HeroBackgroundImage.png"
 import company_logo from "assets/company-logo-gold.svg"
 import NavigationButton from "./NavigationButton"
 import { useState } from "react"
@@ -8,7 +9,11 @@ const Navigation = () => {
   const [toggled, setIsToggleed] = useState(false)
 
   return (
-    <nav className="fixed w-full z-20">
+    <nav
+      className="fixed w-full z-20 bg-top bg-cover"
+      // style={{ backgroundImage: `url(${HeroBackgroundImage.src})` }}
+    >
+      {/* <img src={HeroBackgroundImage.src} alt="" className="w-full" /> */}
       <div className="w-full hidden md:flex pt-12 justify-center gap-10 z-10">
         <ul className="flex gap-10 items-center">
           <a href={ROUTES.aboutUs}>
