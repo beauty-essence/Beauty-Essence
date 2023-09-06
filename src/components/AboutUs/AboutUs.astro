@@ -1,6 +1,7 @@
 ---
 import aboutus_photo from "assets/aboutus-photo.png"
-import { Image } from "astro:assets";
+import { Image } from "astro:assets"
+import { ROUTES } from "helpers/ROUTES"
 ---
 
 <div
@@ -26,9 +27,14 @@ import { Image } from "astro:assets";
         mollis. Integer urna dui, semper quis arcu et, placerat placerat velit.
         Cras in felis nec nisi dictum blandit eget ut nisl.
       </p>
-      <button class="bg-primary py-5 px-20 text-button-dark font-medium"
+      <a href={ROUTES.aboutUs}>
+        <button
+        class="bg-primary py-4 md:py-5 px-16 md:px-20 text-button-dark font-medium text-xl- leading-[132.9%] border-primary border-2
+         hover:bg-white hover:transition hover:duration-200 hover:ease-in-out"
         >Czytaj więcej</button
       >
+      </a>
+
     </div>
     <div
       class="relative flex flex-col lg:-translate-x-24 lg:translate-y-16 items-center items-[unset]"
