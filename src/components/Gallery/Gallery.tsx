@@ -64,7 +64,7 @@ const Gallery = (props: { isGalleryPage?: boolean }) => {
         className={twMerge(
           "relative w-full flex justify-center items-center lg:py-16",
           props.isGalleryPage
-            ? "bg-white text-button-dark"
+            ? "bg-white text-button-dark pt-28 lg:pt-36"
             : "bg-[#31392F] text-white"
         )}
       >
