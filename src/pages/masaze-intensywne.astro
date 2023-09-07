@@ -1,8 +1,49 @@
 ---
 import OfferSubpage from "components/OfferSubpages/OfferSubpage.astro"
 import Layout from "../layouts/Layout.astro"
+import massanger_photo from "assets/photos/offer/massager.png"
+import human_back_photo from "assets/photos/offer/human-back.png"
+
+
+const MASSAGES_DATA =
+    {
+        title: "Masaże intensywne",
+        firstImage: massanger_photo,
+        firstAlt: "Masowana osoba",
+        firstDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut odio sapien, congue a purus vitae, ultricies consequat nibh. Nulla facilisi. Vestibulum euismod cursus congue. Praesent placerat imperdiet magna et mollis. Integer urna dui, semper quis arcu et, placerat placerat velit. Cras in felis nec nisi dictum blandit eget ut nisl.",
+        secondDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut odio sapien, congue a purus vitae, ultricies consequat nibh. Nulla facilisi. Vestibulum euismod cursus congue. Praesent placerat imperdiet magna et mollis. Integer urna dui, semper quis arcu et, placerat placerat velit. Cras in felis nec nisi dictum blandit eget ut nisl.",
+        secondImage: human_back_photo,
+        secondAlt: "dupa",
+    }
+
+const OFFER_CONTENT = [
+    {
+    image: massanger_photo,
+    alt: "dupa",
+    title: "Variant One",
+    subtitle: "Naturalny, holistyczny, uwielbiany przez stałych klientów",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut odio sapien, congue a purus vitae, ultricies consequat nibh. Nulla facilisi. Vestibulum euismod cursus congue. Praesent placerat imperdiet magna et mollis. Integer urna dui, semper quis arcu et.",
+    price: "100 PLN - 300 PLN"
+},
+{
+    image: massanger_photo,
+    alt: "dupa",
+    title: "Variant One",
+    subtitle: "Naturalny, holistyczny, uwielbiany przez stałych klientów",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut odio sapien, congue a purus vitae, ultricies consequat nibh. Nulla facilisi. Vestibulum euismod cursus congue. Praesent placerat imperdiet magna et mollis. Integer urna dui, semper quis arcu et.",
+    price: "100 PLN - 300 PLN"
+},
+{
+    image: massanger_photo,
+    alt: "dupa",
+    title: "Variant One",
+    subtitle: "Naturalny, holistyczny, uwielbiany przez stałych klientów",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut odio sapien, congue a purus vitae, ultricies consequat nibh. Nulla facilisi. Vestibulum euismod cursus congue. Praesent placerat imperdiet magna et mollis. Integer urna dui, semper quis arcu et.",
+    price: "100 PLN - 300 PLN"
+}
+]
 ---
 
 <Layout>
-    <OfferSubpage />
+    <OfferSubpage title={MASSAGES_DATA.title} firstImage={MASSAGES_DATA.firstImage} firstAlt={MASSAGES_DATA.firstAlt} firstDescription={MASSAGES_DATA.firstDescription} secondDescription={MASSAGES_DATA.secondDescription} secondImage={MASSAGES_DATA.secondImage} secondAlt={MASSAGES_DATA.secondAlt} offerContent={OFFER_CONTENT} />
 </Layout>
