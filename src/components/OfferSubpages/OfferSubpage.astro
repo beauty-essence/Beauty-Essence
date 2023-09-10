@@ -1,0 +1,64 @@
+---
+import massager_photo from "assets/photos/offer/massager.png"
+import human_back_photo from "assets/photos/offer/human-back.png"
+import { Image } from "astro:assets"
+import OfferSubpageCard from "./OfferSubpageCard.astro";
+
+interface OfferSubpageProps {
+  title: string
+  firstImage: ImageMetadata
+  firstAlt: string
+  firstDescription: string
+  secondDescription: string
+  secondImage: ImageMetadata
+  secondAlt: string
+  offerContent: any
+}
+
+const {title, firstImage, firstAlt, firstDescription, secondDescription, secondImage, secondAlt, offerContent } = Astro.props
+---
+
+
+<section class="w-full flex flex-col justify-center items-center lg:pt-28">
+    <div class="container mx-auto w-full md:py-10 flex flex-col justify-center">
+      <h3 class="text-7xl font-primary font-bold text-button-dark mb-12 text-center xl:text-left mt-28 xl:mt-[unset] ml-[4%] xl:ml-[11%]">
+        {title}
+      </h3>
+      <div class="relative">
+        <div class="relative justify-center items-start hidden xl:flex">
+          <Image src={firstImage} alt={firstAlt} class="" />
+          <div class="-z-10 max-w-[548px] lg:max-w-xl bg-primary-light pt-24 pr-10 pb-96 pl-40 -translate-x-24 translate-y-24">
+          <p class="text-xl text-secondary-text leading-[130%] mb-5" >
+            {firstDescription}
+          </p>
+          <p class="text-xl text-secondary-text leading-[130%] mb-12">
+           {secondDescription}
+          </p>
+        </div>
+        </div>
+        <div class="relative justify-center items-start hidden xl:flex ">
+          <div class="hidden lg:block absolute w-full max-w-sm before:h-full h-96 rounded-full bg-primary-light -z-10 left-64 -top-72"></div>
+          <Image src={secondImage} alt={secondAlt} class="-translate-y-64" />
+        </div>
+
+        <div class="flex flex-col items-center p-4 xl:hidden">
+          <Image src={secondImage} alt={secondAlt} class="md:max-w-[548px]" />
+          <div class="-z-10 md:max-w-[548px] bg-primary-light p-10">
+            <p class="text-xl text-secondary-text leading-[130%] mb-5">
+              {firstDescription}
+            </p>
+            <p class="text-xl text-secondary-text leading-[130%] mb-12">
+             {secondDescription}
+            </p>
+          </div>
+        </div>
+    </div>
+</section>
+<section class="w-full flex flex-col justify-center items-center py-10 lg:py-28 bg-primary-light">
+  <div class="container mx-auto w-full md:py-10 flex flex-col justify-center items-center gap-10">
+    {offerContent.map((item: any) => (
+    <OfferSubpageCard image={item.image} alt={item.alt} title={item.title} subtitle={item.subtitle} description={item.description}  price={item.price} />
+    ))}
+
+  </div>
+</section>

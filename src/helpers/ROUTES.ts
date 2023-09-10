@@ -5,4 +5,9 @@ export const ROUTES = {
     gallery: "/galeria",
     contact: "/kontakt",
     offer: "/oferta",
+    massagesIntensive: "/masaze-intensywne",
+    massagesRelaxtion: "/masaze-relaksacyjne",
+    massagesWarming: "/masaze-rozgrzewające",
+    massagesDuo: "/masaze-dla-dwojga",
+    massagesTreatments: "/masaze-zabiegi",
 }

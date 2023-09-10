@@ -1,0 +1,27 @@
+---
+import human_back_photo from "assets/photos/offer/human-back.png"
+import { Image } from "astro:assets"
+
+interface Props {
+    image: ImageMetadata
+    alt: string
+    title: string
+    subtitle: string
+    description: string
+    price: string
+}
+
+const { image, alt, title, subtitle, description, price } = Astro.props
+---
+
+<div class="flex flex-col lg:flex-row justify-center items-center gap-4 md:gap-11 max-w-[1000px]">
+    <Image src={image} alt={"dupa"} class="w-[90%] max-w-[400px]" />
+    <div class="p-4 md:pt-5 max-w-[400px] lg:max-w-[unset]">
+        <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">{title}</h6>
+        <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p>
+        <p class="text-xl text-secondary-text leading-[130%] mb-6">
+            {description}
+          </p>
+          <p class="font-secondary text-button-dark text-2xl font-regulary">{price}</p>
+    </div>
+</div>
