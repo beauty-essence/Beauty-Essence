@@ -1,0 +1,31 @@
+---
+interface PricingProps {
+    title: string
+    variant: object[]
+}
+
+const { title, variant } = Astro.props
+---
+
+
+<div>
+    <h6 class="font-primary text-3xl text-button-dark font-bold pb-6">{title}</h6>
+    <table class=" rounded-lg border-separate border-spacing-1">
+        <thead>
+            <tr>
+                <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light text-left md:w-[270px]">Dostępny wariant</th>
+                <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light">30 min</th>
+                <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light">60 min</th>
+            </tr>
+        </thead>
+        <tbody>
+            {variant.map((item: any) => (
+             <tr>
+                <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">{item.variant}</td>
+                <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">{item.firstPrice + " zł"}</td>
+                <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">{item.secondPrice + " zł"}</td>
+            </tr>
+            ))}
+        </tbody>
+    </table>
+</div>
