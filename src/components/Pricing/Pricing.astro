@@ -1,5 +1,28 @@
 ---
 import PricingCard from "./PricingCard.astro"
+
+const CARDS_CONTENT = [
+  {
+
+    first: [
+      {
+        variant: "Wariant 1",
+        firstPrice: "50",
+        secondPrice: "100"
+      },
+      {
+        variant: "Wariant 2",
+        firstPrice: "120",
+        secondPrice: "150"
+      },
+      {
+        variant: "Wariant 3",
+        firstPrice: "123",
+        secondPrice: "456"
+      }
+    ]
+  }
+]
 ---
 
 <section class="w-full flex justify-center items-center py-10 lg:py-28">
@@ -11,10 +34,10 @@ import PricingCard from "./PricingCard.astro"
         <p class="text-secondary-text font-secondary text-xl font-medium">Sprawdź wycenę naszych usług</p>
       </div>
       <div class="flex flex-wrap justify-center lg:justify-start items-center gap-11 max-w-[1000px]">
-        <PricingCard />
-        <PricingCard />
-        <PricingCard />
-        <PricingCard />
+        <PricingCard title="Masaż relakacyjny" variant={CARDS_CONTENT[0].first} />
+        <PricingCard title="Masaż intensywny" variant={CARDS_CONTENT[0].first} />
+        <PricingCard title="Masaż rozgrzewający" variant={CARDS_CONTENT[0].first} />
+        <PricingCard title="Masaż dla dwojga" variant={CARDS_CONTENT[0].first} />
       </div>
     </div>
   </section>
