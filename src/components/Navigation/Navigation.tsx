@@ -42,7 +42,7 @@ const Navigation = () => {
               Kontakt
             </li>
           </a>
-          <a href={ROUTES.offer}>
+          <a href="#offer">
             <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
               Oferta
             </li>

@@ -14,7 +14,7 @@ import Offer from "components/Offer/Offer.astro"
   <AboutUs />
   <Offer />
   <CompanyStats />
-  <Gallery client:load />
+  <Gallery client:only="react" />
   <Opinions client:load />
   <Contact />
 </Layout>

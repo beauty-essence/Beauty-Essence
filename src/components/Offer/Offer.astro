@@ -13,8 +13,8 @@ const CARDS_CONTENT = [
     alt: "asd",
     title: "Masaże intensywne",
     description:
-      "Zanurz się w głęboki stan relaksu i odprężenia dzięki naszym tajskim masażom intensywnym.",
-    destination: `${ROUTES.massages}`
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    destination: `${ROUTES.massagesIntensive}`
   },
   {
     image: hands_icon,
@@ -22,7 +22,7 @@ const CARDS_CONTENT = [
     title: "Masaże relaksacyjne",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    destination: `${ROUTES.massages}`
+    destination: `${ROUTES.massagesRelaxtion}`
   },
   {
     image: foot_icon,
@@ -30,7 +30,7 @@ const CARDS_CONTENT = [
     title: "Masaże rozgrzewające",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    destination: `${ROUTES.massages}`
+    destination: `${ROUTES.massagesWarming}`
   },
   {
     image: olive_icon,
@@ -38,7 +38,7 @@ const CARDS_CONTENT = [
     title: "Masaże dla dwojga",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    destination: `${ROUTES.massages}`
+    destination: `${ROUTES.massagesDuo}`
   },
   {
     image: face_icon,
@@ -46,12 +46,12 @@ const CARDS_CONTENT = [
     title: "Zabiegi na twarz i ciało",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    destination: `${ROUTES.massages}`
+    destination: `${ROUTES.massagesTreatments}`
   }
 ]
 ---
 
-<section class="w-full bg-primary-light p-10 lg:py-32 lg:px-40">
+<section class="w-full bg-primary-light p-10 lg:py-32 lg:px-40" id="offer">
   <div class="container mx-auto">
     <h3
       class="text-7xl font-primary font-bold text-button-dark mb-12 text-center md: text"
