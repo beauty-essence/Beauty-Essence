@@ -67,7 +67,7 @@ const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
                   placeholder="Jan Kowalski"
                   className="border-2 border-primary px-2 py-1"
                 />
-                <p className="font-primary text-lg">
+                <p className="font-primary text-md text-[#ff0000]">
                   {errors.identity?.message}
                 </p>
               </div>
@@ -82,13 +82,14 @@ const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
                   placeholder="twój@email.com"
                   className="border-2 border-primary px-2 py-1"
                 />
-                <p className="font-primary text-lg">
+                <p className="font-primary text-md text-[#ff0000]">
                   {errors.emailAddress?.message}
                 </p>
               </div>
               <button
                 type="submit"
                 className="bg-primary font-primary self-end px-10 py-2 text-lg mt-8"
+                onClick={methods.handleSubmit(onSubmit)}
               >
                 Przejdź do płatności
               </button>
