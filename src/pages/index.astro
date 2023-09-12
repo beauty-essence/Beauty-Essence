@@ -1,6 +1,6 @@
 ---
 import Hero from "../components/Hero/Hero.astro"
-import Contact from "../components/Contact/Contact.astro"
+import Contact from "../components/Contact/Contact"
 import Opinions from "../components/Opinions/Opinions"
 import Gallery from "../components/Gallery/Gallery"
 import Layout from "../layouts/Layout.astro"
@@ -11,6 +11,7 @@ import Pricing from "components/Pricing/Pricing.astro"
 import Vouchers from "components/Vouchers/Vouchers"
 ---
 
+
 <Layout>
   <Hero />
   <AboutUs />
@@ -18,7 +19,7 @@ import Vouchers from "components/Vouchers/Vouchers"
   <CompanyStats />
   <Gallery client:only="react" />
   <Opinions client:load />
-  <Contact />
-  <Pricing />
-  <Vouchers client:only="react" />
+    <Contact client:only="react" />
+    <Pricing />
+    <Vouchers client:only="react" />
 </Layout>
