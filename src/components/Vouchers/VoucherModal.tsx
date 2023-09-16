@@ -10,7 +10,8 @@ interface VoucherModalTypes {
 
 const defaultValues = {
   identity: "",
-  emailAddress: ""
+  emailAddress: "",
+  variant: "100"
 }
 
 export const voucherValidation = yup.object({
@@ -22,20 +23,23 @@ export const voucherValidation = yup.object({
   emailAddress: yup
     .string()
     .email("Podaj prawidłowy adres e-mail")
-    .required("Adres e-mail jest wymagany")
+    .required("Adres e-mail jest wymagany"),
+  variant: yup.string().required("Wprowadź kwotę voucher")
 })
 
 type defaultFormValuesTypes = typeof defaultValues
 
 const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
-  const methods = useForm({
+  const [isPriceSelected, setIsPriceSelected] = useState(false)
+  const [voucherValue, setVoucherValue] = useState(0)
+  const form = useForm({
     defaultValues,
     resolver: yupResolver(voucherValidation)
   })
   const {
     formState: { errors },
     register
-  } = methods
+  } = form
 
   const onSubmit: SubmitHandler<defaultFormValuesTypes> = async data => {
     console.log(data)
@@ -54,8 +58,36 @@ const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
           <h6 className="font-primary text-3xl text-button-dark font-bold mb-8">
             Komu chcesz <br /> sprawić prezent?
           </h6>
-          <FormProvider {...methods}>
+          <FormProvider {...form}>
             <form className="flex flex-col gap-2 md:w-full">
+              <div>
+                <div
+                  className={`border-2 border-primary p-1 max-w-[80px] cursor-pointer`}
+                >
+                  <p
+                    className="font-primary text-xl text-button-dark font-medium text-center"
+                    onClick={() => setVoucherValue(100)}
+                  >
+                    100 zł
+                  </p>
+                </div>
+                {errors.variant?.message}
+                <div className="border-2 border-primary p-1 max-w-[80px] cursor-pointer">
+                  <p
+                    className="font-primary text-xl text-button-dark font-medium text-center"
+                    onClick={() => setVoucherValue(200)}
+                  >
+                    200 zł
+                  </p>
+                </div>
+                {/* <input
+                  id="100"
+                  type="text"
+                  value={"100 zł"}
+                  {...register("voucherValue")}
+                  className="border-2 border-primary px-2 py-1 max-w-[80px]"
+                /> */}
+              </div>
               <div className="flex flex-col gap-1">
                 <label htmlFor="identity" className="font-primary text-lg">
                   Imię i nazwisko
@@ -89,7 +121,7 @@ const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
               <button
                 type="submit"
                 className="bg-primary font-primary self-end px-10 py-2 text-lg mt-8"
-                onClick={methods.handleSubmit(onSubmit)}
+                onClick={form.handleSubmit(onSubmit)}
               >
                 Przejdź do płatności
               </button>

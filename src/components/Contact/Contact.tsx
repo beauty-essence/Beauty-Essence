@@ -49,14 +49,19 @@ const Contact = () => {
   })
   const {
     formState: { errors },
-    register
+    register,
+    reset
   } = methods
 
   const onSubmit: SubmitHandler<defaultFormValuesTypes> = async data => {
     try {
-      const response = await axios.post("https://formspree.io/f/myyqpyaw", data)
+      const response = await axios.post(
+        import.meta.env.PUBLIC_FORM_ENDPOINT,
+        data
+      )
       if (response.status === 200) {
         setIsSuccess(true)
+        reset()
         return response.data
       }
     } catch (error) {
