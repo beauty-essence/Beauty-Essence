@@ -16,12 +16,13 @@ const Vouchers = () => {
               Spraw przyjemność swoim bliskim
             </p>
             <p className="text-secondary-text font-secondary text-xl font-medium mb-9 px-10 md:px-0 ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut odio
-              sapien, congue a purus vitae, ultricies consequat nibh. Nulla
-              facilisi. Vestibulum euismod cursus congue. Praesent placerat
-              imperdiet magna et mollis. Integer urna dui, semper quis arcu et,
-              placerat placerat velit. Cras in felis nec nisi dictum blandit
-              eget ut nisl.
+              Podaruj więcej niż rzecz – podaruj niezapomniane doświadczenie.
+              Nasz voucher prezentowy to idealna propozycja dla kogoś
+              wyjątkowego. Przemyślane zabiegi, ciepła atmosfera i chwile
+              relaksu tworzą niezrównane wrażenia. Pokaż bliskim, że zasługują
+              na specjalne momenty pełne odprężenia. Nasz zespół ekspertów zadba
+              o każdy detal, gwarantując satysfakcję i uśmiech na twarzy
+              obdarowanej osoby.
             </p>
             <button
               className=" bg-primary px-10 py-4 hover:opacity-90 transition-opacity"

@@ -71,20 +71,23 @@ const Gallery = (props: { isGalleryPage?: boolean }) => {
         <div className="container md:flex md:gap-5 justify-center flex flex-col items-center p-10">
           <div className="flex flex-col items-center gap-4">
             <h1 className="text-5xl font-primary font-bold mb-2">Galeria</h1>
-            <p className=" max-w-sm text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut odio
-              sapien, congue a purus vitae, ultricies consequat nibh.
+            <p className="max-w-md text-center">
+              Zobacz nas w akcji. Odkryj atmosferę, profesjonalizm i staranność,
+              z jaką podchodzimy do każdego klienta. Przeglądaj wybrane zdjęcia,
+              by poczuć magię i jakość naszych zabiegów.
             </p>
           </div>
           <Masonry columnsCount={3} gutter="10px" className="mt-10">
-            {images.map((image, index) => (
-              <img
-                src={image.src}
-                key={image.src}
-                className="cursor-pointer"
-                onClick={() => openPreview(index)}
-              />
-            ))}
+            {images
+              .slice(0, props.isGalleryPage ? images.length : 6)
+              .map((image, index) => (
+                <img
+                  src={image.src}
+                  key={image.src}
+                  className="cursor-pointer"
+                  onClick={() => openPreview(index)}
+                />
+              ))}
           </Masonry>
           {props.isGalleryPage ? null : (
             <a
