@@ -11,7 +11,7 @@ const { image, alt, title, description, destination } = Astro.props
 ---
 
 <div
-  class="flex flex-col items-center justify-center gap-14 w-1/5 px-3 min-w-[206px] h-[520px]"
+  class="relative flex flex-col items-center justify-center gap-14 w-1/5 px-3 min-w-[206px] h-[520px]"
 >
   <img src={image} alt={alt} class="h-32" />
   <div class="w-full flex flex-col items-center justify-center gap-4">
@@ -24,7 +24,7 @@ const { image, alt, title, description, destination } = Astro.props
   </div>
   <a
     href={destination}
-    class="bg-primary p-5 2xl:px-12 text-button-dark font-medium relative bottom-0 border-primary border-2
+    class="bg-primary p-5 2xl:px-12 text-button-dark font-medium 2xl:absolute lg:bottom-0 border-primary border-2
     hover:bg-white hover:transition hover:duration-200 hover:ease-in-out"
     >Zobacz więcej</a
   >
