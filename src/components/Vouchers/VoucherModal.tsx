@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import close_icon from "assets/icons/close_black.svg"
 import { useForm, FormProvider, SubmitHandler } from "react-hook-form"
 import * as yup from "yup"
@@ -11,7 +11,7 @@ interface VoucherModalTypes {
 const defaultValues = {
   identity: "",
   emailAddress: "",
-  variant: "100"
+  variant: ""
 }
 
 export const voucherValidation = yup.object({
@@ -24,22 +24,32 @@ export const voucherValidation = yup.object({
     .string()
     .email("Podaj prawidłowy adres e-mail")
     .required("Adres e-mail jest wymagany"),
-  variant: yup.string().required("Wprowadź kwotę voucher")
+  variant: yup.string().required("Wybierz jeden z wariantów")
 })
 
 type defaultFormValuesTypes = typeof defaultValues
 
 const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
-  const [isPriceSelected, setIsPriceSelected] = useState(false)
-  const [voucherValue, setVoucherValue] = useState(0)
+  const [selectedVariant, setSelectedVariant] = useState(defaultValues.variant)
   const form = useForm({
     defaultValues,
     resolver: yupResolver(voucherValidation)
   })
   const {
     formState: { errors },
-    register
+    register,
+    setValue,
+    getValues
   } = form
+
+  const onVariantClick = (value: string) => {
+    setValue("variant", value, {
+      shouldValidate: true,
+      shouldDirty: true,
+      shouldTouch: true
+    })
+    setSelectedVariant(value)
+  }
 
   const onSubmit: SubmitHandler<defaultFormValuesTypes> = async data => {
     console.log(data)
@@ -60,34 +70,83 @@ const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
           </h6>
           <FormProvider {...form}>
             <form className="flex flex-col gap-2 md:w-full">
-              <div>
+              <div className="flex flex-wrap justify-center gap-3">
                 <div
-                  className={`border-2 border-primary p-1 max-w-[80px] cursor-pointer`}
+                  className={`border-2 border-primary py-2 px-4 cursor-pointer ${
+                    selectedVariant === "100" ? "bg-primary" : ""
+                  }`}
                 >
                   <p
                     className="font-primary text-xl text-button-dark font-medium text-center"
-                    onClick={() => setVoucherValue(100)}
+                    onClick={() => onVariantClick("100")}
                   >
                     100 zł
                   </p>
                 </div>
-                {errors.variant?.message}
-                <div className="border-2 border-primary p-1 max-w-[80px] cursor-pointer">
+                <div
+                  className={`border-2 border-primary py-2 px-4 cursor-pointer ${
+                    selectedVariant === "150" ? "bg-primary" : ""
+                  }`}
+                >
                   <p
                     className="font-primary text-xl text-button-dark font-medium text-center"
-                    onClick={() => setVoucherValue(200)}
+                    onClick={() => onVariantClick("150")}
+                  >
+                    150 zł
+                  </p>
+                </div>
+                <div
+                  className={`border-2 border-primary py-2 px-4 cursor-pointer ${
+                    selectedVariant === "200" ? "bg-primary" : ""
+                  }`}
+                >
+                  <p
+                    className="font-primary text-xl text-button-dark font-medium text-center"
+                    onClick={() => onVariantClick("200")}
                   >
                     200 zł
                   </p>
                 </div>
-                {/* <input
-                  id="100"
-                  type="text"
-                  value={"100 zł"}
-                  {...register("voucherValue")}
-                  className="border-2 border-primary px-2 py-1 max-w-[80px]"
-                /> */}
+                <div
+                  className={`border-2 border-primary py-2 px-4 cursor-pointer ${
+                    selectedVariant === "300" ? "bg-primary" : ""
+                  }`}
+                >
+                  <p
+                    className="font-primary text-xl text-button-dark font-medium text-center"
+                    onClick={() => onVariantClick("300")}
+                  >
+                    300 zł
+                  </p>
+                </div>
+                <div
+                  className={`border-2 border-primary py-2 px-4 cursor-pointer ${
+                    selectedVariant === "500" ? "bg-primary" : ""
+                  }`}
+                >
+                  <p
+                    className="font-primary text-xl text-button-dark font-medium text-center"
+                    onClick={() => onVariantClick("500")}
+                  >
+                    500 zł
+                  </p>
+                </div>
+                <div
+                  className={`border-2 border-primary py-2 px-4 cursor-pointer ${
+                    selectedVariant === "1000" ? "bg-primary" : ""
+                  }`}
+                >
+                  <p
+                    className="font-primary text-xl text-button-dark font-medium text-center"
+                    onClick={() => onVariantClick("1000")}
+                  >
+                    1000 zł
+                  </p>
+                </div>
               </div>
+              <p className="font-primary text-md text-[#ff0000]">
+                {errors.variant?.message}
+              </p>
               <div className="flex flex-col gap-1">
                 <label htmlFor="identity" className="font-primary text-lg">
                   Imię i nazwisko
