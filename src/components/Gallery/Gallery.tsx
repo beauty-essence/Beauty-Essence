@@ -84,6 +84,7 @@ const Gallery = (props: { isGalleryPage?: boolean }) => {
                 <img
                   src={image.src}
                   key={image.src}
+                  alt="Masaż wykonywany na ludzkim ciele"
                   className="cursor-pointer"
                   onClick={() => openPreview(index)}
                 />

@@ -81,24 +81,29 @@ const Contact = () => {
 
           <div>
             <p>
-              1487 Rocky Horse Carrefour 1487 Rocky
+              Beauty Essence Sp. z o.o.
               <br />
-              HorseArlington, TX 16819 United
+              ul. Most Pauliński 1m3
+              <br />
+              87-100 Toruń
             </p>
-            <p>+8 520-150-001</p>
-            <p>kontakt@beauty-essence.pl</p>
+            <p>+48 789 585 586</p>
+            <p>recepcja@beauty-essence.pl</p>
           </div>
 
           <div className="flex gap-2">
-            <a href="https://facebook.com" target="_blank">
-              <img src={facebook_icon.src} />
+            <a
+              href="https://www.facebook.com/BeautyEssenceTorun"
+              target="_blank"
+            >
+              <img src={facebook_icon.src} alt="Ikona Facebook" />
             </a>
             <a href="https://instagram.com" target="_blank">
-              <img src={instagram_icon.src} />
+              <img src={instagram_icon.src} alt="Ikona instagram" />
             </a>
-            <a href="https://twitter.com" target="_blank">
+            {/* <a href="https://twitter.com" target="_blank">
               <img src={twitter_icon.src} />
-            </a>
+            </a> */}
           </div>
         </div>
         <FormProvider {...methods}>

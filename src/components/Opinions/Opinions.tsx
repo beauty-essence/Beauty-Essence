@@ -63,7 +63,7 @@ const Opinions = () => {
     <section className="relative w-full flex flex-col justify-center items-center lg:py-16">
       <img
         src={OpinionsBackground.src}
-        alt=""
+        alt="Zdjęcie tła zawierające przyrządy do masażu"
         className="w-full absolute -z-10 object-cover h-full"
       />
       <div className="flex container md:flex md:gap-5 justify-center p-10 text-secondary-text">
@@ -81,11 +81,13 @@ const Opinions = () => {
             src={arrow_left.src}
             className="hidden w-8 h-8 absolute top-1/2 -left-12 md:block cursor-pointer"
             onClick={handleShowPrev}
+            alt="Ikona strzałki w lewo"
           />
           <img
             src={arrow_right.src}
             className="hidden w-8 h-8 absolute top-1/2 -right-12 md:block cursor-pointer"
             onClick={handleShowNext}
+            alt="Ikona strzałki w prawo"
           />
 
           <div className="w-full overflow-hidden">

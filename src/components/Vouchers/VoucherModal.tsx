@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import close_icon from "assets/icons/close_black.svg"
 import { useForm, FormProvider, SubmitHandler } from "react-hook-form"
 import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup"
+import axios from "axios"
 
 interface VoucherModalTypes {
   onCloseModal: () => void
@@ -38,8 +39,7 @@ const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
   const {
     formState: { errors },
     register,
-    setValue,
-    getValues
+    setValue
   } = form
 
   const onVariantClick = (value: string) => {
@@ -53,6 +53,17 @@ const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
 
   const onSubmit: SubmitHandler<defaultFormValuesTypes> = async data => {
     console.log(data)
+    try {
+      const response = await axios.post(
+        "https://hook.eu2.make.com/ijk9zimndmohxjs9j2pd19nf6m164mhp",
+        data
+      )
+      if (response.status === 200) {
+        return response.data
+      }
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   return (
