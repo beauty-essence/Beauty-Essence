@@ -70,7 +70,7 @@ const Navigation = () => {
           </a>
         </ul>
       </div>
-      <div className="flex justify-between items-center pt-8 md:hidden px-8">
+      <div className="flex justify-between items-center py-6 md:hidden px-8">
         <a href={ROUTES.home}>
           <img src={company_logo.src} alt="Beauty Essence Logo" />
         </a>
