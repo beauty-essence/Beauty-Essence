@@ -8,6 +8,7 @@ const MobileNavigationList = ({
   isOpen,
   ...rest
 }: MobileNavigationListProps) => {
+  // const [currentPath, setCurrentPath] = useState(window.location.pathname)
   return (
     <div
       className={`bg-primary transition-transform bg-background w-full h-full fixed top-1/2 left-0 -translate-y-1/2 color-white z-20 px-8 ${
@@ -36,7 +37,7 @@ const MobileNavigationList = ({
             Kontakt
           </li>
         </a>
-        <a href="#offer">
+        <a href={window.location.pathname !== "/" ? "/#offer" : "#offer"}>
           <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
             Oferta
           </li>
