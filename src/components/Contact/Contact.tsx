@@ -6,6 +6,7 @@ import { useForm, FormProvider, SubmitHandler } from "react-hook-form"
 import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup"
 import axios from "axios"
+import { ROUTES } from "helpers/ROUTES"
 
 const defaultValues = {
   name: "",
@@ -98,7 +99,10 @@ const Contact = () => {
             >
               <img src={facebook_icon.src} alt="Ikona Facebook" />
             </a>
-            <a href="https://instagram.com" target="_blank">
+            <a
+              href="https://www.instagram.com/beautyessenceoriental/"
+              target="_blank"
+            >
               <img src={instagram_icon.src} alt="Ikona instagram" />
             </a>
             {/* <a href="https://twitter.com" target="_blank">
@@ -166,6 +170,12 @@ const Contact = () => {
               ></textarea>
               <p className="font-primary text-md text-[#ff0000]">
                 {errors.message?.message}
+              </p>
+              <p className="font-primary text-md text-secondary">
+                Wysyłając formularz akceptujesz naszą
+                <a href={ROUTES.policy} className="font-bold underline ml-1">
+                  politykę prywatności
+                </a>
               </p>
             </div>
             <button

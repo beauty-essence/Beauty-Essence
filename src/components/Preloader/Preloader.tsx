@@ -18,7 +18,7 @@ const Preloader = () => {
   return (
     <section
       className={`fixed top-0 left-0 z-[999] bg-secondary w-full h-screen  ${
-        isPreloaderVisible ? "animate-preloader" : "hidden"
+        isPreloaderVisible ? "block" : "hidden"
       }`}
     >
       <div className="w-full h-full flex justify-center flex-col items-center gap-20">

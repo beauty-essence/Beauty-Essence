@@ -4,6 +4,7 @@ import { useForm, FormProvider, SubmitHandler } from "react-hook-form"
 import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup"
 import axios from "axios"
+import { ROUTES } from "helpers/ROUTES"
 
 interface VoucherModalTypes {
   onCloseModal: () => void
@@ -188,6 +189,12 @@ const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
                   {errors.emailAddress?.message}
                 </p>
               </div>
+              <p className="font-primary text-md text-secondary">
+                Wypełniająć formularz i dokonując zakupu akceptujesz naszą
+                <a href={ROUTES.policy} className="font-bold underline ml-1">
+                  politykę prywatności
+                </a>
+              </p>
               <button
                 type="submit"
                 className="bg-primary font-primary self-end px-10 py-2 text-lg mt-8"
