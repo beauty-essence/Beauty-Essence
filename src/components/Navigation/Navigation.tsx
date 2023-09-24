@@ -18,7 +18,7 @@ const Navigation = () => {
     return () => {
       window.removeEventListener("popstate", handleNavigationChange)
     }
-  }, [])
+  }, [currentPath])
 
   return (
     <nav
@@ -58,7 +58,7 @@ const Navigation = () => {
               Kontakt
             </li>
           </a>
-          <a href="#offer">
+          <a href={currentPath !== "/" ? "/#offer" : "#offer"}>
             <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
               Oferta
             </li>

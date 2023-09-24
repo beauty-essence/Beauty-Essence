@@ -20,13 +20,13 @@ module.exports = {
       keyframes: {
         disappear: {
           "0%:": { opacity: 1 },
-          "50%": { opacity: 0.5 },
-          "100%": { opacity: 0 }
+          "50%": { opacity: 1 },
+          "100%": { opacity: 0, visibility: "hidden" }
         }
       }
     },
     animation: {
-      preloader: "disappear 5s ease-in-out 1"
+      preloader: "disappear 3s ease-in-out forwards"
     }
   },
   plugins: []

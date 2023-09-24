@@ -3,6 +3,7 @@ import Footer from "components/Footer/Footer.astro"
 import Navigation from "components/Navigation/Navigation"
 import "@fontsource/cormorant-garamond"
 import "@fontsource/jost"
+import Preloader from "components/Preloader/Preloader"
 ---
 
 <!doctype html>
@@ -16,6 +17,7 @@ import "@fontsource/jost"
       w zgiełku dnia.</title>
   </head>
   <body>
+    <Preloader client:only="react" />
     <Navigation client:only="react" />
     <slot />
     <Footer />
