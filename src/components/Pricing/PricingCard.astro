@@ -2,9 +2,11 @@
 interface PricingProps {
     title: string
     variant: object[]
+    firstTimeVariant: string
+    secondTimeVariant: string
 }
 
-const { title, variant } = Astro.props
+const { title, variant, firstTimeVariant, secondTimeVariant } = Astro.props
 ---
 
 
@@ -14,16 +16,16 @@ const { title, variant } = Astro.props
         <thead>
             <tr>
                 <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light text-left md:w-[270px]">Dostępny wariant</th>
-                <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light">30 min</th>
-                <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light">60 min</th>
+                <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light">{firstTimeVariant}</th>
+                <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light">{secondTimeVariant}</th>
             </tr>
         </thead>
         <tbody>
             {variant.map((item: any) => (
              <tr>
                 <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">{item.variant}</td>
-                <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">{item.firstPrice + " zł"}</td>
-                <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">{item.secondPrice + " zł"}</td>
+                <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">{item.firstPrice}</td>
+                <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">{item.secondPrice}</td>
             </tr>
             ))}
         </tbody>

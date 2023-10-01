@@ -25,7 +25,8 @@ const Vouchers = () => {
               obdarowanej osoby.
             </p>
             <button
-              className=" bg-primary px-10 py-4 hover:opacity-90 transition-opacity"
+              className=" bg-primary px-10 py-4 hover:opacity-90 transition-opacity border-primary border-2
+              hover:bg-white hover:transition hover:duration-200 hover:ease-in-out"
               onClick={() => setIsPopupOpen(true)}
             >
               Zamów voucher

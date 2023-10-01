@@ -180,7 +180,8 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="bg-primary font-primary self-end px-10 py-2 text-lg"
+              className="bg-primary font-primary self-end px-10 py-2 text-lg border-primary border-2
+              hover:bg-white hover:transition hover:duration-200 hover:ease-in-out"
               onClick={methods.handleSubmit(onSubmit)}
               disabled={isSuccess}
             >
