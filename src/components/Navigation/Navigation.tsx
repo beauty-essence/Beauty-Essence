@@ -8,6 +8,7 @@ import { ROUTES } from "helpers/ROUTES"
 const Navigation = () => {
   const [toggled, setIsToggleed] = useState(false)
   const [currentPath, setCurrentPath] = useState(window.location.pathname)
+  const [navigationColor, setNavigationColor] = useState("asd")
 
   useEffect(() => {
     const handleNavigationChange = () => {
@@ -20,16 +21,32 @@ const Navigation = () => {
     }
   }, [currentPath])
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 800) {
+        setNavigationColor("rgb(49 57 47)")
+      } else {
+        setNavigationColor("")
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   return (
     <nav
       className="fixed w-full z-20 bg-top bg-cover"
       style={{
         backgroundImage: `url(${
           currentPath !== "/" ? HeroBackgroundImage.src : ""
-        })`
+        })`,
+        backgroundColor: navigationColor
       }}
     >
-      {/* <img src={HeroBackgroundImage.src} alt="" className="w-full" /> */}
       <div className="w-full hidden md:flex py-8 justify-center gap-10 z-10">
         <ul className="flex gap-10 items-center">
           <a href={ROUTES.aboutUs}>

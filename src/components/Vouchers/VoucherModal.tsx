@@ -11,21 +11,10 @@ interface VoucherModalTypes {
 }
 
 const defaultValues = {
-  identity: "",
-  emailAddress: "",
   variant: ""
 }
 
 export const voucherValidation = yup.object({
-  identity: yup
-    .string()
-    .max(50, "Imię i nazwisko nie mogą być dłuższe niż 50 znaków")
-    .matches(/^[^0-9]*$/, "Imie i Nazwisko nie mogą zawierać cyfr")
-    .required("Imie i nazwisko są wymagane"),
-  emailAddress: yup
-    .string()
-    .email("Podaj prawidłowy adres e-mail")
-    .required("Adres e-mail jest wymagany"),
   variant: yup.string().required("Wybierz jeden z wariantów")
 })
 
@@ -53,13 +42,18 @@ const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
   }
 
   const onSubmit: SubmitHandler<defaultFormValuesTypes> = async data => {
-    console.log(data)
+    const ParsedData = parseInt(data.variant)
+    console.log(ParsedData)
     try {
       const response = await axios.post(
-        "https://hook.eu2.make.com/ijk9zimndmohxjs9j2pd19nf6m164mhp",
-        data
+        "https://beautyessence-backend.vercel.app/api/generate-payment",
+        {
+          variant: ParsedData
+        }
       )
       if (response.status === 200) {
+        const paymentLinkUrl = response.data.url
+        window.location.href = paymentLinkUrl
         return response.data
       }
     } catch (error) {
@@ -159,7 +153,7 @@ const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
               <p className="font-primary text-md text-[#ff0000]">
                 {errors.variant?.message}
               </p>
-              <div className="flex flex-col gap-1">
+              {/* <div className="flex flex-col gap-1">
                 <label htmlFor="identity" className="font-primary text-lg">
                   Imię i nazwisko
                 </label>
@@ -173,8 +167,8 @@ const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
                 <p className="font-primary text-md text-[#ff0000]">
                   {errors.identity?.message}
                 </p>
-              </div>
-              <div className="flex flex-col gap-1">
+              </div> */}
+              {/* <div className="flex flex-col gap-1">
                 <label htmlFor="emailAddress" className="font-primary text-lg">
                   Email
                 </label>
@@ -188,7 +182,7 @@ const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
                 <p className="font-primary text-md text-[#ff0000]">
                   {errors.emailAddress?.message}
                 </p>
-              </div>
+              </div> */}
               <p className="font-primary text-md text-secondary">
                 Wypełniająć formularz i dokonując zakupu akceptujesz naszą
                 <a href={ROUTES.policy} className="font-bold underline ml-1">
