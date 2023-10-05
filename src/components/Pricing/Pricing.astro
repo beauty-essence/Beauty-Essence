@@ -23,17 +23,7 @@ const CARDS_CONTENT = [
         variant: "Masaż z peelingiem",
         firstPrice: "219 zł",
         secondPrice: "259 zł"
-      },
-      {
-        variant: "Masaż masaż górnych części ciała*",
-        firstPrice: "139 zł*",
-        secondPrice: "189 zł*"
-      },
-      {
-        variant: "Refleksologia*",
-        firstPrice: "139 zł*",
-        secondPrice: "189 zł*"
-      },
+      }
     ],
     massage_intensive: [
       {
@@ -71,30 +61,35 @@ const CARDS_CONTENT = [
     ],
     massage_rituals: [
       {
-        variant: "Rytuał Orientalny",
-        firstPrice: "239 zł",
-        secondPrice: "279 zł"
+        variant: "Rytuał Orient (ekskluzywny)",
+        firstPrice: "-",
+        secondPrice: "390 zł"
       },
       {
-        variant: "Rytuał Jedwabny",
-        firstPrice: "229 zł",
-        secondPrice: "279 zł"
+        variant: "Rytuał Jedwab (ekskluzywny)",
+        firstPrice: "-",
+        secondPrice: "390 zł"
       },
       {
-        variant: "Rytuał Tytan",
-        firstPrice: "229 zł",
-        secondPrice: "279 zł"
-      },
-      {
-        variant: "Rytuał Rajski Grapefruit",
-        firstPrice: "229 zł",
-        secondPrice: "279 zł"
+        variant: "Rytuał Tytan (ekskluzywny)",
+        firstPrice: "-",
+        secondPrice: "390 zł"
       },
       {
         variant: "Rytuał Bursztynowy",
-        firstPrice: "229 zł",
-        secondPrice: "279 zł"
+        firstPrice: "-",
+        secondPrice: "360 zł"
       },
+      {
+        variant: "Rytuał Grejpfrutowy",
+        firstPrice: "-",
+        secondPrice: "360 zł"
+      },
+      {
+        variant: "Rytuał Czerwone Wino",
+        firstPrice: "-",
+        secondPrice: "360 zł"
+      }
     ]
   }
 ]
@@ -110,9 +105,8 @@ const CARDS_CONTENT = [
       <div class="flex flex-wrap justify-center lg:justify-start items-baseline gap-11 p-10 md:p-0 max-w-[1000px]">
         <PricingCard title="Masaż intensywny" variant={CARDS_CONTENT[0].massage_intensive} firstTimeVariant="60 min" secondTimeVariant="90 min" />
         <PricingCard title="Masaż rozgrzewający" variant={CARDS_CONTENT[0].massage_warming} firstTimeVariant="60 min" secondTimeVariant="90 min" />
-        <PricingCard title="Masaż relakacyjny" variant={CARDS_CONTENT[0].massage_relax} firstTimeVariant="60 min" secondTimeVariant="90 min" />
-        <PricingCard title="Rytuały SPA" variant={CARDS_CONTENT[0].massage_rituals} firstTimeVariant="60 min" secondTimeVariant="90 min" />
+        <PricingCard title="Masaż relakacyjny" variant={CARDS_CONTENT[0].massage_relax} firstTimeVariant="60 min" secondTimeVariant="90 min" isRelaxVariant />
+        <PricingCard title="Rytuały SPA" variant={CARDS_CONTENT[0].massage_rituals} firstTimeVariant="60 min" secondTimeVariant="90 min"  />
       </div>
     </div>
-    <p class="absolute bottom-0 mb-10 font-secondary text-lg text-secondary-text font-medium text-center">* wybrane usługi są dostepne tylko w wariantach odpowiednio: 30 minut i 60 minut</p>
   </section>
