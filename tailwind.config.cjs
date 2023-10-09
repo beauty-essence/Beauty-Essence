@@ -16,7 +16,18 @@ module.exports = {
       black: "#000000",
       "button-dark": "#222222"
     },
-    extend: {}
+    extend: {
+      keyframes: {
+        disappear: {
+          "0%:": { opacity: 1 },
+          "50%": { opacity: 1 },
+          "100%": { opacity: 0, visibility: "hidden" }
+        }
+      }
+    },
+    animation: {
+      preloader: "disappear 3s ease-in-out forwards"
+    }
   },
   plugins: []
 }

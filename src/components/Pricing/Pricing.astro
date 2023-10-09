@@ -3,41 +3,100 @@ import PricingCard from "./PricingCard.astro"
 
 const CARDS_CONTENT = [
   {
-
-    first: [
+    massage_relax: [
       {
-        variant: "Wariant 1",
-        firstPrice: "50",
-        secondPrice: "100"
+        variant: "Masaż balijski",
+        firstPrice: "219 zł",
+        secondPrice: "259 zł"
       },
       {
-        variant: "Wariant 2",
-        firstPrice: "120",
-        secondPrice: "150"
+        variant: "Masaż lomi lomi",
+        firstPrice: "-",
+        secondPrice: "-"
       },
       {
-        variant: "Wariant 3",
-        firstPrice: "123",
-        secondPrice: "456"
+        variant: "Masaż olejkami aromatycznymi",
+        firstPrice: "209 zł",
+        secondPrice: "259 zł"
+      },
+    ],
+    massage_intensive: [
+      {
+        variant: "Masaż tajski",
+        firstPrice: "199 zł",
+        secondPrice: "249 zł"
+      },
+      {
+        variant: "Masaż sportowo-leczniczy",
+        firstPrice: "219 zł",
+        secondPrice: "259 zł"
+      },
+    ],
+    massage_warming: [
+      {
+        variant: "Masaż stemplami ziołowymi",
+        firstPrice: "239 zł",
+        secondPrice: "279 zł"
+      },
+      {
+        variant: "Masaż gorącymi kamieniami",
+        firstPrice: "229 zł",
+        secondPrice: "279 zł"
+      },
+      {
+        variant: "Masaż świecą aromatyczną",
+        firstPrice: "229 zł",
+        secondPrice: "279 zł"
+      },
+    ],
+    massage_rituals: [
+      {
+        variant: "Rytuał Orient (ekskluzywny)",
+        firstPrice: "-",
+        secondPrice: "390 zł"
+      },
+      {
+        variant: "Rytuał Jedwab (ekskluzywny)",
+        firstPrice: "-",
+        secondPrice: "390 zł"
+      },
+      {
+        variant: "Rytuał Tytan (ekskluzywny)",
+        firstPrice: "-",
+        secondPrice: "390 zł"
+      },
+      {
+        variant: "Rytuał Bursztynowy",
+        firstPrice: "-",
+        secondPrice: "360 zł"
+      },
+      {
+        variant: "Rytuał Grejpfrutowy",
+        firstPrice: "-",
+        secondPrice: "360 zł"
+      },
+      {
+        variant: "Rytuał Czerwone Wino",
+        firstPrice: "-",
+        secondPrice: "360 zł"
       }
     ]
   }
 ]
 ---
-
-<section class="w-full flex justify-center items-center py-10 lg:py-28">
-    <div class="md:py-10 flex flex-col justify-center items-center md:items-start">
+<section class="relative w-full flex justify-center items-center py-10 lg:py-28">
+    <div class="md:py-10 flex flex-col justify-center items-center md:items-start mb-10 md:mb-[unset]">
       <div class="mb-12">
         <h3 class="text-7xl font-primary font-bold text-button-dark mb-3">
           Cennik
         </h3>
         <p class="text-secondary-text font-secondary text-xl font-medium">Sprawdź wycenę naszych usług</p>
       </div>
-      <div class="flex flex-wrap justify-center lg:justify-start items-center gap-11 max-w-[1000px]">
-        <PricingCard title="Masaż relakacyjny" variant={CARDS_CONTENT[0].first} />
-        <PricingCard title="Masaż intensywny" variant={CARDS_CONTENT[0].first} />
-        <PricingCard title="Masaż rozgrzewający" variant={CARDS_CONTENT[0].first} />
-        <PricingCard title="Masaż dla dwojga" variant={CARDS_CONTENT[0].first} />
+      <div class="flex flex-wrap justify-center lg:justify-start items-baseline gap-11 p-10 md:p-0 max-w-[1000px]">
+        <PricingCard title="Masaż rozgrzewający" variant={CARDS_CONTENT[0].massage_warming} firstTimeVariant="60 min" secondTimeVariant="90 min" />
+        <PricingCard title="Masaż intensywny" variant={CARDS_CONTENT[0].massage_intensive} firstTimeVariant="60 min" secondTimeVariant="90 min" />
+        <PricingCard title="Masaż relaksacyjny" variant={CARDS_CONTENT[0].massage_relax} firstTimeVariant="60 min" secondTimeVariant="90 min" isRelaxVariant />
+        <PricingCard title="Rytuały SPA" variant={CARDS_CONTENT[0].massage_rituals} firstTimeVariant="60 min" secondTimeVariant="90 min"  />
       </div>
     </div>
   </section>

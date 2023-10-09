@@ -3,6 +3,7 @@ import logo_gold from "assets/logo-gold.svg"
 import facebook_icon from "assets/icons/FacebookIcon.svg"
 import instagram_icon from "assets/icons/InstagramIcon.svg"
 import twitter_icon from "assets/icons/TwitterIcon.svg"
+import { ROUTES } from "helpers/ROUTES"
 ---
 
 <footer
@@ -17,14 +18,11 @@ import twitter_icon from "assets/icons/TwitterIcon.svg"
         Twoje chwile spokoju <br /> w zgiełku dnia.
       </h3>
       <div class="flex gap-2">
-        <a href="https://facebook.com" target="_blank">
-          <img src={facebook_icon.src} />
+        <a href="https://www.facebook.com/BeautyEssenceTorun" target="_blank">
+          <img src={facebook_icon.src} alt="Ikona Facebook" />
         </a>
-        <a href="https://instagram.com" target="_blank">
-          <img src={instagram_icon.src} />
-        </a>
-        <a href="https://twitter.com" target="_blank">
-          <img src={twitter_icon.src} />
+        <a href="https://www.instagram.com/beautyessenceoriental/" target="_blank">
+          <img src={instagram_icon.src} alt="Ikona Instagram" />
         </a>
       </div>
     </div>
@@ -33,21 +31,26 @@ import twitter_icon from "assets/icons/TwitterIcon.svg"
       <div class="flex flex-col gap-4 text-white">
         <h5 class="font-primary text-2xl">Kontakt</h5>
         <p>
-          1487 Rocky Horse Carrefour 1487 Rocky
+          Beauty Essence Sp. z o.o.
           <br />
-           HorseArlington, TX 16819 United
+          ul. Most Pauliński 1m3
+          <br>
+          87-100 Toruń
+          <br>
+          NIP: 9562385613
         </p>
-        <p>+8 520-150-001</p>
-        <p>kontakt@beauty-essence.pl</p>
+        <p>+48 789 585 586</p>
+        <p>recepcja@beauty-essence.pl</p>
       </div>
 
       <div class="flex flex-col gap-2 text-white">
         <h5 class="font-primary text-2xl">Menu</h5>
-        <a href="/">Home</a>
-        <a href="/">O nas</a>
-        <a href="/">Cennik</a>
-        <a href="/">Kontakt</a>
-        <a href="/">Galeria</a>
+        <a href={ROUTES.home}>Home</a>
+        <a href={ROUTES.aboutUs}>O nas</a>
+        <a href={ROUTES.pricing}>Cennik</a>
+        <a href={ROUTES.contact}>Kontakt</a>
+        <a href={ROUTES.gallery}>Galeria</a>
+        <a href={ROUTES.policy}>Polityka <br> Prywatności</a>
       </div>
     </div>
   </div>
