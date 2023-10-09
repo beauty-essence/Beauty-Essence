@@ -59,7 +59,8 @@ const Navigation = () => {
               Cennik
             </li>
           </a>
-          <a href={ROUTES.gallery}>
+          {/* <a href={ROUTES.gallery}> */}
+          <a href={ROUTES.home}>
             <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
               Galeria
             </li>
@@ -70,12 +71,13 @@ const Navigation = () => {
         </a>
 
         <ul className="flex gap-10 items-center">
-          <a href={ROUTES.contact}>
+          <a href={ROUTES.vouchers}>
             <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
-              Kontakt
+              Vouchery
             </li>
           </a>
-          <a href={currentPath !== "/" ? "/#offer" : "#offer"}>
+          {/* <a href={currentPath !== "/" ? "/#offer" : "#offer"}> */}
+          <a href={ROUTES.home}>
             <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
               Oferta
             </li>

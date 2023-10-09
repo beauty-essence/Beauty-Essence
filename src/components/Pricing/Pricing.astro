@@ -19,11 +19,6 @@ const CARDS_CONTENT = [
         firstPrice: "209 zł",
         secondPrice: "259 zł"
       },
-      {
-        variant: "Masaż z peelingiem",
-        firstPrice: "219 zł",
-        secondPrice: "259 zł"
-      }
     ],
     massage_intensive: [
       {
@@ -33,11 +28,6 @@ const CARDS_CONTENT = [
       },
       {
         variant: "Masaż sportowo-leczniczy",
-        firstPrice: "219 zł",
-        secondPrice: "259 zł"
-      },
-      {
-        variant: "Masaż Shiatsu",
         firstPrice: "219 zł",
         secondPrice: "259 zł"
       },
@@ -103,9 +93,9 @@ const CARDS_CONTENT = [
         <p class="text-secondary-text font-secondary text-xl font-medium">Sprawdź wycenę naszych usług</p>
       </div>
       <div class="flex flex-wrap justify-center lg:justify-start items-baseline gap-11 p-10 md:p-0 max-w-[1000px]">
-        <PricingCard title="Masaż intensywny" variant={CARDS_CONTENT[0].massage_intensive} firstTimeVariant="60 min" secondTimeVariant="90 min" />
         <PricingCard title="Masaż rozgrzewający" variant={CARDS_CONTENT[0].massage_warming} firstTimeVariant="60 min" secondTimeVariant="90 min" />
-        <PricingCard title="Masaż relakacyjny" variant={CARDS_CONTENT[0].massage_relax} firstTimeVariant="60 min" secondTimeVariant="90 min" isRelaxVariant />
+        <PricingCard title="Masaż intensywny" variant={CARDS_CONTENT[0].massage_intensive} firstTimeVariant="60 min" secondTimeVariant="90 min" />
+        <PricingCard title="Masaż relaksacyjny" variant={CARDS_CONTENT[0].massage_relax} firstTimeVariant="60 min" secondTimeVariant="90 min" isRelaxVariant />
         <PricingCard title="Rytuały SPA" variant={CARDS_CONTENT[0].massage_rituals} firstTimeVariant="60 min" secondTimeVariant="90 min"  />
       </div>
     </div>
