@@ -37,8 +37,8 @@ const MobileNavigationList = ({
             Vouchery
           </li>
         </a>
-        {/* <a href={window.location.pathname !== "/" ? "/#offer" : "#offer"}> */}
-        <a href={ROUTES.home}>
+        <a href={window.location.pathname !== "/" ? "/#offer" : "#offer"}>
+          {/* <a href={ROUTES.home}> */}
           <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
             Oferta
           </li>

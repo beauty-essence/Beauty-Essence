@@ -9,7 +9,7 @@ export const ROUTES = {
     vouchers: "/vouchery",
     massagesIntensive: "/masaze-intensywne",
     massagesRelaxtion: "/masaze-relaksacyjne",
-    massagesWarming: "/masaze-rozgrzewające",
+    massagesWarming: "/masaze-rozgrzewajace",
     massagesDuo: "/masaze-dla-dwojga",
     massagesTreatments: "/masaze-zabiegi",
 }

@@ -100,7 +100,7 @@ const Contact = () => {
               <img src={facebook_icon.src} alt="Ikona Facebook" />
             </a>
             <a
-              href="https://www.instagram.com/beautyessenceoriental/"
+              href="https://www.instagram.com/beautyessence_torun/"
               target="_blank"
             >
               <img src={instagram_icon.src} alt="Ikona instagram" />

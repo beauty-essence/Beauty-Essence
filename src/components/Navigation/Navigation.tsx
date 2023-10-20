@@ -76,8 +76,8 @@ const Navigation = () => {
               Vouchery
             </li>
           </a>
-          {/* <a href={currentPath !== "/" ? "/#offer" : "#offer"}> */}
-          <a href={ROUTES.home}>
+          <a href={currentPath !== "/" ? "/#offer" : "#offer"}>
+            {/* <a href={ROUTES.home}> */}
             <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
               Oferta
             </li>
