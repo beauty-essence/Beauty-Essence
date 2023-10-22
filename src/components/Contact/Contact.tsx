@@ -105,9 +105,6 @@ const Contact = () => {
             >
               <img src={instagram_icon.src} alt="Ikona instagram" />
             </a>
-            {/* <a href="https://twitter.com" target="_blank">
-              <img src={twitter_icon.src} />
-            </a> */}
           </div>
         </div>
         <FormProvider {...methods}>
