@@ -1,64 +1,147 @@
 ---
 import PricingCard from "./PricingCard.astro"
 
+// const CARDS_CONTENT = [
+//   {
+//     massage_relax: [
+//       {
+//         variant: "Masaż balijski",
+//         firstPrice: "229 zł",
+//         secondPrice: "269 zł"
+//       },
+//       {
+//         variant: "Masaż lomi lomi",
+//         firstPrice: "229 zł",
+//         secondPrice: "269 zł"
+//       },
+//       {
+//         variant: "Masaż olejkami aromatycznymi",
+//         firstPrice: "209 zł",
+//         secondPrice: "249 zł"
+//       },
+//     ],
+//     massage_intensive: [
+//       {
+//         variant: "Masaż tajski",
+//         firstPrice: "195 zł",
+//         secondPrice: "225 zł"
+//       },
+//       {
+//         variant: "Masaż sportowo-leczniczy",
+//         firstPrice: "219 zł",
+//         secondPrice: "249 zł"
+//       },
+//     ],
+//     massage_warming: [
+//       {
+//         variant: "Masaż stemplami ziołowymi",
+//         firstPrice: "239 zł",
+//         secondPrice: "279 zł"
+//       },
+//       {
+//         variant: "Masaż gorącymi kamieniami",
+//         firstPrice: "229 zł",
+//         secondPrice: "279 zł"
+//       },
+//       {
+//         variant: "Masaż świecą aromatyczną",
+//         firstPrice: "229 zł",
+//         secondPrice: "279 zł"
+//       },
+//     ],
+//     massage_rituals: [
+//       {
+//         variant: "Rytuał Orient (ekskluzywny)",
+//         firstPrice: "-",
+//         secondPrice: "390 zł"
+//       },
+//       {
+//         variant: "Rytuał Jedwab (ekskluzywny)",
+//         firstPrice: "-",
+//         secondPrice: "390 zł"
+//       },
+//       {
+//         variant: "Rytuał Tytan (ekskluzywny)",
+//         firstPrice: "-",
+//         secondPrice: "390 zł"
+//       },
+//       {
+//         variant: "Rytuał Bursztynowy",
+//         firstPrice: "-",
+//         secondPrice: "360 zł"
+//       },
+//       {
+//         variant: "Rytuał Grejpfrutowy",
+//         firstPrice: "-",
+//         secondPrice: "360 zł"
+//       },
+//       {
+//         variant: "Rytuał Czerwone Wino",
+//         firstPrice: "-",
+//         secondPrice: "360 zł"
+//       }
+//     ]
+//   }
+// ]
+
 const CARDS_CONTENT = [
   {
-    massage_relax: [
+    massage_oriental: [
       {
-        variant: "Masaż balijski",
-        firstPrice: "219 zł",
-        secondPrice: "259 zł"
+        variant: "Masaż tajski",
+        firstPrice: "195 zł",
+        secondPrice: "225 zł"
       },
       {
-        variant: "Masaż lomi lomi",
-        firstPrice: "-",
-        secondPrice: "-"
+        variant: "Masaż leczniczo-sportowy",
+        firstPrice: "219 zł",
+        secondPrice: "249 zł"
+      },
+      {
+        variant: "Masaż balijski",
+        firstPrice: "229 zł",
+        secondPrice: "269 zł"
+      },
+      {
+        variant: "Masaż Lomi Lomi",
+        firstPrice: "229 zł",
+        secondPrice: "269 zł"
       },
       {
         variant: "Masaż olejkami aromatycznymi",
         firstPrice: "209 zł",
-        secondPrice: "259 zł"
-      },
-    ],
-    massage_intensive: [
-      {
-        variant: "Masaż tajski",
-        firstPrice: "199 zł",
         secondPrice: "249 zł"
-      },
-      {
-        variant: "Masaż sportowo-leczniczy",
-        firstPrice: "219 zł",
-        secondPrice: "259 zł"
       },
     ],
     massage_warming: [
       {
-        variant: "Masaż stemplami ziołowymi",
-        firstPrice: "239 zł",
-        secondPrice: "279 zł"
-      },
-      {
-        variant: "Masaż gorącymi kamieniami",
+        variant: "Masaż gorącymi kamieniami bazaltowymi",
         firstPrice: "229 zł",
-        secondPrice: "279 zł"
+        secondPrice: "289 zł"
       },
       {
         variant: "Masaż świecą aromatyczną",
         firstPrice: "229 zł",
-        secondPrice: "279 zł"
+        secondPrice: "259 zł"
+      },
+      {
+        variant: "Masaż gorącymi stemplami ziołowymi",
+        firstPrice: "249 zł",
+        secondPrice: "289 zł"
       },
     ],
     massage_rituals: [
       {
         variant: "Rytuał Orient (ekskluzywny)",
         firstPrice: "-",
-        secondPrice: "390 zł"
+        secondPrice: "390 zł",
+        additionalDescription: "peeling + masaż orientalny ciała olejem -> pobudzenie, tajemniczość, kobiecość"
       },
       {
         variant: "Rytuał Jedwab (ekskluzywny)",
         firstPrice: "-",
-        secondPrice: "390 zł"
+        secondPrice: "390 zł",
+        additionalDescription: "peeling + masaż orientalny ciała mleczkiem do masażu-> odmłodzenie i jedwabisty blask"
       },
       {
         variant: "Rytuał Tytan (ekskluzywny)",
@@ -93,10 +176,10 @@ const CARDS_CONTENT = [
         <p class="text-secondary-text font-secondary text-xl font-medium">Sprawdź wycenę naszych usług</p>
       </div>
       <div class="flex flex-wrap justify-center lg:justify-start items-baseline gap-11 p-10 md:p-0 max-w-[1000px]">
-        <PricingCard title="Masaż rozgrzewający" variant={CARDS_CONTENT[0].massage_warming} firstTimeVariant="60 min" secondTimeVariant="90 min" />
-        <PricingCard title="Masaż intensywny" variant={CARDS_CONTENT[0].massage_intensive} firstTimeVariant="60 min" secondTimeVariant="90 min" />
-        <PricingCard title="Masaż relaksacyjny" variant={CARDS_CONTENT[0].massage_relax} firstTimeVariant="60 min" secondTimeVariant="90 min" isRelaxVariant />
-        <PricingCard title="Rytuały SPA" variant={CARDS_CONTENT[0].massage_rituals} firstTimeVariant="60 min" secondTimeVariant="90 min"  />
+        <PricingCard title="Masaże orientalne" variant={CARDS_CONTENT[0].massage_oriental} firstTimeVariant="60 min" secondTimeVariant="90 min" isOrientalVariant />
+        <PricingCard title="Masaże rozgrzewające" variant={CARDS_CONTENT[0].massage_warming} firstTimeVariant="60 min" secondTimeVariant="90 min" />
+        <!-- <PricingCard title="Masaż intensywny" variant={CARDS_CONTENT[0].massage_intensive} firstTimeVariant="60 min" secondTimeVariant="90 min" /> -->
+        <PricingCard title="Rytuały SPA" variant={CARDS_CONTENT[0].massage_rituals} firstTimeVariant="60 min" secondTimeVariant="90 min" isadditionalDescription/>
       </div>
     </div>
   </section>

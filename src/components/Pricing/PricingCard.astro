@@ -4,10 +4,11 @@ interface PricingProps {
     variant: object[]
     firstTimeVariant: string
     secondTimeVariant: string
-    isRelaxVariant?: boolean
+    isOrientalVariant?: boolean
+    isadditionalDescription?: boolean
 }
 
-const { title, variant, firstTimeVariant, secondTimeVariant, isRelaxVariant } = Astro.props
+const { title, variant, firstTimeVariant, secondTimeVariant, isOrientalVariant, additionalDescription,isadditionalDescription } = Astro.props
 ---
 
 
@@ -24,28 +25,46 @@ const { title, variant, firstTimeVariant, secondTimeVariant, isRelaxVariant } = 
         <tbody>
             {variant.map((item: any) => (
              <tr>
-                <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">{item.variant}</td>
+                <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">{item.variant}
+                    <br/>
+                    <span class={`${isadditionalDescription ? "text-sm" : "hidden"}`}>
+                        {item.additionalDescription}
+                    </span>
+                </td>
                 <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">{item.firstPrice}</td>
                 <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">{item.secondPrice}</td>
             </tr>
             ))}
-            <div>
-                <tr class=`${isRelaxVariant ? "" : "hidden"}`>
+                <tr class=`${isOrientalVariant ? "" : "hidden"}`>
+                    <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light text-left md:w-[270px]">Dostępny wariant</th>
+                    <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light">30 min</th>
+                    <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light">45 min</th>
+                </tr>
+                <tr class=`${isOrientalVariant ? "" : "hidden"}`>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">Masaż masaż górnych części ciała</td>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">-</td>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">159 zł</td>
+                </tr>
+                <tr class=`${isOrientalVariant ? "" : "hidden"}`>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">Masaż masaż dolnych części ciała</td>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">-</td>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">159 zł</td>
+                </tr>
+                <tr class=`${isOrientalVariant ? "" : "hidden"}`>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">Indonezyjski masaż twarzy i dekoltu</td>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">-</td>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">179 zł</td>
+                </tr>
+                <tr class=`${isOrientalVariant ? "" : "hidden"}`>
                     <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light text-left md:w-[270px]">Dostępny wariant</th>
                     <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light">30 min</th>
                     <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light">60 min</th>
                 </tr>
-                <tr class=`${isRelaxVariant ? "" : "hidden"}`>
-                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">Masaż masaż górnych części ciała</td>
-                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">139 zł</td>
-                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">189 zł</td>
-                </tr>
-                <tr class=`${isRelaxVariant ? "" : "hidden"}`>
+                <tr class=`${isOrientalVariant ? "" : "hidden"}`>
                     <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">Refleksologia</td>
-                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">139 zł</td>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">140 zł</td>
                     <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">189 zł</td>
                 </tr>
-            </div>
         </tbody>
     </table>
 </div>
