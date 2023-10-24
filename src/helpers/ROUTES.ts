@@ -7,7 +7,7 @@ export const ROUTES = {
     offer: "/oferta",
     policy: "/polityka",
     vouchers: "/vouchery",
-    massagesIntensive: "/masaze-intensywne",
+    massagesOriental: "/masaze-orientalne",
     massagesRelaxtion: "/masaze-relaksacyjne",
     massagesWarming: "/masaze-rozgrzewajace",
     massagesDuo: "/masaze-dla-dwojga",

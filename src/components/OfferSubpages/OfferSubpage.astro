@@ -19,7 +19,7 @@ const {title, firstImage, firstAlt, firstDescription, secondDescription, secondI
 ---
 
 
-<section class="w-full flex flex-col justify-center items-center lg:pt-28">
+<section class="w-full flex flex-col justify-center items-center lg:pt-64">
     <div class="container mx-auto w-full md:py-10 flex flex-col justify-center">
       <h3 class="text-7xl font-primary font-bold text-button-dark mb-12 text-center xl:text-left mt-28 xl:mt-[unset] ml-[4%] xl:ml-[11%]">
         {title}
@@ -33,6 +33,7 @@ const {title, firstImage, firstAlt, firstDescription, secondDescription, secondI
           </p>
           <p class="text-xl text-secondary-text leading-[130%] mb-12">
            {secondDescription}
+           <br>
           </p>
         </div>
         </div>
@@ -57,7 +58,7 @@ const {title, firstImage, firstAlt, firstDescription, secondDescription, secondI
 <section class="w-full flex flex-col justify-center items-center py-10 lg:py-28 bg-primary-light">
   <div class="container mx-auto w-full md:py-10 flex flex-col justify-center items-center gap-10">
     {offerContent.map((item: any) => (
-    <OfferSubpageCard image={item.image} alt={item.alt} title={item.title} subtitle={item.subtitle} description={item.description}  price={item.price} />
+    <OfferSubpageCard image={item.image} alt={item.alt} title={item.title} subtitle={item.subtitle} description={item.description}  price={item.price} isOilMassage={item.isOilMassage} isCandleMassage={item.isCandleMassage} />
     ))}
 
   </div>

@@ -1,0 +1,98 @@
+---
+import OfferSubpage from "components/OfferSubpages/OfferSubpage.astro"
+import Layout from "../layouts/Layout.astro"
+import massanger_photo from "assets/photos/offer/massager.png"
+import human_back_photo from "assets/photos/offer/human-back.png"
+
+
+const MASSAGES_DATA =
+    {
+        title: "Masaże orientalne",
+        firstImage: massanger_photo,
+        firstAlt: "Masowana osoba",
+        firstDescription: "Zanurz się w głęboki stan relaksu i odprężenia dzięki naszym tajskim masażom intensywnym. Nasze doświadczone terapeutki połączą starożytne techniki masażu z nowoczesnym podejściem, aby zapewnić Ci niezapomniane doświadczenie.",
+        secondDescription: "Tajski masaż intensywny to nie tylko zabieg, to podróż, podczas której ciało i umysł odzyskają harmonię. Wykorzystuje on głęboki nacisk i specjalne techniki manipulacyjne, które pomagają złagodzić napięcie mięśniowe, stres i ból. To idealny wybór dla tych, którzy potrzebują chwili odprężenia od codziennego życia. ",
+        secondImage: human_back_photo,
+        secondAlt: "Masowana osoba",
+    }
+
+const OFFER_CONTENT = [
+    {
+    image: massanger_photo,
+    alt: "Masowana osoba",
+    title: "Masaż tajski",
+    subtitle: "Pełen relaks dla ciała i duszy",
+    description: "Intensywny, głęboki masaż ciała. Składowe masażu tajskiego to rozciąganie, elementy jogi, akupresura i refleksologia. Jest idealny dla osób lubiących intensywne masaże. Efekty terapeutyczne są odczuwalne niemal od razu. Masaż tajski zwiększy zakres rozciągania więzadeł i stawów, zmniejszy bóle mięśniowo- szkieletowe oraz napięciowy ból głowy i migreny. ",
+    price: "195 PLN - 225 PLN"
+},
+{
+    image: massanger_photo,
+    alt: "Masowana osoba",
+    title: "Masaż Lomi Lomi",
+    subtitle: "Odprężenie z aromatem natury",
+    description: "Masaż Lomi Lomi to hawajski masaż, który poprawia formę psycho- fizyczną. Podczas masażu terapeutka uciska ciało za pomocą przedramion, łokci oraz masuje dłońmi. Zabieg, wykonywany zgodnie z tradycyjną metodą, rozluźnia całe grupy mięśni, a dzięki posuwistym ruchom przypominającym spokojne ruchy wód oceanu, usprawnia przepływ limfy i pomaga zniwelować obrzęki. Masaż Lomi Lomi gwarantuje relaks, redukuje napięcie oraz zmęczenie.",
+    price: "229 PLN - 269 PLN"
+},
+{
+    image: massanger_photo,
+    alt: "Masowana osoba",
+    title: "Masaż balijski",
+    subtitle: "Odbudowa wewnętrznego spokoju",
+    description: "Masaż balijski to masaż całego ciała, w którym specjalizują się nasze balijskie terapeutki. Jest to wyjątkowa forma relaksu, dzięki której pozbędziemy się bólu kręgosłupa, bólu mięśni, a nawet symptomów migreny. To masaż, który głęboko odpręży, łączy w sobie elementy akupresury, ajurwedy i refleksologii. Wpłynie na poprawę jakości snu, a także zlikwiduje napięcie i stres. Regeneruje siły witalne, a to wszystko przy użyciu olejku aromatycznego.",
+    price: "229 PLN - 269 PLN"
+},
+{
+    image: massanger_photo,
+    alt: "Masowana osoba",
+    title: "Masaż sportowo-leczniczy",
+    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+    description: "Masaż sportowo-leczniczy – dedykowany osobom, którym zależy na większej elastyczności tkanek, na lepszym ukrwieniu oraz ruchomości w stawach. Jest idealny dla osób aktywnych fizycznie oraz dla zawodowych sportowców. Uwalnia ciało od bólu, rozluźnia mięśnie, głęboko relaksuje i pozwala pozbyć się stresu. Masaż ten dotleni komórki i zniweluje ryzyko powstawiania kontuzji.",
+    price: "219 PLN - 249 PLN"
+},
+{
+    image: massanger_photo,
+    alt: "Masowana osoba",
+    title: "Refleksologia",
+    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+    description: "Refleksologia- doskonały zabieg usuwający uczucie zmęczonych i ciężkich nóg. Jest to technika akupresury, która pobudza ponad 7000 zakończeń nerwowych ukrytych w stopach. Poprzez precyzyjne naciski, wykonane przez nasze terapeutki, dochodzi do uwolnienia zablokowanych ścieżek energetycznych. Tym samym, masując odpowiedni obszar stopy, możemy pozbyć się bólu kręgosłupa, głowy, wątroby czy dolegliwości ze strony układu hormonalnego.",
+    price: "140 PLN - 189 PLN"
+},
+{
+    image: massanger_photo,
+    alt: "Masowana osoba",
+    title: "Masaż górnych części ciała",
+    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+    description: "Masaż górnych części ciała – to idealny masaż dla osób odczuwających ból związany z siedzącym trybem życia. Terapeutka skupia się na masażu pleców, ramion, karku oraz głowy. Pozwala poczuć ulgę, rozluźnienie mięśni. Miejsca najbardziej narażona na stres zostają rozluźnione.",
+    price: "159 PLN"
+},
+{
+    image: massanger_photo,
+    alt: "Masowana osoba",
+    title: "Masaż dolnych części ciała",
+    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+    description: "Masaż dolnych części ciała – to masaż stóp, nóg oraz pośladków. To idealny masaż dla osób, które spędzają dużo czasu w pozycji stojącej. Terapeutki masują dynamicznie, co pozwala osiągnąć oczekiwane rezultaty rozluźnienia i rozciągnięcia. Skupienie masażu kierowane jest w najbardziej spięte miejsca wyżej określonych części ciała.",
+    price: "159 PLN"
+},
+{
+    image: massanger_photo,
+    alt: "Masowana osoba",
+    title: "Masaż olejkami aromatycznymi",
+    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+    description: "Masaż olejkami aromatycznymi – masaż niezwykle relaksujący, który uwalnia od stresu. Aromaterapia potęguje odpoczynek. Usprawnia działanie układu nerwowego oraz odpornościowego. Terapeutka skupia się na najbardziej spiętych partiach ciała. Wykorzystujemy następujące olejki:",
+    price: "159 PLN",
+    isOilMassage: true
+},
+{
+    image: massanger_photo,
+    alt: "Masowana osoba",
+    title: "Indonezyjski masaż twarzy i dekoltu",
+    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+    description: 'Indonezyjski masaż twarzy i dekoltu –  masaż stymulujący przepływ krwi i limfy masowanych obszarów. Pobudza tkanki do produkcji kolagenu poprzez terapeutyczne ruchy z elementami akupresury. W pierwszej kolejności terapeutka wykonuje demakijaż twarzy i oczu delikatną emulsją, bogatą w oleje roślinne, pantenol i aloes, która zmiękcza, nawilża i uspokaja skórę. Następnie stosuje tonik, hydrolat rumianku rzymskiego i szałwii, daje to uczucie świeżości, nawilżenia i złagodzenia. Do masażu używany jest olejek, który dzięki zawartości olejów roślinnych - odżywia, pantenolu i aloesu -  wycisza, witamin - dba o zdrowie skóry oraz dzięki zawartości kombuchy wpłynie na gładkość i przyspieszy regenerację naskórka, spowolni procesy starzenia i poprawi koloryt skóry. Skład olejku do masażu twarzy: olej z pestek winogron, olej rzepakowy, pantenol, kombucha, wyciąg z liści aloesu, wit E, C, D i B5, antyutleniacz.',
+    price: "159 PLN"
+},
+]
+---
+
+<Layout>
+    <OfferSubpage title={MASSAGES_DATA.title} firstImage={MASSAGES_DATA.firstImage} firstAlt={MASSAGES_DATA.firstAlt} firstDescription={MASSAGES_DATA.firstDescription} secondDescription={MASSAGES_DATA.secondDescription} secondImage={MASSAGES_DATA.secondImage} secondAlt={MASSAGES_DATA.secondAlt} offerContent={OFFER_CONTENT} />
+</Layout>

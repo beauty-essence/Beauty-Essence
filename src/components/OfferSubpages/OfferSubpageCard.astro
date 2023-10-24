@@ -9,9 +9,11 @@ interface Props {
     subtitle: string
     description: string
     price: string
+    isOilMassage?: boolean
+    isCandleMassage?: boolean
 }
 
-const { image, alt, title, subtitle, description, price } = Astro.props
+const { image, alt, title, subtitle, description, price, isOilMassage, isCandleMassage } = Astro.props
 ---
 
 <div class="flex flex-col lg:flex-row justify-center items-center gap-4 md:gap-11 max-w-[1000px]">
@@ -21,6 +23,18 @@ const { image, alt, title, subtitle, description, price } = Astro.props
         <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p>
         <p class="text-xl text-secondary-text leading-[130%] mb-6">
             {description}
+            <br>
+            <ul class=`${isOilMassage ? "" : "hidden"} text-lg text-secondary-text leading-[130%] mb-6`>
+                <li><b>• Różany</b> -  łagodzi stres, poprawia nastrój, obniża napięcie i ułatwia zasypianie.</li>
+                <li><b>• Jaśminowy</b> - działa wyciszająco i uspokajająco na ciało i zmysły, redukuje poziom stresu i poprawia nastrój, pomaga zachować równowagę emocjonalną</li>
+                <li><b>• Rokitnik</b> - ekstrakt z owoców z rokitnika zawiera hormon szczęścia - serotoninę, który poprawia nastrój i tonizuje organizm.</li>
+                <li><b>• pomarańcza Bergamota</b> – poprawia nastrój, redukuje poziom stresu. Niweluje zmęczenie oraz wpływa na odczucie pobudzenia. Poprawia koncentrację i pobudza umysł do pracy.</li>
+            </ul>
+            <p class=`${isCandleMassage ? "" : "hidden"} text-lg text-secondary-text leading-[130%] mb-6`>
+                Do wyboru świece: <br>
+                -zmysłowa i delikatna o zapachu bukietu kwiatowo – piżmowego. Białe piżmo posiada właściwości relaksujące, napinające, aromatyczne, dodaje energii, doskonale sprawdza się jako afrodyzjak. <br>
+                -zapach zielonej herbaty to delikatny, świeży zapach, który wykazuje właściwości relaksacyjne oraz wyciszające
+            </p>
           </p>
           <p class="font-secondary text-button-dark text-2xl font-regulary">{price}</p>
     </div>
