@@ -27,14 +27,14 @@ const MobileNavigationList = ({
             Cennik
           </li>
         </a>
-        <a href={ROUTES.home}>
+        <a href={ROUTES.gallery}>
           <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
             Galeria
           </li>
         </a>
-        <a href={ROUTES.vouchers}>
+        <a href={ROUTES.contact}>
           <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
-            Vouchery
+            Kontakt
           </li>
         </a>
         <a href={window.location.pathname !== "/" ? "/#offer" : "#offer"}>

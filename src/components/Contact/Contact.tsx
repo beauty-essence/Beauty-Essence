@@ -73,7 +73,7 @@ const Contact = () => {
   return (
     <section className="relative w-full flex justify-center items-center pt-36 lg:pb-16 lg:pt-48">
       <div className="container md:flex md:gap-5 justify-center">
-        <div className="bg-primary-light p-10 flex flex-col gap-5 text-secondary-text md:w-full max-w-[450px]">
+        <div className="bg-primary-light p-10 flex flex-col gap-5 text-secondary-text md:w-full max-w-[450px] relative">
           <h1 className="text-5xl font-primary font-bold text-button-dark">
             Kontakt
           </h1>
@@ -82,16 +82,19 @@ const Contact = () => {
 
           <div>
             <p>
-              Beauty Essence Sp. z o.o.
+              BEAUTY ESSENCE Sp. z o.o.
               <br />
-              ul. Most Pauliński 1m3
+              ul. Most Pauliński 1/3
               <br />
               87-100 Toruń
             </p>
-            <p>+48 789 585 586</p>
-            <p>recepcja@beauty-essence.pl</p>
+            <p>Recepcja Salonu +48 789 585 586</p>
+            <a href="mailto:recepcja@beauty-essence.pl">
+              recepcja@beauty-essence.pl
+            </a>
           </div>
 
+          <p>Dołącz do nas: </p>
           <div className="flex gap-2">
             <a
               href="https://www.facebook.com/BeautyEssenceTorun"
@@ -106,6 +109,13 @@ const Contact = () => {
               <img src={instagram_icon.src} alt="Ikona instagram" />
             </a>
           </div>
+          <p className="absolute bottom-0 text-xs mr-10 mb-10">
+            Beauty Essence sp. z o.o. z siedzibą w Toruniu pod adresem ul. Most
+            Pauliński 1/3, wpisana jest do rejestru przedsiębiorców Krajowego
+            Rejestru Sądowego pod numerem <br /> KRS: 0001045932, <br />{" "}
+            posiadająca REGON: 525782795, <br /> NIP: 9562385613. <br />
+            Rachunek bieżący w PLN 24 1240 1183 1111 0011 2805 6870
+          </p>
         </div>
         <FormProvider {...methods}>
           <form className="p-4 flex flex-col gap-2 md:w-full max-w-[400px]">

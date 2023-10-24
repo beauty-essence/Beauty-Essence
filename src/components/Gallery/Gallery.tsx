@@ -1,10 +1,10 @@
 import React from "react"
 import Masonry from "react-responsive-masonry"
-import one from "assets/gallery/one.png"
-import two from "assets/gallery/two.png"
-import three from "assets/gallery/three.png"
-import four from "assets/gallery/four.png"
-import five from "assets/gallery/five.png"
+import one from "assets/gallery/one.jpg"
+import two from "assets/gallery/two.jpg"
+import three from "assets/gallery/three.jpg"
+import four from "assets/gallery/four.jpg"
+import five from "assets/gallery/five.jpg"
 import arrow_right from "assets/icons/arrow_right.svg"
 import arrow_left from "assets/icons/arrow_left.svg"
 import close from "assets/icons/close.svg"
@@ -16,22 +16,22 @@ const Gallery = (props: { isGalleryPage?: boolean }) => {
     two,
     three,
     four,
-    five,
-    one,
-    two,
-    three,
-    four,
-    five,
-    one,
-    two,
-    three,
-    four,
-    five,
-    one,
-    two,
-    three,
-    four,
     five
+    // one,
+    // two,
+    // three,
+    // four,
+    // five,
+    // one,
+    // two,
+    // three,
+    // four,
+    // five,
+    // one,
+    // two,
+    // three,
+    // four,
+    // five
   ]
 
   const [previewImageIndex, setPreviewImageIndex] = React.useState(0)

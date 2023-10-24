@@ -18,13 +18,13 @@ const { image, alt, title, description, destination } = Astro.props
     <h4 class="text-3xl font-primary font-bold text-button-dark text-center">
       {title}
     </h4>
-    <p class="font-primary text-secondary font-medium text-base text-center">
+    <p class="font-primary text-secondary font-medium text-base text-center mb-12 2xl:mb-2">
       {description}
     </p>
   </div>
   <a
     href={destination}
-    class="bg-primary p-5 2xl:px-12 text-button-dark font-medium 2xl:absolute lg:bottom-0 border-primary border-2
+    class="bg-primary p-5 2xl:px-12 text-button-dark font-medium absolute bottom-0 border-primary border-2
     hover:bg-white hover:transition hover:duration-200 hover:ease-in-out"
     >Zobacz więcej</a
   >

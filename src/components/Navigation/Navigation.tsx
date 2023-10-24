@@ -8,7 +8,7 @@ import { ROUTES } from "helpers/ROUTES"
 const Navigation = () => {
   const [toggled, setIsToggleed] = useState(false)
   const [currentPath, setCurrentPath] = useState(window.location.pathname)
-  const [navigationColor, setNavigationColor] = useState("asd")
+  const [navigationColor, setNavigationColor] = useState("")
 
   useEffect(() => {
     const handleNavigationChange = () => {
@@ -23,7 +23,7 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 800) {
+      if (window.scrollY > 250) {
         setNavigationColor("rgb(49 57 47)")
       } else {
         setNavigationColor("")
@@ -39,7 +39,7 @@ const Navigation = () => {
 
   return (
     <nav
-      className="fixed w-full z-20 bg-top bg-cover"
+      className="fixed w-full z-20 bg-top bg-cover transition-colors duration-300"
       style={{
         backgroundImage: `url(${
           currentPath !== "/" ? HeroBackgroundImage.src : ""
@@ -59,8 +59,8 @@ const Navigation = () => {
               Cennik
             </li>
           </a>
-          {/* <a href={ROUTES.gallery}> */}
-          <a href={ROUTES.home}>
+          <a href={ROUTES.gallery}>
+            {/* <a href={ROUTES.home}> */}
             <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
               Galeria
             </li>
@@ -71,9 +71,9 @@ const Navigation = () => {
         </a>
 
         <ul className="flex gap-10 items-center">
-          <a href={ROUTES.vouchers}>
+          <a href={ROUTES.contact}>
             <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
-              Vouchery
+              Kontakt
             </li>
           </a>
           <a href={currentPath !== "/" ? "/#offer" : "#offer"}>
