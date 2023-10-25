@@ -10,6 +10,6 @@ export const ROUTES = {
     massagesOriental: "/masaze-orientalne",
     massagesRelaxtion: "/masaze-relaksacyjne",
     massagesWarming: "/masaze-rozgrzewajace",
-    massagesDuo: "/masaze-dla-dwojga",
+    massagesRituals: "/rytualy",
     massagesTreatments: "/masaze-zabiegi",
 }
