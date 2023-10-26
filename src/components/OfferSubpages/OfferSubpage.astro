@@ -16,18 +16,20 @@ interface OfferSubpageProps {
   isRitualMassage?: boolean
 }
 
-const {title, firstImage, firstAlt, firstDescription, secondDescription, secondImage, secondAlt, offerContent, isRitualMassage } = Astro.props
+const { title, firstImage, firstAlt, firstDescription, secondDescription, secondImage, secondAlt, offerContent, isRitualMassage } = Astro.props
 ---
 
 
 <section class="w-full flex flex-col justify-center items-center lg:pt-64">
     <div class="container mx-auto w-full md:py-10 flex flex-col justify-center">
-      <h3 class="text-7xl font-primary font-bold text-button-dark mb-12 text-center xl:text-left mt-28 xl:mt-[unset] ml-[4%] xl:ml-[11%]">
+      <h3 class="text-7xl font-primary font-bold text-button-dark mb-12 text-center xl:text-left mt-32 xl:mt-[unset] ml-[4%] xl:ml-[11%]">
         {title}
       </h3>
       <div class="relative">
         <div class="relative justify-center items-start hidden xl:flex">
-          <Image src={firstImage} alt={firstAlt} class="" />
+          <div class="w-[612px] h-[573px] overflow-hidden flex justify-center">
+            <Image src={firstImage} alt={firstAlt} class="w-full h-full object-cover" />
+          </div>
           <div class="-z-10 max-w-[548px] lg:max-w-xl bg-primary-light pt-24 pr-10 pb-96 pl-40 -translate-x-24 translate-y-24">
           <p class="text-xl text-secondary-text leading-[130%] mb-5" >
             {firstDescription}
@@ -40,11 +42,14 @@ const {title, firstImage, firstAlt, firstDescription, secondDescription, secondI
         </div>
         <div class="relative justify-center items-start hidden xl:flex ">
           <div class="hidden lg:block absolute w-full max-w-sm before:h-full h-96 rounded-full bg-primary-light -z-10 left-64 -top-72"></div>
-          <Image src={secondImage} alt={secondAlt} class="-translate-y-64" />
+          <div class="w-[658px] h-[495px] overflow-hidden flex justify-center -translate-y-64">
+            <Image src={secondImage} alt={secondAlt} class="w-full h-full object-cover" />
+          </div>
         </div>
-
         <div class="flex flex-col items-center p-4 xl:hidden">
-          <Image src={secondImage} alt={secondAlt} class="md:max-w-[548px]" />
+          <div class="w-[382px] h-[288px] overflow-hidden flex justify-center">
+            <Image src={secondImage} alt={secondAlt} class="w-full h-full object-cover" />
+          </div>
           <div class="-z-10 md:max-w-[548px] bg-primary-light p-10">
             <p class="text-xl text-secondary-text leading-[130%] mb-5">
               {firstDescription}

@@ -3,22 +3,26 @@ import OfferSubpage from "components/OfferSubpages/OfferSubpage.astro"
 import Layout from "../layouts/Layout.astro"
 import massanger_photo from "assets/photos/offer/massager.png"
 import human_back_photo from "assets/photos/offer/human-back.png"
+import aromaticcandle_massage from "assets/photos/offer/warming/aromaticcandle-massage.jpg"
+import herbal_massage from "assets/photos/offer/warming/herbal-massage.jpg"
+import hotstone_massage from "assets/photos/offer/warming/hotstone-massage.jpg"
+import warmingadditional_photo from "assets/photos/offer/warming/warmingadditional-photo.jpg"
 
 
 const MASSAGES_DATA =
     {
         title: "Masaże rozgrzewające",
-        firstImage: massanger_photo,
+        firstImage: hotstone_massage,
         firstAlt: "Masowana osoba",
         firstDescription: "Zanurz się w głęboki stan relaksu i odprężenia dzięki naszym tajskim masażom intensywnym. Nasze doświadczone terapeutki połączą starożytne techniki masażu z nowoczesnym podejściem, aby zapewnić Ci niezapomniane doświadczenie.",
         secondDescription: "Tajski masaż intensywny to nie tylko zabieg, to podróż, podczas której ciało i umysł odzyskają harmonię. Wykorzystuje on głęboki nacisk i specjalne techniki manipulacyjne, które pomagają złagodzić napięcie mięśniowe, stres i ból. To idealny wybór dla tych, którzy potrzebują chwili odprężenia od codziennego życia. ",
-        secondImage: human_back_photo,
+        secondImage: warmingadditional_photo,
         secondAlt: "Masowana osoba",
     }
 
 const OFFER_CONTENT = [
     {
-    image: massanger_photo,
+    image: hotstone_massage,
     alt: "Masowana osoba",
     title: "Masaż gorącymi kamieniami bazaltowymi",
     subtitle: "Pełen relaks dla ciała i duszy",
@@ -26,7 +30,7 @@ const OFFER_CONTENT = [
     price: "229 PLN - 289 PLN"
 },
 {
-    image: massanger_photo,
+    image: aromaticcandle_massage,
     alt: "Masowana osoba",
     title: "Masaż świecą aromatyczną",
     subtitle: "Odprężenie z aromatem natury",
@@ -35,7 +39,7 @@ const OFFER_CONTENT = [
     isCandleMassage: true
 },
 {
-    image: massanger_photo,
+    image: herbal_massage,
     alt: "Masowana osoba",
     title: "Masaż stemplami ziołowymi",
     subtitle: "Odprężenie z aromatem natury",

@@ -3,22 +3,27 @@ import OfferSubpage from "components/OfferSubpages/OfferSubpage.astro"
 import Layout from "../layouts/Layout.astro"
 import massanger_photo from "assets/photos/offer/massager.png"
 import human_back_photo from "assets/photos/offer/human-back.png"
-
+import orient_massage from "assets/photos/offer/spa/orient-massage.jpg"
+import silk_massage from "assets/photos/offer/spa/silk-massage.jpg"
+import titanium_massage from "assets/photos/offer/spa/titanium-massage.jpg"
+import wine_massage from "assets/photos/offer/spa/wine-massage.jpg"
+import oil_massage from "assets/photos/offer/spa/oil-massage.jpg"
+import amber_massage from "assets/photos/offer/spa/amber-massage.jpg"
 
 const MASSAGES_DATA =
     {
     title: "Rytuały SPA",
-    firstImage: massanger_photo,
+    firstImage: titanium_massage,
     firstAlt: "Masowana osoba",
     firstDescription: "Zanurz się w głęboki stan relaksu i odprężenia dzięki naszym tajskim masażom intensywnym. Nasze doświadczone terapeutki połączą starożytne techniki masażu z nowoczesnym podejściem, aby zapewnić Ci niezapomniane doświadczenie.",
     secondDescription: "Tajski masaż intensywny to nie tylko zabieg, to podróż, podczas której ciało i umysł odzyskają harmonię. Wykorzystuje on głęboki nacisk i specjalne techniki manipulacyjne, które pomagają złagodzić napięcie mięśniowe, stres i ból. To idealny wybór dla tych, którzy potrzebują chwili odprężenia od codziennego życia. ",
-    secondImage: human_back_photo,
+    secondImage: wine_massage,
     secondAlt: "Masowana osoba",
     }
 
 const OFFER_CONTENT = [
     {
-    image: massanger_photo,
+    image: orient_massage,
     alt: "Masowana osoba",
     title: "Rytuał „Orient”",
     subtitle: "Pełen relaks dla ciała i duszy",
@@ -29,7 +34,7 @@ const OFFER_CONTENT = [
     thirdBadge: "bogactwo, wakacje, tajemniczość",
 },
 {
-    image: massanger_photo,
+    image: silk_massage,
     alt: "Masowana osoba",
     title: "Rytuał „Jedwabny”",
     subtitle: "Odprężenie z aromatem natury",
@@ -40,7 +45,7 @@ const OFFER_CONTENT = [
     thirdBadge: "zapach morza i świeżością lasu z kwiatowymi nutami",
 },
 {
-    image: massanger_photo,
+    image: titanium_massage,
     alt: "Masowana osoba",
     title: "Rytuał „Tytan”",
     subtitle: "Odbudowa wewnętrznego spokoju",
@@ -51,7 +56,7 @@ const OFFER_CONTENT = [
     thirdBadge: "świeży męski zapach z nutami ziemi",
 },
 {
-    image: massanger_photo,
+    image: wine_massage,
     alt: "Masowana osoba",
     title: "Rytuał „Czerwone Wino”",
     subtitle: "Rozluźnienie napiętych mięśni i umysłu",
@@ -62,7 +67,7 @@ const OFFER_CONTENT = [
     thirdBadge: "zapach winogron, ziemi, wina",
 },
 {
-    image: massanger_photo,
+    image: oil_massage,
     alt: "Masowana osoba",
     title: "Rytuał „Rajski Grapefruit”",
     subtitle: "Rozluźnienie napiętych mięśni i umysłu",
@@ -73,11 +78,11 @@ const OFFER_CONTENT = [
     thirdBadge: "świeżość, radość, inspiracja",
 },
 {
-    image: massanger_photo,
+    image: amber_massage,
     alt: "Masowana osoba",
     title: "Rytuał „Bursztynowy”",
     subtitle: "Rozluźnienie napiętych mięśni i umysłu",
-    description: "Masaż na kosmetykach z wyciągiem z bursztynu rozluźnia mięśnie i umysł od stresu. Bursztyn ogrzewa ciało i stan emocjonalny, jest nośnikiem energii i równowagi. Daje moc, która ma pozytywny wpływ na ludzkie ciało i skórę. Kontakt z ciałem uaktywnia kreatywność, pobudza siłę fizyczną i psychiczną, zwiększa pewność siebie i zapewnia optymizm i żywość. W preparatach do masażu wykorzystuje się puder i ekstrakt bursztynowy który wraz z cennymi olejami roślinnymi bardzo korzystnie wpływa nie tylko na skórę ale również na cały organizm, dodając mu moc.",
+    description: "Masaż na produktach z wyciągiem z bursztynu rozluźnia mięśnie i umysł od stresu. Bursztyn ogrzewa ciało i stan emocjonalny, jest nośnikiem energii i równowagi. Daje moc, która ma pozytywny wpływ na ludzkie ciało i skórę. Kontakt z ciałem uaktywnia kreatywność, pobudza siłę fizyczną i psychiczną, zwiększa pewność siebie i zapewnia optymizm i żywość. W preparatach do masażu wykorzystuje się puder i ekstrakt bursztynowy który wraz z cennymi olejami roślinnymi bardzo korzystnie wpływa nie tylko na skórę ale również na cały organizm, dodając mu moc.",
     price: "360 PLN",
     firstBadge: "równowaga, lekkość, radość życia, relaks",
     secondBadge: "gładkie, zregenerowanie ciało",
