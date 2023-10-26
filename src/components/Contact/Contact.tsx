@@ -109,7 +109,7 @@ const Contact = () => {
               <img src={instagram_icon.src} alt="Ikona instagram" />
             </a>
           </div>
-          <p className="absolute bottom-0 text-xs mr-10 mb-10">
+          <p className="text-xs">
             Beauty Essence sp. z o.o. z siedzibą w Toruniu pod adresem ul. Most
             Pauliński 1/3, wpisana jest do rejestru przedsiębiorców Krajowego
             Rejestru Sądowego pod numerem <br /> KRS: 0001045932, <br />{" "}

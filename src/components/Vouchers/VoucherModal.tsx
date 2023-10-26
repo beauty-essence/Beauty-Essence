@@ -11,14 +11,21 @@ interface VoucherModalTypes {
 }
 
 const defaultValues = {
-  variant: ""
+  variant: "",
+  acceptTerms: false
 }
 
 export const voucherValidation = yup.object({
-  variant: yup.string().required("Wybierz jeden z wariantów")
+  variant: yup.string().required("Wybierz jeden z wariantów"),
+  acceptTerms: yup
+    .boolean()
+    .oneOf([true], "Musisz zaakceptować regulamin sklepu")
 })
 
-type defaultFormValuesTypes = typeof defaultValues
+type defaultFormValuesTypes = {
+  variant: string
+  acceptTerms: boolean | undefined
+}
 
 const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
   const [selectedVariant, setSelectedVariant] = useState(defaultValues.variant)
@@ -41,7 +48,9 @@ const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
     setSelectedVariant(value)
   }
 
-  const onSubmit: SubmitHandler<defaultFormValuesTypes> = async data => {
+  const onSubmit: SubmitHandler<
+    Pick<defaultFormValuesTypes, "variant">
+  > = async data => {
     const ParsedData = parseInt(data.variant)
     console.log(ParsedData)
     try {
@@ -153,41 +162,38 @@ const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
               <p className="font-primary text-md text-[#ff0000]">
                 {errors.variant?.message}
               </p>
-              {/* <div className="flex flex-col gap-1">
-                <label htmlFor="identity" className="font-primary text-lg">
-                  Imię i nazwisko
-                </label>
-                <input
-                  id="identity"
-                  type="text"
-                  {...register("identity")}
-                  placeholder="Jan Kowalski"
-                  className="border-2 border-primary px-2 py-1"
-                />
-                <p className="font-primary text-md text-[#ff0000]">
-                  {errors.identity?.message}
-                </p>
-              </div> */}
-              {/* <div className="flex flex-col gap-1">
-                <label htmlFor="emailAddress" className="font-primary text-lg">
-                  Email
-                </label>
-                <input
-                  id="emailAddress"
-                  type="email"
-                  {...register("emailAddress")}
-                  placeholder="twój@email.com"
-                  className="border-2 border-primary px-2 py-1"
-                />
-                <p className="font-primary text-md text-[#ff0000]">
-                  {errors.emailAddress?.message}
-                </p>
-              </div> */}
               <p className="font-primary text-md text-secondary">
-                Wypełniająć formularz i dokonując zakupu akceptujesz naszą
+                &sdot; Voucher jest ważny przez 6 miesięcy od daty zakupu.
+                <br />
+                &sdot; Voucher do druku oraz potwierdzenie płatności znajdą
+                Państwo na e‑mailu po dokonaniu płatności.
+                <br />
+                &sdot; Korzystając ze strony zgadzasz się na używanie plików
+                cookies zainstalowanych na Twoim urządzeniu. Więcej o plikach
+                cookies i możliwościach zmiany ich ustawień dowiesz się w
                 <a href={ROUTES.policy} className="font-bold underline ml-1">
-                  politykę prywatności
+                  polityka prywatności
                 </a>
+              </p>
+              <div className="flex gap-2 items-baseline">
+                <input
+                  type="checkbox"
+                  id="acceptTerms"
+                  {...register("acceptTerms")}
+                />
+
+                <p className="font-primary text-md text-secondary">
+                  Akceptuję
+                  <a
+                    href={ROUTES.regulations}
+                    className="font-bold underline ml-1"
+                  >
+                    regulamin sklepu
+                  </a>
+                </p>
+              </div>
+              <p className="font-primary text-md text-[#ff0000]">
+                {errors.acceptTerms?.message}
               </p>
               <button
                 type="submit"

@@ -3,6 +3,9 @@ import OfferSubpage from "components/OfferSubpages/OfferSubpage.astro"
 import Layout from "../layouts/Layout.astro"
 import massanger_photo from "assets/photos/offer/massager.png"
 import human_back_photo from "assets/photos/offer/human-back.png"
+import thaimassage_photo from "assets/photos/offer/oriental/thai-massage.jpg"
+import lomilomi_photo from "assets/photos/offer/oriental/lomi-massage.jpg"
+import bali_massage from "assets/photos/offer/oriental/bali-massage.jpg"
 
 
 const MASSAGES_DATA =
@@ -18,7 +21,7 @@ const MASSAGES_DATA =
 
 const OFFER_CONTENT = [
     {
-    image: massanger_photo,
+    image: thaimassage_photo,
     alt: "Masowana osoba",
     title: "Masaż tajski",
     subtitle: "Pełen relaks dla ciała i duszy",
@@ -26,7 +29,7 @@ const OFFER_CONTENT = [
     price: "195 PLN - 225 PLN"
 },
 {
-    image: massanger_photo,
+    image: lomilomi_photo,
     alt: "Masowana osoba",
     title: "Masaż Lomi Lomi",
     subtitle: "Odprężenie z aromatem natury",
@@ -34,7 +37,7 @@ const OFFER_CONTENT = [
     price: "229 PLN - 269 PLN"
 },
 {
-    image: massanger_photo,
+    image: bali_massage,
     alt: "Masowana osoba",
     title: "Masaż balijski",
     subtitle: "Odbudowa wewnętrznego spokoju",
@@ -102,5 +105,5 @@ const OFFER_CONTENT = [
 ---
 
 <Layout>
-    <OfferSubpage title={MASSAGES_DATA.title} firstImage={MASSAGES_DATA.firstImage} firstAlt={MASSAGES_DATA.firstAlt} firstDescription={MASSAGES_DATA.firstDescription} secondDescription={MASSAGES_DATA.secondDescription} secondImage={MASSAGES_DATA.secondImage} secondAlt={MASSAGES_DATA.secondAlt} offerContent={OFFER_CONTENT} />
+    <OfferSubpage title={MASSAGES_DATA.title} firstImage={MASSAGES_DATA.firstImage} firstAlt={MASSAGES_DATA.firstAlt} firstDescription={MASSAGES_DATA.firstDescription} secondDescription={MASSAGES_DATA.secondDescription} secondImage={MASSAGES_DATA.secondImage} secondAlt={MASSAGES_DATA.secondAlt} offerContent={OFFER_CONTENT} isRuitualMassage={false} />
 </Layout>

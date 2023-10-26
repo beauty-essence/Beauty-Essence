@@ -6,6 +6,7 @@ export const ROUTES = {
     contact: "/kontakt",
     offer: "/oferta",
     policy: "/polityka",
+    regulations: "/regulamin",
     vouchers: "/vouchery",
     massagesOriental: "/masaze-orientalne",
     massagesRelaxtion: "/masaze-relaksacyjne",
