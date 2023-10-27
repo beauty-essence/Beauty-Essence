@@ -72,9 +72,9 @@ const Gallery = (props: { isGalleryPage?: boolean }) => {
           <div className="flex flex-col items-center gap-4">
             <h1 className="text-5xl font-primary font-bold mb-2">Galeria</h1>
             <p className="max-w-md text-center">
-              Zobacz nas w akcji. Odkryj atmosferę, profesjonalizm i staranność,
-              z jaką podchodzimy do każdego klienta. Przeglądaj wybrane zdjęcia,
-              by poczuć magię i jakość naszych zabiegów.
+              Zobacz nas w akcji. Odkryj atmosferę, profesjonalizm <br /> i
+              staranność, z jaką podchodzimy do każdego klienta. Przeglądaj
+              wybrane zdjęcia, by poczuć magię i jakość naszych zabiegów.
             </p>
           </div>
           <Masonry columnsCount={3} gutter="10px" className="mt-10">

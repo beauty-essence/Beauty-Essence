@@ -7,20 +7,21 @@ interface PricingProps {
     isOrientalVariant?: boolean
     isadditionalDescription?: boolean
     isCollapsed?: boolean
+    isCarnet?: boolean
 }
 
-const { title, variant, firstTimeVariant, secondTimeVariant, isOrientalVariant,isadditionalDescription, isCollapsed } = Astro.props
+const { title, variant, firstTimeVariant, secondTimeVariant, isOrientalVariant,isadditionalDescription, isCollapsed, isCarnet } = Astro.props
 ---
 
 
 <div>
     <h6 class="font-primary text-3xl text-button-dark font-bold pb-6">{title}</h6>
-    <table class=" rounded-lg border-separate border-spacing-1">
+    <table class=" rounded-lg border-separate border-spacing-1 md:max-w-[451px]">
         <thead>
             <tr>
-                <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light text-left md:w-[270px]">Dostępny wariant</th>
-                <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light" colspan=`${isCollapsed ? "2" : ""}`>{firstTimeVariant}</th>
-                <th class=`font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light ${isCollapsed ? "hidden" : ""}`>{secondTimeVariant}</th>
+                <th class=`font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light text-left  ${isCarnet ? "" : "md:w-[270px]"} ${isadditionalDescription ? "md:w-[350px]" : ""}`>Dostępny wariant</th>
+                <th class=`font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light ${ isCarnet ? "hidden" : ""}`  colspan=`${isCollapsed ? "2" : ""}`>{firstTimeVariant}</th>
+                <th class=`font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light ${isCollapsed || isCarnet ? "hidden" : ""}`>{secondTimeVariant}</th>
             </tr>
         </thead>
         <tbody>
@@ -32,8 +33,8 @@ const { title, variant, firstTimeVariant, secondTimeVariant, isOrientalVariant,i
                         {item.additionalDescription}
                     </p>
                 </td>
-                <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center" colspan={`${isCollapsed ? "2" : ""}`}>{item.firstPrice}</td>
-                <td class={`font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center ${isCollapsed ? "hidden" : ""}`}>{item.secondPrice}</td>
+                <td class={`font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center ${ isCarnet ? "hidden" : ""}`} colspan={`${isCollapsed ? "2" : ""}`}>{item.firstPrice}</td>
+                <td class={`font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center ${isCollapsed || isCarnet ? "hidden" : ""}`}>{item.secondPrice}</td>
             </tr>
             ))}
                 <tr class=`${isOrientalVariant ? "" : "hidden"}`>

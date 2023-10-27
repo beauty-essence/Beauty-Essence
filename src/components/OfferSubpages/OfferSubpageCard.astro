@@ -26,14 +26,14 @@ const { image, alt, title, subtitle, description, price, isOilMassage, isCandleM
     </div>
     <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
         <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">{title}</h6>
-        <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p>
-        <p class="text-xl text-secondary-text leading-[130%] mb-6">
+        <!-- <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p> -->
+        <p class="text-xl text-secondary-text leading-[130%] mb-6 text-justify">
             {description}
             <br>
             <p class=`${isRitualMassage ? "" : "hidden"} text-lg text-secondary-text leading-[130%] mb-6`>
-                <b>Odczucia:</b> {firstBadge} <br>
-                <b>Efekt Masażu:</b> {secondBadge} <br>
-                <b>Aromaterapia:</b> {thirdBadge}
+                <b class=" mr-12">Odczucia:</b> {firstBadge} <br>
+                <b class=" mr-3">Efekt masażu:</b> {secondBadge} <br>
+                <b class=" mr-2">Aromaterapia:</b> {thirdBadge}
             </p>
             <ul class=`${isOilMassage ? "" : "hidden"} text-lg text-secondary-text leading-[130%] mb-6`>
                 <li><b>• Różany</b> -  łagodzi stres, poprawia nastrój, obniża napięcie i ułatwia zasypianie.</li>
@@ -41,7 +41,7 @@ const { image, alt, title, subtitle, description, price, isOilMassage, isCandleM
                 <li><b>• Rokitnik</b> - ekstrakt z owoców z rokitnika zawiera hormon szczęścia - serotoninę, który poprawia nastrój i tonizuje organizm.</li>
                 <li><b>• pomarańcza Bergamota</b> – poprawia nastrój, redukuje poziom stresu. Niweluje zmęczenie oraz wpływa na odczucie pobudzenia. Poprawia koncentrację i pobudza umysł do pracy.</li>
             </ul>
-            <p class=`${isCandleMassage ? "" : "hidden"} text-lg text-secondary-text leading-[130%] mb-6`>
+            <p class=`${isCandleMassage ? "" : "hidden"} text-lg text-secondary-text leading-[130%] mb-6 text-justify`>
                 Do wyboru świece: <br>
                 <b>- zmysłowa i delikatna</b> o zapachu bukietu kwiatowo – piżmowego. Białe piżmo posiada właściwości relaksujące, napinające, aromatyczne, dodaje energii, doskonale sprawdza się jako afrodyzjak. <br>
                 <b>- zapach zielonej herbaty</b> to delikatny, świeży zapach, który wykazuje właściwości relaksacyjne oraz wyciszające

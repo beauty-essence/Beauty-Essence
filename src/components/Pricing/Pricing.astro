@@ -54,17 +54,17 @@ const CARDS_CONTENT = [
     ],
     massage_rituals: [
       {
-        variant: "Rytuał Orient (ekskluzywny)",
+        variant: "Rytuał Orient",
         firstPrice: "390 zł",
         additionalDescription: "Peeling + masaż orientalny ciała olejem. Odczucia: pobudzenie, tajemniczość, kobiecość"
       },
       {
-        variant: "Rytuał Jedwab (ekskluzywny)",
+        variant: "Rytuał Jedwab",
         firstPrice: "390 zł",
         additionalDescription: "Peeling + masaż orientalny ciała mleczkiem do masażu. Odczucia: odmłodzenie i jedwabisty blask"
       },
       {
-        variant: "Rytuał Tytan (ekskluzywny)",
+        variant: "Rytuał Tytan",
         firstPrice: "390 zł",
         additionalDescription: "Peeling + masaż orientalny ciała olejem. Odczucia: siła, witalność, męska energia"
       },
@@ -83,7 +83,20 @@ const CARDS_CONTENT = [
         firstPrice: "360 zł",
         additionalDescription: "Peeling + masaż orientalny maską do ciała. Odczucia: równowaga duchowa, energia młodości"
       }
-    ]
+    ],
+    massage_carnet: [
+      {
+        variant: "5 MASAŻY - RABAT 10%, OKRES WAŻNOŚCI 3 MIESIĄCE",
+      },
+      {
+        variant: "10 MASAŻY - RABAT 20%, OKRES WAŻNOŚCI 6 MIESIĘCY",
+      },
+    ],
+    massage_duo: [
+      {
+        variant: "Wybierz dowolny masaż lub rytuał z oferty, otrzymasz -10% od wartości masaży/ rytuałów w pakiecie dla 2 osób",
+      },
+    ],
   }
 ]
 ---
@@ -97,8 +110,15 @@ const CARDS_CONTENT = [
       </div>
       <div class="flex flex-wrap justify-center lg:justify-start items-baseline gap-11 p-10 md:p-0 max-w-[1000px]">
         <PricingCard title="Masaże orientalne" variant={CARDS_CONTENT[0].massage_oriental} firstTimeVariant="60 min" secondTimeVariant="90 min" isOrientalVariant />
+        <div class="flex flex-col gap-4">
         <PricingCard title="Masaże rozgrzewające" variant={CARDS_CONTENT[0].massage_warming} firstTimeVariant="60 min" secondTimeVariant="90 min" />
+        <div class="flex flex-col gap-4">
+          <PricingCard title="Karnety na Masaże/Rytuały" variant={CARDS_CONTENT[0].massage_carnet} isCarnet={true} />
+          <PricingCard title="Masaże dla dwojga" variant={CARDS_CONTENT[0].massage_duo} isCarnet={true} />
+        </div>
+      </div>
         <PricingCard title="Rytuały SPA" variant={CARDS_CONTENT[0].massage_rituals} firstTimeVariant="90 min" isadditionalDescription isCollapsed/>
+
       </div>
     </div>
   </section>

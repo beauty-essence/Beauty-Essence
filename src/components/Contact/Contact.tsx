@@ -87,9 +87,14 @@ const Contact = () => {
               ul. Most Pauliński 1/3
               <br />
               87-100 Toruń
+              <br />
+              <br />
             </p>
             <p>Recepcja Salonu +48 789 585 586</p>
-            <a href="mailto:recepcja@beauty-essence.pl">
+            <a
+              href="mailto:recepcja@beauty-essence.pl"
+              className="hover:underline"
+            >
               recepcja@beauty-essence.pl
             </a>
           </div>
@@ -110,10 +115,12 @@ const Contact = () => {
             </a>
           </div>
           <p className="text-xs">
-            Beauty Essence sp. z o.o. z siedzibą w Toruniu pod adresem ul. Most
-            Pauliński 1/3, wpisana jest do rejestru przedsiębiorców Krajowego
-            Rejestru Sądowego pod numerem <br /> KRS: 0001045932, <br />{" "}
-            posiadająca REGON: 525782795, <br /> NIP: 9562385613. <br />
+            Beauty Essence sp. z o.o. z siedzibą w Toruniu pod adresem <br />
+            ul. Most Pauliński 1/3, wpisana jest do rejestru przedsiębiorców
+            Krajowego Rejestru Sądowego pod numerem KRS: 0001045932, posiadająca
+            REGON: 525782795, NIP: 9562385613.
+            <br />
+            <br />
             Rachunek bieżący w PLN 24 1240 1183 1111 0011 2805 6870
           </p>
         </div>
@@ -178,7 +185,7 @@ const Contact = () => {
               <p className="font-primary text-md text-[#ff0000]">
                 {errors.message?.message}
               </p>
-              <p className="font-primary text-md text-secondary">
+              <p className="font-primary text-sm text-secondary">
                 Wysyłając formularz akceptujesz naszą
                 <a href={ROUTES.policy} className="font-bold underline ml-1">
                   politykę prywatności
