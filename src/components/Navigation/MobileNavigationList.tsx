@@ -8,7 +8,6 @@ const MobileNavigationList = ({
   isOpen,
   ...rest
 }: MobileNavigationListProps) => {
-  // const [currentPath, setCurrentPath] = useState(window.location.pathname)
   return (
     <div
       className={`bg-primary transition-transform bg-background w-full h-full fixed top-1/2 left-0 -translate-y-1/2 color-white z-20 px-8 ${
@@ -27,23 +26,25 @@ const MobileNavigationList = ({
             Cennik
           </li>
         </a>
-        <a href={ROUTES.home}>
+        <a href={ROUTES.gallery}>
           <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
             Galeria
           </li>
         </a>
-        <a href={ROUTES.vouchers}>
+        <a href={ROUTES.contact}>
           <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
-            Vouchery
+            Kontakt
           </li>
         </a>
-        {/* <a href={window.location.pathname !== "/" ? "/#offer" : "#offer"}> */}
-        <a href={ROUTES.home}>
+        <a href={window.location.pathname !== "/" ? "/#offer" : "#offer"}>
           <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
             Oferta
           </li>
         </a>
-        <a href="" target="_blank">
+        <a
+          href="https://booksy.com/pl-pl/210989_beauty-essence-torun_masaz_22875_torun#ba_s=sh_1"
+          target="_blank"
+        >
           <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
             Zarezerwuj
           </li>

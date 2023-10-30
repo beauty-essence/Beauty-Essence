@@ -9,18 +9,43 @@ interface Props {
     subtitle: string
     description: string
     price: string
+    isOilMassage?: boolean
+    isCandleMassage?: boolean
+    firstBadge?: string
+    secondBadge?: string
+    thirdBadge?: string
+    isRitualMassage?: boolean
 }
 
-const { image, alt, title, subtitle, description, price } = Astro.props
+const { image, alt, title, subtitle, description, price, isOilMassage, isCandleMassage, firstBadge, secondBadge, thirdBadge, isRitualMassage } = Astro.props
 ---
 
-<div class="flex flex-col lg:flex-row justify-center items-center gap-4 md:gap-11 max-w-[1000px]">
-    <Image src={image} alt={"dupa"} class="w-[90%] max-w-[400px]" />
-    <div class="p-4 md:pt-5 max-w-[400px] lg:max-w-[unset]">
+<div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px]">
+    <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center">
+        <Image src={image} alt={"something"} class="w-full h-full object-cover" />
+    </div>
+    <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
         <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">{title}</h6>
-        <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p>
+        <!-- <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p> -->
         <p class="text-xl text-secondary-text leading-[130%] mb-6">
             {description}
+            <br>
+            <p class=`${isRitualMassage ? "" : "hidden"} text-lg text-secondary-text leading-[130%] mb-6`>
+                <b class=" mr-12">Odczucia:</b> {firstBadge} <br>
+                <b class=" mr-3">Efekt masażu:</b> {secondBadge} <br>
+                <b class=" mr-2">Aromaterapia:</b> {thirdBadge}
+            </p>
+            <ul class=`${isOilMassage ? "" : "hidden"} text-lg text-secondary-text leading-[130%] mb-6`>
+                <li><b>• Różany</b> -  łagodzi stres, poprawia nastrój, obniża napięcie i ułatwia zasypianie.</li>
+                <li><b>• Jaśminowy</b> - działa wyciszająco i uspokajająco na ciało i zmysły, redukuje poziom stresu i poprawia nastrój, pomaga zachować równowagę emocjonalną</li>
+                <li><b>• Rokitnik</b> - ekstrakt z owoców z rokitnika zawiera hormon szczęścia - serotoninę, który poprawia nastrój i tonizuje organizm.</li>
+                <li><b>• pomarańcza Bergamota</b> – poprawia nastrój, redukuje poziom stresu. Niweluje zmęczenie oraz wpływa na odczucie pobudzenia. Poprawia koncentrację i pobudza umysł do pracy.</li>
+            </ul>
+            <p class=`${isCandleMassage ? "" : "hidden"} text-lg text-secondary-text leading-[130%] mb-6 text-justify`>
+                Do wyboru świece: <br>
+                <b>- zmysłowa i delikatna</b> o zapachu bukietu kwiatowo – piżmowego. Białe piżmo posiada właściwości relaksujące, napinające, aromatyczne, dodaje energii, doskonale sprawdza się jako afrodyzjak. <br>
+                <b>- zapach zielonej herbaty</b> to delikatny, świeży zapach, który wykazuje właściwości relaksacyjne oraz wyciszające
+            </p>
           </p>
           <p class="font-secondary text-button-dark text-2xl font-regulary">{price}</p>
     </div>

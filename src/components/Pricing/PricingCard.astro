@@ -4,48 +4,65 @@ interface PricingProps {
     variant: object[]
     firstTimeVariant: string
     secondTimeVariant: string
-    isRelaxVariant?: boolean
+    isOrientalVariant?: boolean
+    isadditionalDescription?: boolean
+    isCollapsed?: boolean
+    isCarnet?: boolean
 }
 
-const { title, variant, firstTimeVariant, secondTimeVariant, isRelaxVariant } = Astro.props
+const { title, variant, firstTimeVariant, secondTimeVariant, isOrientalVariant,isadditionalDescription, isCollapsed, isCarnet } = Astro.props
 ---
 
 
 <div>
     <h6 class="font-primary text-3xl text-button-dark font-bold pb-6">{title}</h6>
-    <table class=" rounded-lg border-separate border-spacing-1">
+    <table class=" rounded-lg border-separate border-spacing-1 md:max-w-[451px]">
         <thead>
             <tr>
-                <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light text-left md:w-[270px]">Dostępny wariant</th>
-                <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light">{firstTimeVariant}</th>
-                <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light">{secondTimeVariant}</th>
+                <th class=`font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light text-left  ${isCarnet ? "" : "md:w-[270px]"} ${isadditionalDescription ? "md:w-[350px]" : ""}`>Dostępny wariant</th>
+                <th class=`font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light ${ isCarnet ? "hidden" : ""}`  colspan=`${isCollapsed ? "2" : ""}`>{firstTimeVariant}</th>
+                <th class=`font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light ${isCollapsed || isCarnet ? "hidden" : ""}`>{secondTimeVariant}</th>
             </tr>
         </thead>
         <tbody>
             {variant.map((item: any) => (
              <tr>
-                <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">{item.variant}</td>
-                <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">{item.firstPrice}</td>
-                <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">{item.secondPrice}</td>
+                <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">{item.variant}
+                    <br/>
+                    <p class={`${isadditionalDescription ? "text-xs leading-none italic pt-2" : "hidden"}`}>
+                        {item.additionalDescription}
+                    </p>
+                </td>
+                <td class={`font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center ${ isCarnet ? "hidden" : ""}`} colspan={`${isCollapsed ? "2" : ""}`}>{item.firstPrice}</td>
+                <td class={`font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center ${isCollapsed || isCarnet ? "hidden" : ""}`}>{item.secondPrice}</td>
             </tr>
             ))}
-            <div>
-                <tr class=`${isRelaxVariant ? "" : "hidden"}`>
+                <tr class=`${isOrientalVariant ? "" : "hidden"}`>
+                    <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light text-left md:w-[270px]">Dostępny wariant</th>
+                    <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light"colspan="2">45 min</th>
+                </tr>
+                <tr class=`${isOrientalVariant ? "" : "hidden"}`>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">Masaż masaż górnych części ciała</td>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center" colspan="2">159 zł</td>
+                </tr>
+                <tr class=`${isOrientalVariant ? "" : "hidden"}`>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">Masaż masaż dolnych części ciała</td>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center" colspan="2">159 zł</td>
+                </tr>
+                <tr class=`${isOrientalVariant ? "" : "hidden"}`>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">Indonezyjski masaż twarzy i dekoltu</td>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center" colspan="2">179 zł</td>
+                </tr>
+                <tr class=`${isOrientalVariant ? "" : "hidden"}`>
                     <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light text-left md:w-[270px]">Dostępny wariant</th>
                     <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light">30 min</th>
                     <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light">60 min</th>
                 </tr>
-                <tr class=`${isRelaxVariant ? "" : "hidden"}`>
-                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">Masaż masaż górnych części ciała</td>
-                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">139 zł</td>
-                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">189 zł</td>
-                </tr>
-                <tr class=`${isRelaxVariant ? "" : "hidden"}`>
+                <tr class=`${isOrientalVariant ? "" : "hidden"}`>
                     <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">Refleksologia</td>
-                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">139 zł</td>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">140 zł</td>
                     <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">189 zł</td>
                 </tr>
-            </div>
         </tbody>
     </table>
 </div>

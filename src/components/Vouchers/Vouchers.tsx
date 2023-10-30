@@ -6,7 +6,7 @@ const Vouchers = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false)
   return (
     <>
-      <section className="w-full flex justify-center items-center pt-48 pb-20">
+      <section className="w-full flex justify-center items-center py-32">
         <div className="md:flex items-center gap-16 max-w-3xl">
           <div className="text-center md:text-left">
             <h3 className="text-7xl font-primary font-bold text-button-dark mb-3">

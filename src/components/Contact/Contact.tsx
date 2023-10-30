@@ -73,7 +73,7 @@ const Contact = () => {
   return (
     <section className="relative w-full flex justify-center items-center pt-36 lg:pb-16 lg:pt-48">
       <div className="container md:flex md:gap-5 justify-center">
-        <div className="bg-primary-light p-10 flex flex-col gap-5 text-secondary-text md:w-full max-w-[450px]">
+        <div className="bg-primary-light p-10 flex flex-col gap-5 text-secondary-text md:w-full max-w-[450px] relative">
           <h1 className="text-5xl font-primary font-bold text-button-dark">
             Kontakt
           </h1>
@@ -82,16 +82,24 @@ const Contact = () => {
 
           <div>
             <p>
-              Beauty Essence Sp. z o.o.
+              BEAUTY ESSENCE Sp. z o.o.
               <br />
-              ul. Most Pauliński 1m3
+              ul. Most Pauliński 1/3
               <br />
               87-100 Toruń
+              <br />
+              <br />
             </p>
-            <p>+48 789 585 586</p>
-            <p>recepcja@beauty-essence.pl</p>
+            <p>Recepcja Salonu +48 789 585 586</p>
+            <a
+              href="mailto:recepcja@beauty-essence.pl"
+              className="hover:underline"
+            >
+              recepcja@beauty-essence.pl
+            </a>
           </div>
 
+          <p>Dołącz do nas: </p>
           <div className="flex gap-2">
             <a
               href="https://www.facebook.com/BeautyEssenceTorun"
@@ -100,15 +108,21 @@ const Contact = () => {
               <img src={facebook_icon.src} alt="Ikona Facebook" />
             </a>
             <a
-              href="https://www.instagram.com/beautyessenceoriental/"
+              href="https://www.instagram.com/beautyessence_torun/"
               target="_blank"
             >
               <img src={instagram_icon.src} alt="Ikona instagram" />
             </a>
-            {/* <a href="https://twitter.com" target="_blank">
-              <img src={twitter_icon.src} />
-            </a> */}
           </div>
+          <p className="text-xs">
+            Beauty Essence sp. z o.o. z siedzibą w Toruniu pod adresem <br />
+            ul. Most Pauliński 1/3, wpisana jest do rejestru przedsiębiorców
+            Krajowego Rejestru Sądowego pod numerem KRS: 0001045932, posiadająca
+            REGON: 525782795, NIP: 9562385613.
+            <br />
+            <br />
+            Rachunek bieżący w PLN 24 1240 1183 1111 0011 2805 6870
+          </p>
         </div>
         <FormProvider {...methods}>
           <form className="p-4 flex flex-col gap-2 md:w-full max-w-[400px]">
@@ -171,7 +185,7 @@ const Contact = () => {
               <p className="font-primary text-md text-[#ff0000]">
                 {errors.message?.message}
               </p>
-              <p className="font-primary text-md text-secondary">
+              <p className="font-primary text-sm text-secondary">
                 Wysyłając formularz akceptujesz naszą
                 <a href={ROUTES.policy} className="font-bold underline ml-1">
                   politykę prywatności

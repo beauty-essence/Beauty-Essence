@@ -1,0 +1,115 @@
+---
+import OfferSubpage from "components/OfferSubpages/OfferSubpage.astro"
+import Layout from "../layouts/Layout.astro"
+import massanger_photo from "assets/photos/offer/massager.png"
+import human_back_photo from "assets/photos/offer/human-back.png"
+import thaimassage_photo from "assets/photos/offer/oriental/thai-massage.jpg"
+import lomilomi_photo from "assets/photos/offer/oriental/lomi-massage.jpg"
+import bali_massage from "assets/photos/offer/oriental/bali-massage.jpg"
+import sport_massage from "assets/photos/offer/oriental/sport-massage.jpg"
+import reflexology_massage from "assets/photos/offer/oriental/reflexology-massage.jpg"
+import topbody_massage from "assets/photos/offer/oriental/topbody-massage.jpg"
+import downbody_massage from "assets/photos/offer/oriental/downbody-massage.jpg"
+import oil_massage from "assets/photos/offer/oriental/oil-massage.jpg"
+import neckline_massage from "assets/photos/offer/oriental/neckline-massage.jpg"
+import fourhands_massage from "assets/photos/offer/oriental/4hands-massage.jpg"
+
+const MASSAGES_DATA =
+    {
+        title: "Masaże orientalne",
+        firstImage: thaimassage_photo,
+        firstAlt: "Masowana osoba",
+        firstDescription: "Odkryj tajemniczy świat relaksu i ukojenia dzięki naszym tajskim masażom orientalnym. Nasze wykwalifikowane terapeutki zapraszają Cię do podróży w głąb tradycji i tajemniczych technik masażu, które od wieków pomagają przywracać równowagę ciału i umysłowi.",
+        secondDescription: "Masaże orientalne to wyjątkowa okazja do odzyskania wewnętrznej harmonii i spokoju. Wykorzystują one starożytne tajniki oraz specjalne ruchy, które pozwalają złagodzić napięcie mięśniowe, redukować stres i przynosić ulgę bólom ciała. To doskonały wybór dla tych, którzy pragną odetchnąć od codziennego zgiełku i odnaleźć spokój w orientalnym rytuale relaksu.",
+        secondImage: sport_massage,
+        secondAlt: "Masowana osoba",
+    }
+
+const OFFER_CONTENT = [
+    {
+    image: thaimassage_photo,
+    alt: "Masowana osoba",
+    title: "Masaż tajski",
+    subtitle: "Pełen relaks dla ciała i duszy",
+    description: "Intensywny, głęboki masaż ciała. Składowe masażu tajskiego to rozciąganie, elementy jogi, akupresura i refleksologia. Jest idealny dla osób lubiących intensywne masaże. Efekty terapeutyczne są odczuwalne niemal od razu. Masaż tajski zwiększy zakres rozciągania więzadeł i stawów, zmniejszy bóle mięśniowo- szkieletowe oraz napięciowy ból głowy i migreny. ",
+    price: "195 PLN - 225 PLN"
+},
+{
+    image: lomilomi_photo,
+    alt: "Masowana osoba",
+    title: "Masaż Lomi Lomi",
+    subtitle: "Odprężenie z aromatem natury",
+    description: "Hawajski masaż, który poprawia formę psycho- fizyczną. Podczas masażu terapeutka uciska ciało za pomocą przedramion, łokci oraz masuje dłońmi. Zabieg, wykonywany zgodnie z tradycyjną metodą, rozluźnia całe grupy mięśni, a dzięki posuwistym ruchom przypominającym spokojne ruchy wód oceanu, usprawnia przepływ limfy i pomaga zniwelować obrzęki. Masaż Lomi Lomi gwarantuje relaks, redukuje napięcie oraz zmęczenie.",
+    price: "229 PLN - 269 PLN"
+},
+{
+    image: bali_massage,
+    alt: "Masowana osoba",
+    title: "Masaż balijski",
+    subtitle: "Odbudowa wewnętrznego spokoju",
+    description: "Masaż całego ciała, w którym specjalizują się nasze balijskie terapeutki. Jest to wyjątkowa forma relaksu, dzięki której pozbędziemy się bólu kręgosłupa, bólu mięśni, a nawet symptomów migreny. To masaż, który głęboko odpręży, łączy w sobie elementy akupresury, ajurwedy i refleksologii. Wpłynie na poprawę jakości snu, a także zlikwiduje napięcie i stres. Regeneruje siły witalne, a to wszystko przy użyciu olejku aromatycznego.",
+    price: "229 PLN - 269 PLN"
+},
+{
+    image: sport_massage,
+    alt: "Masowana osoba",
+    title: "Masaż sportowo-leczniczy",
+    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+    description: "Dedykowany osobom, którym zależy na większej elastyczności tkanek, na lepszym ukrwieniu oraz ruchomości w stawach. Jest idealny dla osób aktywnych fizycznie oraz dla zawodowych sportowców. Uwalnia ciało od bólu, rozluźnia mięśnie, głęboko relaksuje i pozwala pozbyć się stresu. Masaż ten dotleni komórki i zniweluje ryzyko powstawiania kontuzji.",
+    price: "219 PLN - 249 PLN"
+},
+{
+    image: reflexology_massage,
+    alt: "Masowana osoba",
+    title: "Refleksologia",
+    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+    description: "Doskonały zabieg usuwający uczucie zmęczonych i ciężkich nóg. Jest to technika akupresury, która pobudza ponad 7000 zakończeń nerwowych ukrytych w stopach. Poprzez precyzyjne naciski, wykonane przez nasze terapeutki, dochodzi do uwolnienia zablokowanych ścieżek energetycznych. Tym samym, masując odpowiedni obszar stopy, możemy pozbyć się bólu kręgosłupa, głowy, wątroby czy dolegliwości ze strony układu hormonalnego.",
+    price: "140 PLN - 189 PLN"
+},
+{
+    image: topbody_massage,
+    alt: "Masowana osoba",
+    title: "Masaż górnych części ciała",
+    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+    description: "Idealny masaż dla osób odczuwających ból związany z siedzącym trybem życia. Terapeutka skupia się na masażu pleców, ramion, karku oraz głowy. Pozwala poczuć ulgę, rozluźnienie mięśni. Miejsca najbardziej narażona na stres zostają rozluźnione.",
+    price: "159 PLN"
+},
+{
+    image: downbody_massage,
+    alt: "Masowana osoba",
+    title: "Masaż dolnych części ciała",
+    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+    description: "Masaż stóp, nóg oraz pośladków. To idealny masaż dla osób, które spędzają dużo czasu w pozycji stojącej. Terapeutki masują dynamicznie, co pozwala osiągnąć oczekiwane rezultaty rozluźnienia i rozciągnięcia. Skupienie masażu kierowane jest w najbardziej spięte miejsca wyżej określonych części ciała.",
+    price: "159 PLN"
+},
+{
+    image: oil_massage,
+    alt: "Masowana osoba",
+    title: "Masaż olejkami aromatycznymi",
+    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+    description: "Masaż niezwykle relaksujący, który uwalnia od stresu. Aromaterapia potęguje odpoczynek. Usprawnia działanie układu nerwowego oraz odpornościowego. Terapeutka skupia się na najbardziej spiętych partiach ciała. Wykorzystujemy następujące olejki:",
+    price: "159 PLN",
+    isOilMassage: true
+},
+{
+    image: neckline_massage,
+    alt: "Masowana osoba",
+    title: "Indonezyjski masaż twarzy i dekoltu",
+    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+    description: 'Masaż stymulujący przepływ krwi i limfy masowanych obszarów. Pobudza tkanki do produkcji kolagenu poprzez terapeutyczne ruchy z elementami akupresury. W pierwszej kolejności terapeutka wykonuje demakijaż twarzy i oczu delikatną emulsją, bogatą w oleje roślinne, pantenol i aloes, która zmiękcza, nawilża i uspokaja skórę. Następnie stosuje tonik, hydrolat rumianku rzymskiego i szałwii, daje to uczucie świeżości, nawilżenia i złagodzenia. Do masażu używany jest olejek, który dzięki zawartości olejów roślinnych - odżywia, pantenolu i aloesu -  wycisza, witamin - dba o zdrowie skóry oraz dzięki zawartości kombuchy wpłynie na gładkość i przyspieszy regenerację naskórka, spowolni procesy starzenia i poprawi koloryt skóry. Skład olejku do masażu twarzy: olej z pestek winogron, olej rzepakowy, pantenol, kombucha, wyciąg z liści aloesu, wit E, C, D i B5, antyutleniacz.',
+    price: "159 PLN"
+},
+{
+    image: fourhands_massage,
+    alt: "Masowana osoba",
+    title: "Balijski masaż na 4 ręce",
+    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+    description: 'Nasza wyjątkowa procedura, która opiera się na masażu balijskim wykonanym przez 2 terapeutki. Masaż polega na wykonywaniu płynnych ruchów w tym samym czasie, po obu stronach ciała. To mocno relaksacyjny, z uwzględnieniem elementów akupresury, refleksologii i ajurwedy masaż. Wpływa na redukcję stresu i napięcia. Całość wykonywana jest przy użyciu jaśminowego olejku do masażu, który dodatkowo działa wyciszająco i uspokajająco na ciało i zmysły, poprawia nastrój i pomaga zachować równowagę emocjonalną.',
+    price: "339 PLN - 389 PLN"
+},
+]
+---
+
+<Layout>
+    <OfferSubpage title={MASSAGES_DATA.title} firstImage={MASSAGES_DATA.firstImage} firstAlt={MASSAGES_DATA.firstAlt} firstDescription={MASSAGES_DATA.firstDescription} secondDescription={MASSAGES_DATA.secondDescription} secondImage={MASSAGES_DATA.secondImage} secondAlt={MASSAGES_DATA.secondAlt} offerContent={OFFER_CONTENT} isRuitualMassage={false} />
+</Layout>

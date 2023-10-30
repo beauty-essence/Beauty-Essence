@@ -1,0 +1,95 @@
+---
+import OfferSubpage from "components/OfferSubpages/OfferSubpage.astro"
+import Layout from "../layouts/Layout.astro"
+import orient_massage from "assets/photos/offer/spa/orient-massage.jpg"
+import silk_massage from "assets/photos/offer/spa/silk-massage.jpg"
+import titanium_massage from "assets/photos/offer/spa/titanium-massage.jpg"
+import wine_massage from "assets/photos/offer/spa/wine-massage.jpg"
+import oil_massage from "assets/photos/offer/spa/oil-massage.jpg"
+import amber_massage from "assets/photos/offer/spa/amber-massage.jpg"
+import withoutwine_massage from "assets/photos/offer/spa/withoutwine-massage.jpg"
+
+const MASSAGES_DATA =
+    {
+    title: "Rytuały SPA",
+    firstImage: titanium_massage,
+    firstAlt: "Masowana osoba",
+    firstDescription: "Przywitaj się z magicznym światem relaksu i luksusu dzięki naszym tajskim rytuałom SPA. Nasze wykwalifikowane terapeutki serdecznie Cię zapraszają do wyjątkowej podróży, która zanurzy Cię w głęboki stan błogiego odprężenia i przywróci harmonię ciału i umysłowi.",
+    secondDescription: "Nasze rytuały SPA to niezwykłe doświadczenie, które łączy w sobie starożytne tajniki masażu, aromaterapii i pielęgnacji skóry. Każdy krok tego wyjątkowego rytuału jest zaprojektowany, aby dostarczyć Ci niezapomnianych chwil relaksu i regeneracji. Pozwól sobie na chwilę oderwania się od codziennego zgiełku i zanurz się w luksusie tajskiego SPA, gdzie Twoje ciało i dusza odnajdą spokój i ukojenie. To idealny wybór dla tych, którzy pragną doświadczyć prawdziwego relaksu na najwyższym poziomie.",
+    secondImage: withoutwine_massage,
+    secondAlt: "Masowana osoba",
+    }
+
+const OFFER_CONTENT = [
+    {
+    image: orient_massage,
+    alt: "Masowana osoba",
+    title: "Rytuał „Orient”",
+    subtitle: "Pełen relaks dla ciała i duszy",
+    description: "Produkty do masażu Orient to wyjątkowo bogata kompozycja orientalnych ziół, naturalnych przypraw i drogocennych mieszanek olejowych z jojoby i migdałów. Odżywienia, nawilża i rewitalizuje. Procedura ta pobudza przemianę materii, poprawia krążenie krwi, które usuwa toksyny z organizmu i równoważy przepływ energii. Kojarzy się z ciepłymi, egzotycznymi wakacjami, przepełnionymi relaksem, witalnością i swobodą. Orientalne aromaty to naturalne wyciągi z: wanilii, cynamonu, goździków, drzewa herbacianego działają jak afrodyzjak, który daje siłę i energię dla obu płci, łagodzi depresję, melancholię i codzienny stres. Po zabiegach z tej procedury wzmacnia się uczucie wolności i elegancji.",
+    price: "390 PLN",
+    firstBadge: "ciepło, seksapil i wyzwolenie",
+    secondBadge: "zadbana, głęboko nawilżona i zregenerowana skóra w atmosferze eleganckich, orientalnych przypraw",
+    thirdBadge: "bogactwo, wakacje, tajemniczość",
+},
+{
+    image: silk_massage,
+    alt: "Masowana osoba",
+    title: "Rytuał „Jedwabny”",
+    subtitle: "Odprężenie z aromatem natury",
+    description: "W tym luksusowym zabiegu wykorzystany jest najwyższej jakości hydrolizat jedwabiu. Proteiny jedwabiu są doskonałym materiałem budulcowym, a dzięki swej niskiej masie cząsteczkowej są zdolne przenikać do zewnętrznych warstw naskórka, scalając je i poprawiając poziom nawilżenia. Głównymi aminokwasami jedwabiu są alanina i glicyna– obydwa w znaczących ilościach obecne w białkach budulcowych naszej skóry, mające dobre właściwości nawilżające i regeneracyjne. Trzecim znaczącym aminokwasem jedwabiu jest seryna, posiadająca zdolność wiązania wody i tworzenia ochronnego i nieokluzyjnego filmu na powierzchni skóry. Jedwab poprawia metabolizm komórek skóry, przeciwdziała przebarwieniom, nadaje skórze gładkość a w połączeniu z bogactwem olei roślinnych działa regenerująco i nawilżająco. Produkty zostawiają na skórze delikatną, jedwabną poświatę co czyni ten masaż wyjątkowo luksusowym.",
+    price: "390 PLN",
+    firstBadge: "lekkość, delikatny dotyk",
+    secondBadge: "głębokie nawilżenie i odmłodzenie, jedwabisty połysk",
+    thirdBadge: "zapach morza i świeżością lasu z kwiatowymi nutami",
+},
+{
+    image: titanium_massage,
+    alt: "Masowana osoba",
+    title: "Rytuał „Tytan”",
+    subtitle: "Odbudowa wewnętrznego spokoju",
+    description: "Produkty do masażu z linii Tytan, adresowane są dla mężczyzn. Zapach oraz składniki aktywne dbają o regenerację męskiej skóry, długotrwale utrzymują poziom jej nawilżenia oraz dogłębnie ją odżywiają. Aromat rytuału oparty jest na nutach ziemi i drewna, które cudownie relaksują i wpływają na dobre samopoczucie każdego mężczyzny.",
+    price: "390 PLN",
+    firstBadge: "moc, dominacja, witalność",
+    secondBadge: "regeneracja, nawilżenie",
+    thirdBadge: "świeży męski zapach z nutami ziemi",
+},
+{
+    image: withoutwine_massage,
+    alt: "Masowana osoba",
+    title: "Rytuał „Czerwone Wino”",
+    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+    description: "Ujędrniające kosmetyki do masażu „Czerwone Wino” nasycone wyciągami z winogron cudownie wygładzą skórę. Ekstrakt z pestek winogron, wyciąg z wina i mieszanka olei intensywnie działają na wolne rodniki, regenerują i z prawdziwą mocą witalności odżywiają skórę, rozjaśniają cerę, łagodzą zaczerwienienia skóry, działają przeciwzapalnie, opóźniają starzenie się. Z pozostałości po fermentacji wina uzyskuje się wiele cennych substancji korzystnie wpływających na stan skóry: peptydy, witaminy, polifenole. Zawarte w naszych produktach witaminy wpływają na doskonałe samopoczucie, tworząc miękką i gładką skórę, przywracają jej elastyczność, dając blask, zmysłowość i tajemniczość. „In vino veritas, in aqua sanitas” – w winie prawda, w wodzie zdrowie, głosi znana łacińska sentencja, która doskonale wpisuje się w zdrowotno – relaksujące zabiegi SPA.",
+    price: "390 PLN",
+    firstBadge: "energia, libido, życie, świętowanie",
+    secondBadge: "ujędrniona, miękka, gładka i odmłodzona skóra",
+    thirdBadge: "zapach winogron, ziemi, wina",
+},
+{
+    image: oil_massage,
+    alt: "Masowana osoba",
+    title: "Rytuał „Rajski Grapefruit”",
+    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+    description: "Masaż grejpfrutowy zapobiega zmęczeniu psychicznemu, ponieważ olejek eteryczny z grejpfruta, który jest używany w procedurze, jest uznany za jeden z najbardziej skutecznych naturalnych leków antydepresyjnych. Procedura zwiększa odporność i aktywnie wpływa na eliminację toksyn z organizmu. Należy ją stosować w terapii nadwagi i w celu wymodelowania ciała. Regularne wykonywane masaże na tych produktach przyczynią się do korzystnego wpływu na redukcję cellulitu.",
+    price: "360 PLN",
+    firstBadge: "energia, słońce, lekkość, radość życia",
+    secondBadge: "głęboko nawilżona, gładka, odmłodzona skóra; zredukowany kształt ciała",
+    thirdBadge: "świeżość, radość, inspiracja",
+},
+{
+    image: amber_massage,
+    alt: "Masowana osoba",
+    title: "Rytuał „Bursztynowy”",
+    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+    description: "Masaż na produktach z wyciągiem z bursztynu rozluźnia mięśnie i umysł od stresu. Bursztyn ogrzewa ciało i stan emocjonalny, jest nośnikiem energii i równowagi. Daje moc, która ma pozytywny wpływ na ludzkie ciało i skórę. Kontakt z ciałem uaktywnia kreatywność, pobudza siłę fizyczną i psychiczną, zwiększa pewność siebie i zapewnia optymizm i żywość. W preparatach do masażu wykorzystuje się puder i ekstrakt bursztynowy który wraz z cennymi olejami roślinnymi bardzo korzystnie wpływa nie tylko na skórę ale również na cały organizm, dodając mu moc.",
+    price: "360 PLN",
+    firstBadge: "równowaga, lekkość, radość życia, relaks",
+    secondBadge: "gładkie, zregenerowanie ciało",
+    thirdBadge: "święto, radość, fascynacja",
+}
+]
+---
+
+<Layout>
+    <OfferSubpage title={MASSAGES_DATA.title} firstImage={MASSAGES_DATA.firstImage} firstAlt={MASSAGES_DATA.firstAlt} firstDescription={MASSAGES_DATA.firstDescription} secondDescription={MASSAGES_DATA.secondDescription} secondImage={MASSAGES_DATA.secondImage} secondAlt={MASSAGES_DATA.secondAlt} offerContent={OFFER_CONTENT} isRitualMassage={true} />
+</Layout>

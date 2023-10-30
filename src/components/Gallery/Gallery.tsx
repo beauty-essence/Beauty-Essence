@@ -1,38 +1,17 @@
 import React from "react"
 import Masonry from "react-responsive-masonry"
-import one from "assets/gallery/one.png"
-import two from "assets/gallery/two.png"
-import three from "assets/gallery/three.png"
-import four from "assets/gallery/four.png"
-import five from "assets/gallery/five.png"
+import one from "assets/gallery/one.jpg"
+import two from "assets/gallery/two.jpg"
+import three from "assets/gallery/three.jpg"
+import four from "assets/gallery/four.jpg"
+import five from "assets/gallery/five.jpg"
 import arrow_right from "assets/icons/arrow_right.svg"
 import arrow_left from "assets/icons/arrow_left.svg"
 import close from "assets/icons/close.svg"
 import { twMerge } from "tailwind-merge"
 
 const Gallery = (props: { isGalleryPage?: boolean }) => {
-  const images = [
-    one,
-    two,
-    three,
-    four,
-    five,
-    one,
-    two,
-    three,
-    four,
-    five,
-    one,
-    two,
-    three,
-    four,
-    five,
-    one,
-    two,
-    three,
-    four,
-    five
-  ]
+  const images = [one, two, three, four, five]
 
   const [previewImageIndex, setPreviewImageIndex] = React.useState(0)
   const [showPreview, setShowPreview] = React.useState(false)
@@ -72,9 +51,9 @@ const Gallery = (props: { isGalleryPage?: boolean }) => {
           <div className="flex flex-col items-center gap-4">
             <h1 className="text-5xl font-primary font-bold mb-2">Galeria</h1>
             <p className="max-w-md text-center">
-              Zobacz nas w akcji. Odkryj atmosferę, profesjonalizm i staranność,
-              z jaką podchodzimy do każdego klienta. Przeglądaj wybrane zdjęcia,
-              by poczuć magię i jakość naszych zabiegów.
+              Zobacz nas w akcji. Odkryj atmosferę, profesjonalizm <br /> i
+              staranność, z jaką podchodzimy do każdego klienta. Przeglądaj
+              wybrane zdjęcia, by poczuć magię i jakość naszych zabiegów.
             </p>
           </div>
           <Masonry columnsCount={3} gutter="10px" className="mt-10">
