@@ -60,7 +60,6 @@ const Navigation = () => {
             </li>
           </a>
           <a href={ROUTES.gallery}>
-            {/* <a href={ROUTES.home}> */}
             <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
               Galeria
             </li>
@@ -77,12 +76,14 @@ const Navigation = () => {
             </li>
           </a>
           <a href={currentPath !== "/" ? "/#offer" : "#offer"}>
-            {/* <a href={ROUTES.home}> */}
             <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
               Oferta
             </li>
           </a>
-          <a href="" target="_blank">
+          <a
+            href="https://booksy.com/pl-pl/210989_beauty-essence-torun_masaz_22875_torun#ba_s=sh_1"
+            target="_blank"
+          >
             <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
               Zarezerwuj
             </li>

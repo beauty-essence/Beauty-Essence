@@ -11,28 +11,7 @@ import close from "assets/icons/close.svg"
 import { twMerge } from "tailwind-merge"
 
 const Gallery = (props: { isGalleryPage?: boolean }) => {
-  const images = [
-    one,
-    two,
-    three,
-    four,
-    five
-    // one,
-    // two,
-    // three,
-    // four,
-    // five,
-    // one,
-    // two,
-    // three,
-    // four,
-    // five,
-    // one,
-    // two,
-    // three,
-    // four,
-    // five
-  ]
+  const images = [one, two, three, four, five]
 
   const [previewImageIndex, setPreviewImageIndex] = React.useState(0)
   const [showPreview, setShowPreview] = React.useState(false)
