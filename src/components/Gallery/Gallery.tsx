@@ -5,13 +5,17 @@ import two from "assets/gallery/two.jpg"
 import three from "assets/gallery/three.jpg"
 import four from "assets/gallery/four.jpg"
 import five from "assets/gallery/five.jpg"
+import six from "assets/gallery/six.jpg"
+import seven from "assets/gallery/seven.jpg"
+import eight from "assets/gallery/eight.jpg"
+import nine from "assets/gallery/nine.jpg"
 import arrow_right from "assets/icons/arrow_right.svg"
 import arrow_left from "assets/icons/arrow_left.svg"
 import close from "assets/icons/close.svg"
 import { twMerge } from "tailwind-merge"
 
 const Gallery = (props: { isGalleryPage?: boolean }) => {
-  const images = [one, two, three, four, five]
+  const images = [one, two, three, four, five, six, seven, eight, nine]
 
   const [previewImageIndex, setPreviewImageIndex] = React.useState(0)
   const [showPreview, setShowPreview] = React.useState(false)
@@ -58,7 +62,7 @@ const Gallery = (props: { isGalleryPage?: boolean }) => {
           </div>
           <Masonry columnsCount={3} gutter="10px" className="mt-10">
             {images
-              .slice(0, props.isGalleryPage ? images.length : 6)
+              .slice(0, props.isGalleryPage ? images.length : 5)
               .map((image, index) => (
                 <img
                   src={image.src}
