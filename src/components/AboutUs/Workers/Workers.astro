@@ -1,6 +1,9 @@
 ---
 import Worker from "./Worker.astro"
 import worker_photo from "assets/photos/workers/worker.png"
+import widi_photo from "assets/gallery/nine.jpg"
+import youngii_photo from "assets/gallery/seven.jpg"
+import sri_photo from "assets/gallery/eight.jpg"
 ---
 
 <section class="w-full flex flex-col justify-center items-center py-10 lg:py-28 bg-primary-light">
@@ -11,16 +14,12 @@ import worker_photo from "assets/photos/workers/worker.png"
         >
         Nasi pracownicy
       </h3>
-      <p class="font-secondary text-2xl font-normal text-secondary-text">Lorem ipsum dolor sit amet</p>
+      <!-- <p class="font-secondary text-2xl font-normal text-secondary-text">Lorem ipsum dolor sit amet</p> -->
     </div>
-    <div class="flex flex-wrap justify-center gap-6">
-      <Worker image={worker_photo} alt="Zdjęcie pracownika" title="Patrycja Nowak" description="Manager zespołu masażystów" />
-      <Worker image={worker_photo} alt="Zdjęcie pracownika" title="Patrycja Nowak" description="Manager zespołu masażystów" />
-      <Worker image={worker_photo} alt="Zdjęcie pracownika" title="Patrycja Nowak" description="Manager zespołu masażystów" />
-      <Worker image={worker_photo} alt="Zdjęcie pracownika" title="Patrycja Nowak" description="Manager zespołu masażystów" />
-      <Worker image={worker_photo} alt="Zdjęcie pracownika" title="Patrycja Nowak" description="Manager zespołu masażystów" />
-      <Worker image={worker_photo} alt="Zdjęcie pracownika" title="Patrycja Nowak" description="Manager zespołu masażystów" />
-
+    <div class="flex flex-wrap justify-center items-baseline gap-6">
+      <Worker image={widi_photo} alt="Zdjęcie pracownika" title="Widi" description="Poznajcie Widi, naszą balijską specjalistkę. Stawi czoła nawet najbardziej wymagającym masażom. Niepozorna, a jakże silna, celnie trafia w źródło bólu. To nie tylko masaż, to doświadczenie, które oczyszcza ciało i duszę. " />
+      <Worker image={youngii_photo} alt="Zdjęcie pracownika" title="Youngii" description="Oto Youngii, nasza tajska magia masażu! Jej dłonie zaprowadzą Was w kierunku oryginalnej tajskiej techniki. Nie ma sobie równych i ściśle trzyma się azjatyckich standardów, poprawiając przy tym zakres ruchów, Waszą kondycję psychiczną i fizyczną. " />
+      <Worker image={sri_photo} alt="Zdjęcie pracownika" title="Sri" description="Przedstawiamy Sri! Jej technika masażu prosto z Bali sprawi, że poczujecie się głęboko odprężeni. Sri potrafi stworzyć magiczną atmosferę, a jej ciepłe uśmiechy i delikatne ręce sprawiają, że każdy masaż staje się wyjątkowym doświadczeniem. Wbrew pozorom, swoją siłą w dłoniach doskonale wie jak zniwelować napięcia mięśniowe." />
     </div>
   </div>
 </section>
