@@ -8,9 +8,10 @@ interface PricingProps {
     isadditionalDescription?: boolean
     isCollapsed?: boolean
     isCarnet?: boolean
+    isWarmingVariant?: boolean
 }
 
-const { title, variant, firstTimeVariant, secondTimeVariant, isOrientalVariant,isadditionalDescription, isCollapsed, isCarnet } = Astro.props
+const { title, variant, firstTimeVariant, secondTimeVariant, isOrientalVariant,isadditionalDescription, isCollapsed, isCarnet, isWarmingVariant } = Astro.props
 ---
 
 
@@ -62,6 +63,14 @@ const { title, variant, firstTimeVariant, secondTimeVariant, isOrientalVariant,i
                     <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">Refleksologia</td>
                     <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">140 zł</td>
                     <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">189 zł</td>
+                </tr>
+                <tr class=`${isWarmingVariant ? "" : "hidden"}`>
+                    <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light text-left md:w-[270px]">Dostępny wariant</th>
+                    <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light" colspan="2">90 min</th>
+                </tr>
+                <tr class=`${isWarmingVariant ? "" : "hidden"}`>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">Masaż gorącymi stemplami ziołowymi</td>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center" colspan="2">289 zł</td>
                 </tr>
         </tbody>
     </table>
