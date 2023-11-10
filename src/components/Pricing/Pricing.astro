@@ -6,76 +6,110 @@ const CARDS_CONTENT = [
     massage_oriental: [
       {
         variant: "Masaż tajski",
-        firstPrice: "195 zł",
-        secondPrice: "225 zł"
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "195 zł",
+        fourthPrice: "225 zł"
       },
       {
         variant: "Masaż leczniczo-sportowy",
-        firstPrice: "219 zł",
-        secondPrice: "249 zł"
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "219 zł",
+        fourthPrice: "249 zł"
       },
       {
         variant: "Masaż balijski",
-        firstPrice: "229 zł",
-        secondPrice: "269 zł"
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "229 zł",
+        fourthPrice: "269 zł"
       },
       {
         variant: "Masaż Lomi Lomi",
-        firstPrice: "229 zł",
-        secondPrice: "269 zł"
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "229 zł",
+        fourthPrice: "269 zł"
       },
       {
         variant: "Masaż olejkami aromatycznymi",
-        firstPrice: "209 zł",
-        secondPrice: "249 zł"
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "209 zł",
+        fourthPrice: "249 zł"
       },
       {
         variant: "Balijski masaż na 4 ręce",
-        firstPrice: "339 zł",
-        secondPrice: "389 zł"
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "339 zł",
+        fourthPrice: "389 zł"
       },
     ],
     massage_warming: [
       {
         variant: "Masaż gorącymi kamieniami bazaltowymi",
-        firstPrice: "229 zł",
-        secondPrice: "289 zł"
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "229 zł",
+        fourthPrice: "289 zł"
       },
       {
         variant: "Masaż świecą aromatyczną",
-        firstPrice: "229 zł",
-        secondPrice: "259 zł"
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "229 zł",
+        fourthPrice: "259 zł"
       },
     ],
     massage_rituals: [
       {
         variant: "Rytuał Orient",
-        firstPrice: "390 zł",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "-",
+        fourthPrice: "390 zł",
         additionalDescription: "Peeling + masaż orientalny ciała olejem. Odczucia: pobudzenie, tajemniczość, kobiecość"
       },
       {
         variant: "Rytuał Jedwab",
-        firstPrice: "390 zł",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "-",
+        fourthPrice: "390 zł",
         additionalDescription: "Peeling + masaż orientalny ciała mleczkiem do masażu. Odczucia: odmłodzenie i jedwabisty blask"
       },
       {
         variant: "Rytuał Tytan",
-        firstPrice: "390 zł",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "-",
+        fourthPrice: "390 zł",
         additionalDescription: "Peeling + masaż orientalny ciała olejem. Odczucia: siła, witalność, męska energia"
       },
       {
         variant: "Rytuał Czerwone Wino",
-        firstPrice: "360 zł",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "-",
+        fourthPrice: "360 zł",
         additionalDescription: "Peeling + masaż orientalny masłem do ciała. Efekty: ujędrnienie, rewitalizacja"
       },
       {
         variant: "Rytuał Rajski Grapefruit",
-        firstPrice: "360 zł",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "-",
+        fourthPrice: "360 zł",
         additionalDescription: "Peeling + masaż orientalny olejem. Efekty: odchudzanie, działanie antycellulitowe"
       },
       {
         variant: "Rytuał Bursztynowy",
-        firstPrice: "360 zł",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "-",
+        fourthPrice: "360 zł",
         additionalDescription: "Peeling + masaż orientalny maską do ciała. Odczucia: równowaga duchowa, energia młodości"
       }
     ],
@@ -95,7 +129,7 @@ const CARDS_CONTENT = [
   }
 ]
 ---
-<section class="relative w-full flex justify-center items-center py-10 lg:py-28">
+<section class="relative w-full flex justify-center items-center  lg:py-28">
     <div class="md:py-10 flex flex-col justify-center items-center md:items-start mb-10 md:mb-[unset]">
       <div class="mb-12">
         <h3 class="text-7xl font-primary font-bold text-button-dark mb-3">
@@ -103,16 +137,16 @@ const CARDS_CONTENT = [
         </h3>
         <p class="text-secondary-text font-secondary text-xl font-medium">Sprawdź wycenę naszych usług</p>
       </div>
-      <div class="flex flex-wrap justify-center lg:justify-start items-baseline gap-11 p-10 md:p-0 max-w-[1000px]">
-        <PricingCard title="Masaże orientalne" variant={CARDS_CONTENT[0].massage_oriental} firstTimeVariant="60 min" secondTimeVariant="90 min" isOrientalVariant />
+      <div class="flex flex-col justify-center lg:justify-start gap-11 md:p-0 max-w-[1000px]">
+        <PricingCard title="Masaże orientalne" variant={CARDS_CONTENT[0].massage_oriental} variantTitle="Rodzaj masażu" isOrientalVariant />
         <div class="flex flex-col gap-4">
-        <PricingCard title="Masaże rozgrzewające" variant={CARDS_CONTENT[0].massage_warming} firstTimeVariant="60 min" secondTimeVariant="90 min" isWarmingVariant={true} />
+        <PricingCard title="Masaże rozgrzewające" variant={CARDS_CONTENT[0].massage_warming} variantTitle="Rodzaj masażu" isWarmingVariant={true} />
+        <PricingCard title="Rytuały SPA" variant={CARDS_CONTENT[0].massage_rituals} variantTitle="Rodzaj rytuału" isadditionalDescription isCollapsed/>
         <div class="flex flex-col gap-4">
           <PricingCard title="Karnety na Masaże/Rytuały" variant={CARDS_CONTENT[0].massage_carnet} isCarnet={true} />
           <PricingCard title="Masaże dla dwojga" variant={CARDS_CONTENT[0].massage_duo} isCarnet={true} />
         </div>
       </div>
-        <PricingCard title="Rytuały SPA" variant={CARDS_CONTENT[0].massage_rituals} firstTimeVariant="90 min" isadditionalDescription isCollapsed/>
 
       </div>
     </div>
