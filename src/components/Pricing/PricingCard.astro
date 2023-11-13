@@ -82,15 +82,15 @@ const { title, variant, variantTitle, firstTimeVariant, secondTimeVariant, isOri
         <thead >
             <tr>
                 <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light text-left  ${isCarnet ? "" : "md:w-[270px]"} ${isadditionalDescription ? "md:w-[350px]" : ""}`>{variantTitle}</th>
-                <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light`>30 min</th>
-                <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light`>45 min</th>
-                <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light`>60 min</th>
-                <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light`>90 min</th>
+                <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet ? "hidden" : ""}`>30 min</th>
+                <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet ? "hidden" : ""}`>45 min</th>
+                <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet ? "hidden" : ""}`>60 min</th>
+                <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet ? "hidden" : ""}`>90 min</th>
             </tr>
         </thead>
-        <th class=`font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light text-left  ${isCarnet ? "" : "md:w-[270px]"} ${isadditionalDescription ? "md:w-[350px]" : ""}`>Dostępny wariant</th>
+        <!-- <th class=`font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light text-left  ${isCarnet ? "" : "md:w-[270px]"} ${isadditionalDescription ? "md:w-[350px]" : ""}`>Dostępny wariant</th>
         <th class=`font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light ${ isCarnet ? "hidden" : ""}`  colspan=`${isCollapsed ? "2" : ""}`>{firstTimeVariant}</th>
-        <th class=`font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light ${isCollapsed || isCarnet ? "hidden" : ""}`>{secondTimeVariant}</th>
+        <th class=`font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light ${isCollapsed || isCarnet ? "hidden" : ""}`>{secondTimeVariant}</th> -->
         <tbody>
             {variant.map((item: any) => (
              <tr>
