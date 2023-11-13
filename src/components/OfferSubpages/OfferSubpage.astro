@@ -14,9 +14,10 @@ interface OfferSubpageProps {
   secondAlt: string
   offerContent: any
   isRitualMassage?: boolean
+  isStampMassage?: boolean
 }
 
-const { title, firstImage, firstAlt, firstDescription, secondDescription, secondImage, secondAlt, offerContent, isRitualMassage } = Astro.props
+const { title, firstImage, firstAlt, firstDescription, secondDescription, secondImage, secondAlt, offerContent, isRitualMassage, isStampMassage } = Astro.props
 ---
 
 
@@ -64,7 +65,7 @@ const { title, firstImage, firstAlt, firstDescription, secondDescription, second
 <section class="w-full flex flex-col justify-center items-center py-10 lg:py-28 bg-primary-light">
   <div class="container mx-auto w-full md:py-10 flex flex-col justify-center items-center gap-10">
     {offerContent.map((item: any) => (
-    <OfferSubpageCard image={item.image} alt={item.alt} title={item.title} subtitle={item.subtitle} description={item.description}  price={item.price} isOilMassage={item.isOilMassage} isCandleMassage={item.isCandleMassage} isRitualMassage={isRitualMassage} firstBadge={item.firstBadge} secondBadge={item.secondBadge} thirdBadge={item.thirdBadge} />
+    <OfferSubpageCard image={item.image} alt={item.alt} title={item.title} subtitle={item.subtitle} description={item.description}  price={item.price} isOilMassage={item.isOilMassage} isCandleMassage={item.isCandleMassage} isRitualMassage={isRitualMassage} firstBadge={item.firstBadge} secondBadge={item.secondBadge} thirdBadge={item.thirdBadge} isStampMassage={item.isStampMassage} />
     ))}
 
   </div>

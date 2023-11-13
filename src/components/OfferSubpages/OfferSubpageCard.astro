@@ -15,9 +15,10 @@ interface Props {
     secondBadge?: string
     thirdBadge?: string
     isRitualMassage?: boolean
+    isStampMassage?: boolean
 }
 
-const { image, alt, title, subtitle, description, price, isOilMassage, isCandleMassage, firstBadge, secondBadge, thirdBadge, isRitualMassage } = Astro.props
+const { image, alt, title, subtitle, description, price, isOilMassage, isCandleMassage, firstBadge, secondBadge, thirdBadge, isRitualMassage, isStampMassage } = Astro.props
 ---
 
 <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px]">
@@ -29,6 +30,8 @@ const { image, alt, title, subtitle, description, price, isOilMassage, isCandleM
         <!-- <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p> -->
         <p class="text-xl text-secondary-text leading-[130%] mb-6">
             {description}
+            {isStampMassage ? <br/><br/> : ""}
+            <b class=`${isStampMassage ? "" : "hidden"}`> Masaż należy zarezerwować z wyprzedzeniem minimum 1h.</b>
             <br>
             <p class=`${isRitualMassage ? "" : "hidden"} text-lg text-secondary-text leading-[130%] mb-6`>
                 <b class=" mr-12">Odczucia:</b> {firstBadge} <br>
