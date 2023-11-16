@@ -136,7 +136,7 @@ const CARDS_CONTENT = [
         firstPrice: "-",
         secondPrice: "-",
         thirdPrice: "-",
-        fourthPrice: "360 zł",
+        fourthPrice: "390 zł",
         additionalDescription: "Peeling + masaż orientalny olejem. Efekty: odchudzanie, działanie antycellulitowe"
       },
       {
@@ -144,16 +144,28 @@ const CARDS_CONTENT = [
         firstPrice: "-",
         secondPrice: "-",
         thirdPrice: "-",
-        fourthPrice: "360 zł",
+        fourthPrice: "390 zł",
         additionalDescription: "Peeling + masaż orientalny maską do ciała. Odczucia: równowaga duchowa, energia młodości"
       }
     ],
     massage_carnet: [
       {
-        variant: "5 MASAŻY - RABAT 10%, OKRES WAŻNOŚCI 3 MIESIĄCE",
+        variant: "5 masaży -> rabat 10% ",
+        additionalDescription: "Okres ważności: 3 miesiące"
       },
       {
-        variant: "10 MASAŻY - RABAT 20%, OKRES WAŻNOŚCI 6 MIESIĘCY",
+        variant: "10 masaży -> rabat 20%, ",
+        additionalDescription: "Okres ważności: 6 miesięcy"
+      },
+    ],
+    massage_carnetPriced: [
+      {
+        variant: "1000 zł + 150 zł gratis",
+        additionalDescription: "Okres ważności: 3 miesiące"
+      },
+      {
+        variant: "2000 zł + 350 zł gratis",
+        additionalDescription: "Okres ważności: 6 miesięcy"
       },
     ],
     massage_duo: [
@@ -176,11 +188,16 @@ const CARDS_CONTENT = [
         <PricingCard title="Masaże orientalne" variant={CARDS_CONTENT[0].massage_oriental} variantTitle="Rodzaj masażu" isOrientalVariant />
         <div class="flex flex-col gap-4">
         <PricingCard title="Masaże rozgrzewające" variant={CARDS_CONTENT[0].massage_warming} variantTitle="Rodzaj masażu" isWarmingVariant={true} />
-        <PricingCard title="Rytuały SPA" variant={CARDS_CONTENT[0].massage_rituals} variantTitle="Rodzaj rytuału" isadditionalDescription isCollapsed/>
-        <div class="flex flex-col gap-4">
-          <!-- <PricingCard title="Karnety na Masaże/Rytuały" variant={CARDS_CONTENT[0].massage_carnet} variantTitle="Rodzaj karnetu" isCarnet={true} />
-          <PricingCard title="Masaże dla dwojga" variant={CARDS_CONTENT[0].massage_duo} variantTitle="Rodzaj karnetu" isCarnet={true} /> -->
+        <PricingCard title="Rytuały SPA" variant={CARDS_CONTENT[0].massage_rituals} variantTitle="Rodzaj rytuału" isadditionalDescription isRitualVariant/>
+        <div class="flex flex-col gap-4 md:flex-row">
+          <div class=" md:w-1/2">
+          <PricingCard title="Karnety na Masaże/Rytuały" variant={CARDS_CONTENT[0].massage_carnet} variantTitle="Rodzaj karnetu" isCarnet={true} isadditionalDescription />
+          </div>
+          <div class="md:w-1/2">
+          <PricingCard title="Karnety kwotowe" variant={CARDS_CONTENT[0].massage_carnetPriced} variantTitle="Rodzaj karnetu" isCarnet={true} isadditionalDescription />
+          </div>
         </div>
+        <PricingCard title="Masaże dla dwojga" variant={CARDS_CONTENT[0].massage_duo} variantTitle="Rodzaj karnetu" isCarnet={true} isadditionalDescription />
       </div>
 
       </div>

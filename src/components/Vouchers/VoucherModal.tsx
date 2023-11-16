@@ -56,13 +56,14 @@ const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
     try {
       const response = await axios.post(
         "https://beautyessence-backend.vercel.app/api/generate-payment",
+        // "http://localhost:3001/api/generate-payment",
         {
           variant: ParsedData
         }
       )
       if (response.status === 200) {
         const paymentLinkUrl = response.data.url
-        window.location.href = paymentLinkUrl
+        // window.location.href = paymentLinkUrl
         return response.data
       }
     } catch (error) {

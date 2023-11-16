@@ -3,16 +3,13 @@ interface PricingProps {
     title: string
     variant: object[]
     variantTitle: string
-    firstTimeVariant: string
-    secondTimeVariant: string
-    isOrientalVariant?: boolean
     isadditionalDescription?: boolean
-    isCollapsed?: boolean
     isCarnet?: boolean
     isWarmingVariant?: boolean
+    isRitualVariant?: boolean
 }
 
-const { title, variant, variantTitle, firstTimeVariant, secondTimeVariant, isOrientalVariant,isadditionalDescription, isCollapsed, isCarnet, isWarmingVariant } = Astro.props
+const { title, variant, variantTitle,isadditionalDescription, isCarnet, isWarmingVariant, isRitualVariant } = Astro.props
 ---
 
 
@@ -78,19 +75,16 @@ const { title, variant, variantTitle, firstTimeVariant, secondTimeVariant, isOri
 </div> -->
 <div>
     <h6 class="font-primary text-3xl text-button-dark font-bold pb-6">{title}</h6>
-    <table class=" rounded-lg border-separate border-spacing-1 w-full md:max-w-[800px]">
+    <table class=`rounded-lg border-separate border-spacing-1 w-full md:max-w-[800px]`>
         <thead >
             <tr>
-                <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light text-left  ${isCarnet ? "" : "md:w-[270px]"} ${isadditionalDescription ? "md:w-[350px]" : ""}`>{variantTitle}</th>
-                <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet ? "hidden" : ""}`>30 min</th>
-                <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet ? "hidden" : ""}`>45 min</th>
-                <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet ? "hidden" : ""}`>60 min</th>
+                <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light text-left   ${isadditionalDescription ? "md:w-[350px]" : ""}`>{variantTitle}</th>
+                <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet || isWarmingVariant || isRitualVariant ? "hidden" : ""}`>30 min</th>
+                <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet || isWarmingVariant || isRitualVariant ? "hidden" : ""}`>45 min</th>
+                <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet || isRitualVariant ? "hidden" : ""}`>60 min</th>
                 <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet ? "hidden" : ""}`>90 min</th>
             </tr>
         </thead>
-        <!-- <th class=`font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light text-left  ${isCarnet ? "" : "md:w-[270px]"} ${isadditionalDescription ? "md:w-[350px]" : ""}`>Dostępny wariant</th>
-        <th class=`font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light ${ isCarnet ? "hidden" : ""}`  colspan=`${isCollapsed ? "2" : ""}`>{firstTimeVariant}</th>
-        <th class=`font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light ${isCollapsed || isCarnet ? "hidden" : ""}`>{secondTimeVariant}</th> -->
         <tbody>
             {variant.map((item: any) => (
              <tr>
@@ -100,46 +94,12 @@ const { title, variant, variantTitle, firstTimeVariant, secondTimeVariant, isOri
                         {item.additionalDescription}
                     </p>
                 </td>
-                <td class={`font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center`}>{item.firstPrice}</td>
-                <td class={`font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center`}>{item.secondPrice}</td>
-                <td class={`font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center`}>{item.thirdPrice}</td>
-                <td class={`font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center`}>{item.fourthPrice}</td>
+                <td class={`font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center ${ isCarnet || isWarmingVariant || isRitualVariant ? "hidden" : ""}`}>{item.firstPrice}</td>
+                <td class={`font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center ${ isCarnet || isWarmingVariant || isRitualVariant ? "hidden" : ""}`}>{item.secondPrice}</td>
+                <td class={`font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center ${ isCarnet || isRitualVariant ? "hidden" : ""}`}>{item.thirdPrice}</td>
+                <td class={`font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center ${ isCarnet ? "hidden" : ""}`}>{item.fourthPrice}</td>
             </tr>
             ))}
-                <!-- <tr class=`${isOrientalVariant ? "" : "hidden"}`>
-                    <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light text-left md:w-[270px]">Dostępny wariant</th>
-                    <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light"colspan="2">45 min</th>
-                </tr>
-                <tr class=`${isOrientalVariant ? "" : "hidden"}`>
-                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">Masaż górnych części ciała</td>
-                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center" colspan="2">159 zł</td>
-                </tr>
-                <tr class=`${isOrientalVariant ? "" : "hidden"}`>
-                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">Masaż dolnych części ciała</td>
-                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center" colspan="2">159 zł</td>
-                </tr>
-                <tr class=`${isOrientalVariant ? "" : "hidden"}`>
-                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">Indonezyjski masaż twarzy i dekoltu</td>
-                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center" colspan="2">179 zł</td>
-                </tr>
-                <tr class=`${isOrientalVariant ? "" : "hidden"}`>
-                    <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light text-left md:w-[270px]">Dostępny wariant</th>
-                    <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light">30 min</th>
-                    <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light">60 min</th>
-                </tr>
-                <tr class=`${isOrientalVariant ? "" : "hidden"}`>
-                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">Refleksologia</td>
-                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">140 zł</td>
-                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center">189 zł</td>
-                </tr>
-                <tr class=`${isWarmingVariant ? "" : "hidden"}`>
-                    <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light text-left md:w-[270px]">Dostępny wariant</th>
-                    <th class="font-secondary text-lg text-secondary-text font-semibold py-3 px-4 bg-primary-light" colspan="2">90 min</th>
-                </tr>
-                <tr class=`${isWarmingVariant ? "" : "hidden"}`>
-                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light">Masaż gorącymi stemplami ziołowymi</td>
-                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center" colspan="2">289 zł</td>
-                </tr> -->
         </tbody>
     </table>
 </div>
