@@ -105,7 +105,8 @@ const CARDS_CONTENT = [
         secondPrice: "-",
         thirdPrice: "-",
         fourthPrice: "390 zł",
-        additionalDescription: "Peeling + masaż orientalny ciała olejem. Odczucia: pobudzenie, tajemniczość, kobiecość"
+        additionalDescription: "Peeling + masaż orientalny ciała olejem orient.",
+        secondAdditionalDescription: "Odczucia: pobudzenie, tajemniczość"
       },
       {
         variant: "Rytuał Jedwab",
@@ -113,7 +114,8 @@ const CARDS_CONTENT = [
         secondPrice: "-",
         thirdPrice: "-",
         fourthPrice: "390 zł",
-        additionalDescription: "Peeling + masaż orientalny ciała mleczkiem do masażu. Odczucia: odmłodzenie i jedwabisty blask"
+        additionalDescription: "Peeling + masaż orientalny ciała jedwabnym mleczkiem do masażu.",
+        secondAdditionalDescription: "Odczucia: odmłodzenie i jedwabisty blask"
       },
       {
         variant: "Rytuał Tytan",
@@ -121,7 +123,8 @@ const CARDS_CONTENT = [
         secondPrice: "-",
         thirdPrice: "-",
         fourthPrice: "390 zł",
-        additionalDescription: "Peeling + masaż orientalny ciała olejem. Odczucia: siła, witalność, męska energia"
+        additionalDescription: "Peeling + masaż orientalny ciała olejem tytan.",
+        secondAdditionalDescription: "Odczucia: siła, witalność, męska energia"
       },
       {
         variant: "Rytuał Czerwone Wino",
@@ -129,7 +132,8 @@ const CARDS_CONTENT = [
         secondPrice: "-",
         thirdPrice: "-",
         fourthPrice: "390 zł",
-        additionalDescription: "Peeling + masaż orientalny masłem do ciała. Efekty: ujędrnienie, rewitalizacja"
+        additionalDescription: "Peeling + masaż orientalny masłem do ciała shea.",
+        secondAdditionalDescription: "Efekty: ujędrnienie, rewitalizacja"
       },
       {
         variant: "Rytuał Rajski Grapefruit",
@@ -137,15 +141,17 @@ const CARDS_CONTENT = [
         secondPrice: "-",
         thirdPrice: "-",
         fourthPrice: "390 zł",
-        additionalDescription: "Peeling + masaż orientalny olejem. Efekty: odchudzanie, działanie antycellulitowe"
+        additionalDescription: "Peeling + masaż orientalny olejem rajski grapefruit.",
+        secondAdditionalDescription: " Efekty: lekkość, działanie antycellulitowe"
       },
       {
-        variant: "Rytuał Bursztynowy",
+        variant: "Rytuał Bursztyn",
         firstPrice: "-",
         secondPrice: "-",
         thirdPrice: "-",
         fourthPrice: "390 zł",
-        additionalDescription: "Peeling + masaż orientalny maską do ciała. Odczucia: równowaga duchowa, energia młodości"
+        additionalDescription: "Peeling + masaż orientalny maską do ciała bursztyn.",
+        secondAdditionalDescription: "Odczucia: równowaga duchowa, energia młodości"
       }
     ],
     massage_carnet: [
@@ -154,7 +160,7 @@ const CARDS_CONTENT = [
         additionalDescription: "Okres ważności: 3 miesiące"
       },
       {
-        variant: "10 masaży -> rabat 20%, ",
+        variant: "10 masaży -> rabat 20% ",
         additionalDescription: "Okres ważności: 6 miesięcy"
       },
     ],
@@ -197,7 +203,7 @@ const CARDS_CONTENT = [
           <PricingCard title="Karnety kwotowe" variant={CARDS_CONTENT[0].massage_carnetPriced} variantTitle="Rodzaj karnetu" isCarnet={true} isadditionalDescription />
           </div>
         </div>
-        <PricingCard title="Masaże dla dwojga" variant={CARDS_CONTENT[0].massage_duo} variantTitle="Rodzaj karnetu" isCarnet={true} isadditionalDescription />
+        <PricingCard title="Masaże dla dwojga" variant={CARDS_CONTENT[0].massage_duo} variantTitle="Rodzaj karnetu" isCarnet={true} isadditionalDescription isDuoMassage />
       </div>
 
       </div>

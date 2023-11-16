@@ -7,9 +7,10 @@ interface PricingProps {
     isCarnet?: boolean
     isWarmingVariant?: boolean
     isRitualVariant?: boolean
+    isDuoMassage?: boolean
 }
 
-const { title, variant, variantTitle,isadditionalDescription, isCarnet, isWarmingVariant, isRitualVariant } = Astro.props
+const { title, variant, variantTitle,isadditionalDescription, isCarnet, isWarmingVariant, isRitualVariant, isDuoMassage } = Astro.props
 ---
 
 
@@ -78,7 +79,7 @@ const { title, variant, variantTitle,isadditionalDescription, isCarnet, isWarmin
     <table class=`rounded-lg border-separate border-spacing-1 w-full md:max-w-[800px]`>
         <thead >
             <tr>
-                <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light text-left   ${isadditionalDescription ? "md:w-[350px]" : ""}`>{variantTitle}</th>
+                <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light text-left ${isDuoMassage ? "hidden" : ""}   ${isadditionalDescription ? "md:w-[350px]" : ""}`>{variantTitle}</th>
                 <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet || isWarmingVariant || isRitualVariant ? "hidden" : ""}`>30 min</th>
                 <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet || isWarmingVariant || isRitualVariant ? "hidden" : ""}`>45 min</th>
                 <th class=`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet || isRitualVariant ? "hidden" : ""}`>60 min</th>
@@ -92,6 +93,8 @@ const { title, variant, variantTitle,isadditionalDescription, isCarnet, isWarmin
                     <br/>
                     <p class={`${isadditionalDescription ? "text-xs leading-none italic pt-2" : "hidden"}`}>
                         {item.additionalDescription}
+                        <br>
+                        {item.secondAdditionalDescription}
                     </p>
                 </td>
                 <td class={`font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center ${ isCarnet || isWarmingVariant || isRitualVariant ? "hidden" : ""}`}>{item.firstPrice}</td>
