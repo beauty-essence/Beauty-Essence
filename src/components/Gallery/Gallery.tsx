@@ -1,21 +1,54 @@
 import React from "react"
 import Masonry from "react-responsive-masonry"
-import one from "assets/gallery/one.jpg"
-import two from "assets/gallery/two.jpg"
-import three from "assets/gallery/three.jpg"
-import four from "assets/gallery/four.jpg"
-import five from "assets/gallery/five.jpg"
-import six from "assets/gallery/six.jpg"
-import seven from "assets/gallery/seven.jpg"
-import eight from "assets/gallery/eight.jpg"
-import nine from "assets/gallery/nine.jpg"
+import photo_014 from "assets/gallery/BeautyEssence_014-min.jpg"
+import photo_045 from "assets/gallery/BeautyEssence_045-min.jpg"
+import photo_047 from "assets/gallery/BeautyEssence_047-min.jpg"
+import photo_051 from "assets/gallery/BeautyEssence_051-min.jpg"
+import photo_092 from "assets/gallery/BeautyEssence_092-min.jpg"
+import photo_093 from "assets/gallery/BeautyEssence_093-min.jpg"
+import photo_095 from "assets/gallery/BeautyEssence_095-min.jpg"
+import photo_096 from "assets/gallery/BeautyEssence_096-min.jpg"
+import photo_100 from "assets/gallery/BeautyEssence_100-min.jpg"
+import photo_102 from "assets/gallery/BeautyEssence_102-min.jpg"
+import photo_103 from "assets/gallery/BeautyEssence_103-min.jpg"
+import photo_104 from "assets/gallery/BeautyEssence_104-min.jpg"
+import photo_107 from "assets/gallery/BeautyEssence_107-min.jpg"
+import photo_109 from "assets/gallery/BeautyEssence_109-min.jpg"
+import photo_110 from "assets/gallery/BeautyEssence_110-min.jpg"
+import photo_112 from "assets/gallery/BeautyEssence_112-min.jpg"
+import photo_113 from "assets/gallery/BeautyEssence_113-min.jpg"
+import photo_121 from "assets/gallery/BeautyEssence_121-min.jpg"
+import photo_125 from "assets/gallery/BeautyEssence_125-min.jpg"
+import photo_126 from "assets/gallery/BeautyEssence_126-min.jpg"
 import arrow_right from "assets/icons/arrow_right.svg"
 import arrow_left from "assets/icons/arrow_left.svg"
 import close from "assets/icons/close.svg"
 import { twMerge } from "tailwind-merge"
+import { LazyLoadImage } from "react-lazy-load-image-component"
 
 const Gallery = (props: { isGalleryPage?: boolean }) => {
-  const images = [one, two, three, four, five, six, seven, eight, nine]
+  const images = [
+    photo_014,
+    photo_045,
+    photo_047,
+    photo_051,
+    photo_092,
+    photo_093,
+    photo_095,
+    photo_096,
+    photo_100,
+    photo_102,
+    photo_103,
+    photo_104,
+    photo_107,
+    photo_109,
+    photo_110,
+    photo_112,
+    photo_113,
+    photo_121,
+    photo_125,
+    photo_126
+  ]
 
   const [previewImageIndex, setPreviewImageIndex] = React.useState(0)
   const [showPreview, setShowPreview] = React.useState(false)
@@ -55,16 +88,16 @@ const Gallery = (props: { isGalleryPage?: boolean }) => {
           <div className="flex flex-col items-center gap-4">
             <h1 className="text-5xl font-primary font-bold mb-2">Galeria</h1>
             <p className="max-w-md text-center">
-              Zobacz nas w akcji. Odkryj atmosferę, profesjonalizm <br /> i
-              staranność, z jaką podchodzimy do każdego klienta. Przeglądaj
-              wybrane zdjęcia, by poczuć magię i jakość naszych zabiegów.
+              Odkryj atmosferę, profesjonalizm <br /> i staranność, z jaką
+              podchodzimy do każdego klienta. Przeglądaj wybrane zdjęcia, by
+              poczuć magię i jakość naszych zabiegów.
             </p>
           </div>
           <Masonry columnsCount={3} gutter="10px" className="mt-10">
             {images
-              .slice(0, props.isGalleryPage ? images.length : 5)
+              .slice(0, props.isGalleryPage ? images.length : 10)
               .map((image, index) => (
-                <img
+                <LazyLoadImage
                   src={image.src}
                   key={image.src}
                   alt="Masaż wykonywany na ludzkim ciele"

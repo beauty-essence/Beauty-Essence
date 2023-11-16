@@ -84,7 +84,7 @@ const Navigation = () => {
             href="https://booksy.com/pl-pl/210989_beauty-essence-torun_masaz_22875_torun#ba_s=sh_1"
             target="_blank"
           >
-            <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
+            <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform animate-pulse-rotate animation-delay-2s">
               Zarezerwuj
             </li>
           </a>

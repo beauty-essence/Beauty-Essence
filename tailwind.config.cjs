@@ -22,11 +22,17 @@ module.exports = {
           "0%:": { opacity: 1 },
           "50%": { opacity: 1 },
           "100%": { opacity: 0, visibility: "hidden" }
+        },
+        pulseRotate: {
+          "0%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.15)" },
+          "100%": { transform: "scale(1)" }
         }
       }
     },
     animation: {
-      preloader: "disappear 3s ease-in-out forwards"
+      preloader: "disappear 3s ease-in-out forwards",
+      "pulse-rotate": "pulseRotate 3s infinite ease-in-out"
     }
   },
   plugins: []
