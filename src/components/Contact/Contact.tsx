@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import facebook_icon from "assets/icons/FacebookIconGreen.svg"
 import instagram_icon from "assets/icons/InstagramIconGreen.svg"
+import whatsapp_icon from "assets/icons/WhatsappIconGreen.svg"
 import { useForm, FormProvider, SubmitHandler } from "react-hook-form"
 import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup"
@@ -77,7 +78,7 @@ const Contact = () => {
             Kontakt
           </h1>
 
-          <p>W razie pytań, nie wachaj się pisać!</p>
+          <p>W razie pytań, nie wachaj się napisać!</p>
 
           <div>
             <p>
@@ -112,8 +113,15 @@ const Contact = () => {
             >
               <img src={instagram_icon.src} alt="Ikona instagram" />
             </a>
+            <a href="https://wa.me/48789585586" target="_blank">
+              <img
+                src={whatsapp_icon.src}
+                alt="Ikona whatsapp"
+                className="max-w-[19px]"
+              />
+            </a>
           </div>
-          <p className="text-xs">
+          <p className="text-[10px]">
             Beauty Essence sp. z o.o. z siedzibą w Toruniu pod adresem <br />
             ul. Most Pauliński 1/3, wpisana jest do rejestru przedsiębiorców
             Krajowego Rejestru Sądowego pod numerem KRS: 0001045932, posiadająca
