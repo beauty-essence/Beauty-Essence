@@ -10,14 +10,16 @@ interface OfferSubpageProps {
   firstAlt: string
   firstDescription: string
   secondDescription: string
+  thirdDescription?: string
   secondImage: ImageMetadata
   secondAlt: string
   offerContent: any
   isRitualMassage?: boolean
   isStampMassage?: boolean
+  isHotstoneMassage?: boolean
 }
 
-const { title, firstImage, firstAlt, firstDescription, secondDescription, secondImage, secondAlt, offerContent, isRitualMassage, isStampMassage } = Astro.props
+const { title, firstImage, firstAlt, firstDescription, secondDescription, secondImage, secondAlt, offerContent, isRitualMassage, isStampMassage, isHotstoneMassage, thirdDescription } = Astro.props
 ---
 
 
@@ -35,9 +37,12 @@ const { title, firstImage, firstAlt, firstDescription, secondDescription, second
           <p class="text-xl text-secondary-text leading-[130%] mb-5" >
             {firstDescription}
           </p>
-          <p class="text-xl text-secondary-text leading-[130%] mb-12">
+          <p class="text-xl text-secondary-text leading-[130%]">
            {secondDescription}
-           <br>
+           <br><br>
+           <p class="text-xl text-secondary-text leading-[130%]">
+            {thirdDescription}
+            <br>
           </p>
         </div>
         </div>
@@ -65,7 +70,7 @@ const { title, firstImage, firstAlt, firstDescription, secondDescription, second
 <section class="w-full flex flex-col justify-center items-center py-10 lg:py-28 bg-primary-light">
   <div class="container mx-auto w-full md:py-10 flex flex-col justify-center items-center gap-10">
     {offerContent.map((item: any) => (
-    <OfferSubpageCard image={item.image} alt={item.alt} title={item.title} subtitle={item.subtitle} description={item.description}  price={item.price} isOilMassage={item.isOilMassage} isCandleMassage={item.isCandleMassage} isRitualMassage={isRitualMassage} firstBadge={item.firstBadge} secondBadge={item.secondBadge} thirdBadge={item.thirdBadge} isStampMassage={item.isStampMassage} />
+    <OfferSubpageCard image={item.image} alt={item.alt} title={item.title} subtitle={item.subtitle} description={item.description}  price={item.price} isOilMassage={item.isOilMassage} isCandleMassage={item.isCandleMassage} isRitualMassage={isRitualMassage} firstBadge={item.firstBadge} secondBadge={item.secondBadge} thirdBadge={item.thirdBadge} isStampMassage={item.isStampMassage} isHotstoneMassage={item.isHotstoneMassage}/>
     ))}
 
   </div>

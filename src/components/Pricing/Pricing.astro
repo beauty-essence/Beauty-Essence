@@ -49,8 +49,8 @@ const CARDS_CONTENT = [
       {
         variant: "Refleksologia",
         firstPrice: "140 zł",
-        secondPrice: "189 zł",
-        thirdPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "189 zł",
         fourthPrice: "-"
       },
       {
@@ -132,7 +132,7 @@ const CARDS_CONTENT = [
         secondPrice: "-",
         thirdPrice: "-",
         fourthPrice: "390 zł",
-        additionalDescription: "Peeling + masaż orientalny masłem do ciała shea.",
+        additionalDescription: "Peeling + masaż orientalny masłem shea do ciała.",
         secondAdditionalDescription: "Efekty: ujędrnienie, rewitalizacja"
       },
       {
@@ -182,25 +182,25 @@ const CARDS_CONTENT = [
   }
 ]
 ---
-<section class="relative w-full flex justify-center items-center  lg:py-28">
-    <div class="md:py-10 flex flex-col justify-center items-center md:items-start mb-10 md:mb-[unset]">
-      <div class="mb-12">
-        <h3 class="text-7xl font-primary font-bold text-button-dark mb-3">
+<section class="relative w-full flex justify-center items-center  lg:py-28 overflow-scroll">
+    <div class="md:py-10 flex flex-col justify-center items-center md:items-start mb-10 md:mb-[unset] max-w-[400px] md:max-w-[unset]">
+      <div class="mb-10">
+        <h3 class="text-7xl font-primary font-bold text-center md:text-left text-button-dark my-6">
           Cennik
         </h3>
         <p class="text-secondary-text font-secondary text-xl font-medium">Sprawdź wycenę naszych usług</p>
       </div>
-      <div class="flex flex-col justify-center lg:justify-start gap-11 md:p-0 max-w-[1000px]">
+      <div class="flex flex-col justify-center lg:justify-start gap-11 md:p-0 md:max-w-[1000px] overflow-hidden max-w-[400px]">
         <PricingCard title="Masaże orientalne" variant={CARDS_CONTENT[0].massage_oriental} variantTitle="Rodzaj masażu" isOrientalVariant />
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-11">
         <PricingCard title="Masaże rozgrzewające" variant={CARDS_CONTENT[0].massage_warming} variantTitle="Rodzaj masażu" isWarmingVariant={true} />
         <PricingCard title="Rytuały SPA" variant={CARDS_CONTENT[0].massage_rituals} variantTitle="Rodzaj rytuału" isadditionalDescription isRitualVariant/>
         <div class="flex flex-col gap-4 md:flex-row">
           <div class=" md:w-1/2">
-          <PricingCard title="Karnety na Masaże/Rytuały" variant={CARDS_CONTENT[0].massage_carnet} variantTitle="Rodzaj karnetu" isCarnet={true} isadditionalDescription />
+          <PricingCard title="Karnety na Masaże/Rytuały" variant={CARDS_CONTENT[0].massage_carnet} variantTitle="Rodzaj karnetu" isCarnet={true} isadditionalDescription additionalTitle="(Jeden rodzaj masażu/rytuału)" />
           </div>
           <div class="md:w-1/2">
-          <PricingCard title="Karnety kwotowe" variant={CARDS_CONTENT[0].massage_carnetPriced} variantTitle="Rodzaj karnetu" isCarnet={true} isadditionalDescription />
+          <PricingCard title="Karnety kwotowe" variant={CARDS_CONTENT[0].massage_carnetPriced} variantTitle="Rodzaj karnetu" isCarnet={true} isadditionalDescription additionalTitle="(Dowolne masaże/rytuały)" />
           </div>
         </div>
         <PricingCard title="Masaże dla dwojga" variant={CARDS_CONTENT[0].massage_duo} variantTitle="Rodzaj karnetu" isCarnet={true} isadditionalDescription isDuoMassage />

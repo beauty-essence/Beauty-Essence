@@ -24,7 +24,7 @@ import arrow_right from "assets/icons/arrow_right.svg"
 import arrow_left from "assets/icons/arrow_left.svg"
 import close from "assets/icons/close.svg"
 import { twMerge } from "tailwind-merge"
-import { LazyLoadImage } from "react-lazy-load-image-component"
+// import { LazyLoadImage } from "react-lazy-load-image-component"
 
 const Gallery = (props: { isGalleryPage?: boolean }) => {
   const images = [
@@ -97,7 +97,7 @@ const Gallery = (props: { isGalleryPage?: boolean }) => {
             {images
               .slice(0, props.isGalleryPage ? images.length : 10)
               .map((image, index) => (
-                <LazyLoadImage
+                <img
                   src={image.src}
                   key={image.src}
                   alt="Masaż wykonywany na ludzkim ciele"
@@ -119,7 +119,10 @@ const Gallery = (props: { isGalleryPage?: boolean }) => {
       {showPreview && (
         <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50">
           <div className="bg-black w-full h-full fixed top-0 left-0 opacity-70"></div>
-          <img src={images[previewImageIndex].src} className="z-50" />
+          <img
+            src={images[previewImageIndex].src}
+            className="z-50 max-w-xs md:max-w-lg"
+          />
           <img
             src={close.src}
             className=" w-12 h-12 absolute top-10 right-10 cursor-pointer"

@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/react": "^2.3.2",
     "@astrojs/tailwind": "^4.0.0",
+    "@emailjs/browser": "^3.11.0",
     "@fontsource/cormorant-garamond": "^5.0.8",
     "@fontsource/jost": "^5.0.8",
     "@hookform/resolvers": "^3.3.1",
@@ -32,6 +33,7 @@
     "yup": "^1.2.0"
   },
   "devDependencies": {
+    "@types/react-lazy-load-image-component": "^1.6.3",
     "@typescript-eslint/parser": "^6.4.0",
     "eslint": "^8.47.0",
     "eslint-plugin-astro": "^0.28.0",

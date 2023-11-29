@@ -1,4 +1,4 @@
-import voucher_photo from "assets/vouchers-photo.png"
+import voucher_photo from "assets/vouchers-photo.webp"
 import { useState } from "react"
 import VoucherModal from "./VoucherModal"
 
@@ -8,7 +8,7 @@ const Vouchers = () => {
     <>
       <section className="w-full flex justify-center items-center py-32">
         <div className="md:flex items-center gap-16 max-w-3xl">
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left max-w-md">
             <h3 className="text-7xl font-primary font-bold text-button-dark mb-3">
               Vouchery
             </h3>
@@ -32,11 +32,18 @@ const Vouchers = () => {
               Zamów voucher
             </button>
           </div>
-          <img
+          <div class="max-w-[262px] md:w-[393px] overflow-hidden hidden md:flex justify-center">
+            <img
+              src={voucher_photo.src}
+              alt="Masażysta"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          {/* <img
             src={voucher_photo.src}
             alt="Masażysta"
-            className="hidden md:block"
-          />
+            className="w-full h-full object-cover"
+          /> */}
         </div>
       </section>
       {isPopupOpen && (
