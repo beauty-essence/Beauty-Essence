@@ -25,13 +25,17 @@ module.exports = {
         },
         pulseRotate: {
           "0%": { transform: "scale(1)" },
-          "50%": { transform: "scale(1.15)" },
+          "20%": { transform: "scale(1.15)" },
+          "30%": { transform: "rotate(5deg)" },
+          "50%": { transform: "rotate(-5deg)" },
+          "70%": { transform: "rotate(5deg)" },
+          "90%": { transform: "rotate(-5deg)" },
           "100%": { transform: "scale(1)" }
         }
       }
     },
     animation: {
-      preloader: "disappear 3s ease-in-out forwards",
+      preloader: "disappear 4s ease-in-out forwards",
       "pulse-rotate": "pulseRotate 3s infinite ease-in-out"
     }
   },
