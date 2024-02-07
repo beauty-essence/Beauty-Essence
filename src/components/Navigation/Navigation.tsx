@@ -59,9 +59,9 @@ const Navigation = () => {
               Cennik
             </li>
           </a>
-          <a href={ROUTES.gallery}>
+          <a href={ROUTES.vouchers}>
             <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
-              Galeria
+              Kup voucher
             </li>
           </a>
         </ul>

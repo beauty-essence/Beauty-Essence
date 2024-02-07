@@ -4,8 +4,8 @@ import Image from "astro/components/Image.astro";
 ---
 
 <div class="flex flex-col justify-center items-center mt-20 max-w-xs h-[860px]">
-    <div class="mb-8 max-w-xs">
-      <Image src={image} alt={alt} />
+    <div class="mb-8 max-w-xs w-80 md:w-[352px] overflow-hidden flex justify-center">
+      <Image src={image} alt={alt} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
     </div>
     <div>
         <h3

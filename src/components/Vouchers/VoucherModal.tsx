@@ -163,7 +163,7 @@ const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
                 {errors.variant?.message}
               </p>
               <p className="font-primary text-md text-secondary">
-                &sdot; Voucher jest ważny przez 6 miesięcy od daty zakupu.
+                &sdot; Voucher jest ważny przez 3 miesiące od daty zakupu.
                 <br />
                 &sdot; Voucher do druku oraz potwierdzenie płatności znajdą
                 Państwo na e‑mailu po dokonaniu płatności.
