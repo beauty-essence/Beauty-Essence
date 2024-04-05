@@ -8,6 +8,7 @@ import wine_massage from "assets/photos/offer/spa/wine-massage.jpg"
 import oil_massage from "assets/photos/offer/spa/oil-massage.jpg"
 import amber_massage from "assets/photos/offer/spa/amber-massage.jpg"
 import withoutwine_massage from "assets/photos/offer/spa/withoutwine_massage.jpg"
+import neckline_massage from "assets/photos/offer/oriental/neckline-massage.jpg"
 import photo_052 from "assets/photos/offer/spa/BeautyEssence_052-min.webp"
 import photo_89 from "assets/photos/offer/spa/BeautyEssence_089-min.webp"
 import photo_122 from "assets/photos/offer/spa/BeautyEssence_122-min.webp"
@@ -26,12 +27,20 @@ const MASSAGES_DATA =
     }
 
 const OFFER_CONTENT = [
+{
+    image: neckline_massage,
+    alt: "Masowana osoba",
+    title: "Indonezyjski masaż twarzy i dekoltu",
+    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+    description: 'Zabieg pielęgnacyjny stymulujący przepływ krwi i limfy obszaru twarzy i dekoltu. Pobudza tkanki do produkcji kolagenu poprzez terapeutyczne ruchy z elementami akupresury. W pierwszej kolejności terapeutka wykonuje demakijaż twarzy i oczu delikatną emulsją, bogatą w oleje roślinne, pantenol i aloes, która zmiękcza, nawilża i uspokaja skórę. Następnie stosuje tonik, hydrolat rumianku rzymskiego i szałwii, daje to uczucie świeżości, nawilżenia i złagodzenia. Do zabiegu używany jest olejek, który dzięki zawartości olejów roślinnych - odżywia, pantenolu i aloesu - wycisza, witamin - dba o zdrowie skóry oraz dzięki zawartości kombuchy wpłynie na gładkość i przyspieszy regenerację naskórka, spowolni procesy starzenia i poprawi koloryt skóry. Skład olejku do zabiegu twarzy: olej z pestek winogron, olej rzepakowy, pantenol, kombucha, wyciąg z liści aloesu, wit E, C, D i B5, antyutleniacz.',
+    price: "179 PLN"
+},
     {
     image: orient_massage,
     alt: "Masowana osoba",
     title: "Rytuał „Orient”",
     subtitle: "Pełen relaks dla ciała i duszy",
-    description: "Produkty do masażu Orient to wyjątkowo bogata kompozycja orientalnych ziół, naturalnych przypraw i drogocennych mieszanek olejowych z jojoby i migdałów. Odżywia, nawilża i rewitalizuje. Rytuał ten pobudza przemianę materii, poprawia krążenie krwi, usuwa toksyny z organizmu i równoważy przepływ energii. Kojarzy się z ciepłymi, egzotycznymi wakacjami, przepełnionymi relaksem, witalnością i swobodą. Orientalne aromaty to naturalne wyciągi z: wanilii, cynamonu, goździków, drzewa herbacianego - działają jak afrodyzjak, który daje siłę i energię dla obu płci, łagodzi depresję, melancholię i codzienny stres.",
+    description: "Produkty do rytuału Orient to wyjątkowo bogata kompozycja orientalnych ziół, naturalnych przypraw i drogocennych mieszanek olejowych z jojoby i migdałów. Odżywia, nawilża i rewitalizuje. Rytuał ten pobudza przemianę materii, poprawia krążenie krwi, usuwa toksyny z organizmu i równoważy przepływ energii. Kojarzy się z ciepłymi, egzotycznymi wakacjami, przepełnionymi relaksem, witalnością i swobodą. Orientalne aromaty to naturalne wyciągi z: wanilii, cynamonu, goździków, drzewa herbacianego - działają jak afrodyzjak, który daje siłę i energię dla obu płci, łagodzi depresję, melancholię i codzienny stres.",
     price: "390 PLN",
     firstBadge: "ciepło, seksapil i wyzwolenie",
     secondBadge: "zadbana, głęboko nawilżona i zregenerowana skóra",
@@ -42,7 +51,7 @@ const OFFER_CONTENT = [
     alt: "Masowana osoba",
     title: "Rytuał „Jedwab”",
     subtitle: "Odprężenie z aromatem natury",
-    description: "W tym luksusowym zabiegu wykorzystany jest najwyższej jakości hydrolizat jedwabiu. Proteiny jedwabiu są doskonałym materiałem budulcowym, a dzięki swej niskiej masie cząsteczkowej są zdolne przenikać do warstw naskórka, scalając je i poprawiając poziom nawilżenia. Głównymi aminokwasami jedwabiu są alanina i glicyna – mające dobre właściwości nawilżające i regeneracyjne. Trzecim znaczącym aminokwasem jedwabiu jest seryna, posiadająca zdolność wiązania wody i tworzenia ochronnego i nieokluzyjnego filmu na powierzchni skóry. Jedwab poprawia metabolizm komórek skóry, przeciwdziała przebarwieniom, nadaje skórze gładkość, a w połączeniu z bogactwem olei roślinnych działa regenerująco i nawilżająco. Produkty zostawiają na skórze delikatną, jedwabną poświatę co czyni ten masaż wyjątkowo luksusowym.",
+    description: "W tym luksusowym zabiegu wykorzystany jest najwyższej jakości hydrolizat jedwabiu. Proteiny jedwabiu są doskonałym materiałem budulcowym, a dzięki swej niskiej masie cząsteczkowej są zdolne przenikać do warstw naskórka, scalając je i poprawiając poziom nawilżenia. Głównymi aminokwasami jedwabiu są alanina i glicyna – mające dobre właściwości nawilżające i regeneracyjne. Trzecim znaczącym aminokwasem jedwabiu jest seryna, posiadająca zdolność wiązania wody i tworzenia ochronnego i nieokluzyjnego filmu na powierzchni skóry. Jedwab poprawia metabolizm komórek skóry, przeciwdziała przebarwieniom, nadaje skórze gładkość, a w połączeniu z bogactwem olei roślinnych działa regenerująco i nawilżająco. Produkty zostawiają na skórze delikatną, jedwabną poświatę co czyni ten zabieg wyjątkowo luksusowym.",
     price: "390 PLN",
     firstBadge: "lekkość, delikatny dotyk",
     secondBadge: "głębokie nawilżenie i odmłodzenie, jedwabisty połysk skóry",
@@ -53,7 +62,7 @@ const OFFER_CONTENT = [
     alt: "Masowana osoba",
     title: "Rytuał „Tytan”",
     subtitle: "Odbudowa wewnętrznego spokoju",
-    description: "Produkty do masażu z linii Tytan, adresowane są dla mężczyzn. Zapach oraz dobór składników aktywnych dbają o regenerację męskiej skóry. Oleje roślinne z: sezamu indyjskiego, pestek winogron, słodkich migdałów i nasion rzepaku odżywiają oraz długotrwale utrzymują odpowiednie nawilżenie skóry. Masaż wpływa na lepsze krążenie. Aromat rytuału oparty jest na nutach ziemi i drewna, które cudownie relaksują i wpływają na dobre samopoczucie każdego mężczyzny.",
+    description: "Produkty do rytuału z linii Tytan, adresowane są dla mężczyzn. Zapach oraz dobór składników aktywnych dbają o regenerację męskiej skóry. Oleje roślinne z: sezamu indyjskiego, pestek winogron, słodkich migdałów i nasion rzepaku odżywiają oraz długotrwale utrzymują odpowiednie nawilżenie skóry. Zabieg ten wpływa na lepsze krążenie. Aromat rytuału oparty jest na nutach ziemi i drewna, które cudownie relaksują i wpływają na dobre samopoczucie każdego mężczyzny.",
     price: "390 PLN",
     firstBadge: "moc, witalność",
     secondBadge: "regeneracja, nawilżenie",
@@ -64,7 +73,7 @@ const OFFER_CONTENT = [
     alt: "Masowana osoba",
     title: "Rytuał „Czerwone Wino”",
     subtitle: "Rozluźnienie napiętych mięśni i umysłu",
-    description: "Ujędrniające kosmetyki do masażu „Czerwone Wino” nasycone wyciągami z winogron cudownie wygładzą skórę. Ekstrakt z pestek winogron, wyciąg z wina i mieszanka olei intensywnie działają na wolne rodniki, regenerują i z prawdziwą mocą witalności odżywiają skórę, rozjaśniają cerę, łagodzą zaczerwienienia skóry, działają przeciwzapalnie, opóźniają starzenie się. Z pozostałości po fermentacji wina uzyskuje się wiele cennych substancji korzystnie wpływających na stan skóry: peptydy, witaminy, polifenole. Zawarte w naszych produktach witaminy tworzą miękką i gładką skórę, przywracają jej elastyczność, dając blask, zmysłowość i tajemniczość. „In vino veritas, in aqua sanitas” – w winie prawda, w wodzie zdrowie, głosi znana łacińska sentencja, która doskonale wpisuje się w ten zdrowotno – relaksujący zabieg SPA.",
+    description: "Ujędrniające kosmetyki do rytuału „Czerwone Wino” nasycone wyciągami z winogron cudownie wygładzą skórę. Ekstrakt z pestek winogron, wyciąg z wina i mieszanka olei intensywnie działają na wolne rodniki, regenerują i z prawdziwą mocą witalności odżywiają skórę, rozjaśniają cerę, łagodzą zaczerwienienia skóry, działają przeciwzapalnie, opóźniają starzenie się. Z pozostałości po fermentacji wina uzyskuje się wiele cennych substancji korzystnie wpływających na stan skóry: peptydy, witaminy, polifenole. Zawarte w naszych produktach witaminy tworzą miękką i gładką skórę, przywracają jej elastyczność, dając blask, zmysłowość i tajemniczość. „In vino veritas, in aqua sanitas” – w winie prawda, w wodzie zdrowie, głosi znana łacińska sentencja, która doskonale wpisuje się w ten zdrowotno – relaksujący zabieg SPA.",
     price: "390 PLN",
     firstBadge: "energia, witalność",
     secondBadge: "ujędrniona, miękka, gładka i odmłodzona skóra",
@@ -75,7 +84,7 @@ const OFFER_CONTENT = [
     alt: "Masowana osoba",
     title: "Rytuał „Rajski Grapefruit”",
     subtitle: "Rozluźnienie napiętych mięśni i umysłu",
-    description: "Masaż grejpfrutowy zapobiega zmęczeniu psychicznemu, ponieważ olejek eteryczny z grejpfruta, który jest używany w tym rytuale, jest uznany za jeden z najbardziej skutecznych naturalnych leków antydepresyjnych. Masaż rytualny zwiększa odporność i aktywnie wpływa na eliminację toksyn z organizmu. Należy ją stosować w terapii nadwagi i w celu wymodelowania ciała. Regularne wykonywane masaże na tych produktach przyczynią się do korzystnego wpływu na redukcję cellulitu..",
+    description: "Rytuał „Rajski Grejpfrut” zapobiega zmęczeniu psychicznemu, ponieważ olejek eteryczny z grejpfruta, który jest używany w tym rytuale, jest uznany za jeden z najbardziej skutecznych naturalnych leków antydepresyjnych. Zabieg rytualny zwiększa odporność i aktywnie wpływa na eliminację toksyn z organizmu. Należy go stosować w terapii nadwagi i w celu wymodelowania ciała. Regularne wykonywane zabiegi na tych produktach przyczynią się do korzystnego wpływu na redukcję cellulitu.",
     price: "390 PLN",
     firstBadge: "energia, lekkość, radość życia",
     secondBadge: "głęboko nawilżona, gładka, odmłodzona skóra; zredukowany kształt ciała",
@@ -85,8 +94,7 @@ const OFFER_CONTENT = [
     image: photo_87,
     alt: "Masowana osoba",
     title: "Rytuał „Bursztyn”",
-    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
-    description: "Masaż na produktach z wyciągiem z bursztynu rozluźnia mięśnie i umysł od stresu. Bursztyn ogrzewa ciało i stan emocjonalny. Jest nośnikiem energii i równowagi. Daje moc, która ma pozytywny wpływ na ludzkie ciało i skórę. Rytuał ten pobudza siłę fizyczną i psychiczną, zwiększa pewność siebie. W preparatach do masażu wykorzystujemy puder i ekstrakt bursztynowy który wraz z cennymi olejami roślinnymi bardzo korzystnie wpływa nie tylko na skórę ale również na cały organizm, dodając mu mocy.",
+    subtitle: "Zabieg na produktach z wyciągiem z bursztynu rozluźnia mięśnie i umysł od stresu. Bursztyn ogrzewa ciało i stan emocjonalny. Jest nośnikiem energii i równowagi. Daje moc, która ma pozytywny wpływ na ludzkie ciało i skórę. Rytuał ten pobudza siłę fizyczną i psychiczną, zwiększa pewność siebie. W preparatach do zabiegu wykorzystujemy puder i ekstrakt bursztynowy, który wraz z cennymi olejami roślinnymi bardzo korzystnie wpływa nie tylko na skórę ale również na cały organizm, dodając mu mocy.",
     price: "390 PLN",
     firstBadge: "równowaga, lekkość, radość życia, relaks",
     secondBadge: "gładkie, zregenerowane ciało",
