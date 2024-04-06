@@ -3,6 +3,7 @@ import massager_photo from "assets/photos/offer/massager.png"
 import human_back_photo from "assets/photos/offer/human-back.png"
 import { Image } from "astro:assets"
 import OfferSubpageCard from "./OfferSubpageCard.astro";
+import neckline_massage from "assets/photos/offer/oriental/neckline-massage.jpg"
 
 interface OfferSubpageProps {
   title: string
@@ -17,9 +18,10 @@ interface OfferSubpageProps {
   isRitualMassage?: boolean
   isStampMassage?: boolean
   isHotstoneMassage?: boolean
+  isAdditionalMassage?: boolean
 }
 
-const { title, firstImage, firstAlt, firstDescription, secondDescription, secondImage, secondAlt, offerContent, isRitualMassage, isStampMassage, isHotstoneMassage, thirdDescription } = Astro.props
+const { title, firstImage, firstAlt, firstDescription, secondDescription, secondImage, secondAlt, offerContent, isRitualMassage, isStampMassage, isHotstoneMassage, thirdDescription, isAdditionalMassage } = Astro.props
 ---
 
 
@@ -68,9 +70,22 @@ const { title, firstImage, firstAlt, firstDescription, secondDescription, second
     </div>
 </section>
 <section class="w-full flex flex-col justify-center items-center py-10 lg:py-28 bg-primary-light">
-  <div class="container mx-auto w-full md:py-10 flex flex-col justify-center items-center gap-10">
+  <div class=`container mx-auto w-full md:py-10 flex flex-col justify-center items-center gap-10`>
+    <div class=`${isRitualMassage ? "" : "hidden"} flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px]`>
+      <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
+          <Image src={neckline_massage} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
+      </div>
+      <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
+          <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Indonezyjski zabieg twarzy i dekoltu</h6>
+          <!-- <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p> -->
+          <p class="text-xl text-secondary-text leading-[130%] mb-6">
+            Zabieg pielęgnacyjny stymulujący przepływ krwi i limfy obszaru twarzy i dekoltu. Pobudza tkanki do produkcji kolagenu poprzez terapeutyczne ruchy z elementami akupresury. W pierwszej kolejności terapeutka wykonuje demakijaż twarzy i oczu delikatną emulsją, bogatą w oleje roślinne, pantenol i aloes, która zmiękcza, nawilża i uspokaja skórę. Następnie stosuje tonik, hydrolat rumianku rzymskiego i szałwii, daje to uczucie świeżości, nawilżenia i złagodzenia. Do zabiegu używany jest olejek, który dzięki zawartości olejów roślinnych - odżywia, pantenolu i aloesu - wycisza, witamin - dba o zdrowie skóry oraz dzięki zawartości kombuchy wpłynie na gładkość i przyspieszy regenerację naskórka, spowolni procesy starzenia i poprawi koloryt skóry. Skład olejku do zabiegu twarzy: olej z pestek winogron, olej rzepakowy, pantenol, kombucha, wyciąg z liści aloesu, wit E, C, D i B5, antyutleniacz.
+            </p>
+            <p class="font-secondary text-button-dark text-2xl font-regulary">179 PLN</p>
+      </div>
+  </div>
     {offerContent.map((item: any) => (
-    <OfferSubpageCard image={item.image} alt={item.alt} title={item.title} subtitle={item.subtitle} description={item.description}  price={item.price} isOilMassage={item.isOilMassage} isCandleMassage={item.isCandleMassage} isRitualMassage={isRitualMassage} firstBadge={item.firstBadge} secondBadge={item.secondBadge} thirdBadge={item.thirdBadge} isStampMassage={item.isStampMassage} isHotstoneMassage={item.isHotstoneMassage}/>
+    <OfferSubpageCard image={item.image} alt={item.alt} title={item.title} subtitle={item.subtitle} description={item.description}  price={item.price} isOilMassage={item.isOilMassage} isCandleMassage={item.isCandleMassage} isRitualMassage={isRitualMassage} firstBadge={item.firstBadge} secondBadge={item.secondBadge} thirdBadge={item.thirdBadge} isStampMassage={item.isStampMassage} isHotstoneMassage={item.isHotstoneMassage} isAdditionalMassage={item.isAdditionalMassage}/>
     ))}
 
   </div>

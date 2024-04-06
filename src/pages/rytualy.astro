@@ -27,14 +27,6 @@ const MASSAGES_DATA =
     }
 
 const OFFER_CONTENT = [
-{
-    image: neckline_massage,
-    alt: "Masowana osoba",
-    title: "Indonezyjski masaż twarzy i dekoltu",
-    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
-    description: 'Zabieg pielęgnacyjny stymulujący przepływ krwi i limfy obszaru twarzy i dekoltu. Pobudza tkanki do produkcji kolagenu poprzez terapeutyczne ruchy z elementami akupresury. W pierwszej kolejności terapeutka wykonuje demakijaż twarzy i oczu delikatną emulsją, bogatą w oleje roślinne, pantenol i aloes, która zmiękcza, nawilża i uspokaja skórę. Następnie stosuje tonik, hydrolat rumianku rzymskiego i szałwii, daje to uczucie świeżości, nawilżenia i złagodzenia. Do zabiegu używany jest olejek, który dzięki zawartości olejów roślinnych - odżywia, pantenolu i aloesu - wycisza, witamin - dba o zdrowie skóry oraz dzięki zawartości kombuchy wpłynie na gładkość i przyspieszy regenerację naskórka, spowolni procesy starzenia i poprawi koloryt skóry. Skład olejku do zabiegu twarzy: olej z pestek winogron, olej rzepakowy, pantenol, kombucha, wyciąg z liści aloesu, wit E, C, D i B5, antyutleniacz.',
-    price: "179 PLN"
-},
     {
     image: orient_massage,
     alt: "Masowana osoba",
@@ -94,7 +86,8 @@ const OFFER_CONTENT = [
     image: photo_87,
     alt: "Masowana osoba",
     title: "Rytuał „Bursztyn”",
-    subtitle: "Zabieg na produktach z wyciągiem z bursztynu rozluźnia mięśnie i umysł od stresu. Bursztyn ogrzewa ciało i stan emocjonalny. Jest nośnikiem energii i równowagi. Daje moc, która ma pozytywny wpływ na ludzkie ciało i skórę. Rytuał ten pobudza siłę fizyczną i psychiczną, zwiększa pewność siebie. W preparatach do zabiegu wykorzystujemy puder i ekstrakt bursztynowy, który wraz z cennymi olejami roślinnymi bardzo korzystnie wpływa nie tylko na skórę ale również na cały organizm, dodając mu mocy.",
+    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+    description: "Zabieg na produktach z wyciągiem z bursztynu rozluźnia mięśnie i umysł od stresu. Bursztyn ogrzewa ciało i stan emocjonalny. Jest nośnikiem energii i równowagi. Daje moc, która ma pozytywny wpływ na ludzkie ciało i skórę. Rytuał ten pobudza siłę fizyczną i psychiczną, zwiększa pewność siebie. W preparatach do zabiegu wykorzystujemy puder i ekstrakt bursztynowy który wraz z cennymi olejami roślinnymi bardzo korzystnie wpływa nie tylko na skórę ale również na cały organizm, dodając mu mocy.",
     price: "390 PLN",
     firstBadge: "równowaga, lekkość, radość życia, relaks",
     secondBadge: "gładkie, zregenerowane ciało",
@@ -104,5 +97,5 @@ const OFFER_CONTENT = [
 ---
 
 <Layout>
-    <OfferSubpage title={MASSAGES_DATA.title} firstImage={MASSAGES_DATA.firstImage} firstAlt={MASSAGES_DATA.firstAlt} firstDescription={MASSAGES_DATA.firstDescription} secondDescription={MASSAGES_DATA.secondDescription} secondImage={MASSAGES_DATA.secondImage} secondAlt={MASSAGES_DATA.secondAlt} offerContent={OFFER_CONTENT} isRitualMassage={true} thirdDescription={MASSAGES_DATA.thirdDescription}/>
+    <OfferSubpage title={MASSAGES_DATA.title} firstImage={MASSAGES_DATA.firstImage} firstAlt={MASSAGES_DATA.firstAlt} firstDescription={MASSAGES_DATA.firstDescription} secondDescription={MASSAGES_DATA.secondDescription} secondImage={MASSAGES_DATA.secondImage} secondAlt={MASSAGES_DATA.secondAlt} offerContent={OFFER_CONTENT} isRitualMassage={true} thirdDescription={MASSAGES_DATA.thirdDescription} idAdditionalMassage={true} />
 </Layout>
