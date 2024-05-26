@@ -9,9 +9,13 @@ import AboutUs from "../components/AboutUs/AboutUs.astro"
 import Offer from "components/Offer/Offer.astro"
 import Pricing from "components/Pricing/Pricing.astro"
 import Vouchers from "components/Vouchers/Vouchers"
+import Popup from "../components/Popup/Popup"
 ---
 
 <Layout>
+  <div class="">
+    <Popup client:only="react" />
+  </div>
   <Hero />
   <AboutUs />
   <Offer />
