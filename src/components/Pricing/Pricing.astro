@@ -68,19 +68,12 @@ const CARDS_CONTENT = [
         fourthPrice: "-"
       },
       {
-        variant: "Indonezyjski masaż twarzy i dekoltu",
-        firstPrice: "-",
-        secondPrice: "179 zł",
-        thirdPrice: "-",
-        fourthPrice: "-"
-      },
-      {
         variant: "Masaż dla kobiet w ciąży",
         firstPrice: "-",
         secondPrice: "-",
         thirdPrice: "229 zł",
         fourthPrice: "-"
-      },
+      }
     ],
     massage_warming: [
       {
@@ -161,6 +154,64 @@ const CARDS_CONTENT = [
         secondAdditionalDescription: "Odczucia: równowaga duchowa, energia młodości"
       },
     ],
+    massage_headspa: [
+      {
+        variant: "Zen Head SPA",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "349 zł",
+        fourthPrice: "1h 15 min",
+        additionalDescription: "Peeling + masaż orientalny maską do ciała bursztyn.",
+        secondAdditionalDescription: "Odczucia: równowaga duchowa, energia młodości"
+      },
+      {
+        variant: "Harmony Head SPA",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "439 zł",
+        fourthPrice: "1h 45 min",
+        additionalDescription: "Peeling + masaż orientalny maską do ciała bursztyn.",
+        secondAdditionalDescription: "Odczucia: równowaga duchowa, energia młodości"
+      },
+      {
+        variant: "Oriental Head SPA",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "549 zł",
+        fourthPrice: "2h",
+        additionalDescription: "Peeling + masaż orientalny maską do ciała bursztyn.",
+        secondAdditionalDescription: "Odczucia: równowaga duchowa, energia młodości"
+      },
+      {
+        variant: "Bali Head SPA Essence",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "599 zł",
+        fourthPrice: "2h 30 min",
+        additionalDescription: "Peeling + masaż orientalny maską do ciała bursztyn.",
+        secondAdditionalDescription: "Odczucia: równowaga duchowa, energia młodości"
+      },
+    ],
+    massage_kobido: [
+      {
+        variant: "Kobido Up",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "299 zł",
+        fourthPrice: "1h 15 min",
+        additionalDescription: "Peeling + masaż orientalny maską do ciała bursztyn.",
+        secondAdditionalDescription: "Odczucia: równowaga duchowa, energia młodości"
+      },
+      {
+        variant: "Kobido Up + Taping",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "399 zł",
+        fourthPrice: "1h 30 min",
+        additionalDescription: "Peeling + masaż orientalny maską do ciała bursztyn.",
+        secondAdditionalDescription: "Odczucia: równowaga duchowa, energia młodości"
+      },
+    ],
     massage_carnet: [
       {
         variant: "5 masaży -> rabat 10% ",
@@ -202,6 +253,8 @@ const CARDS_CONTENT = [
         <div class="flex flex-col gap-11">
         <PricingCard title="Masaże rozgrzewające" variant={CARDS_CONTENT[0].massage_warming} variantTitle="Rodzaj masażu" isWarmingVariant={true} />
         <PricingCard title="Rytuały SPA" variant={CARDS_CONTENT[0].massage_rituals} variantTitle="Rodzaj rytuału" isadditionalDescription isRitualVariant/>
+        <PricingCard title="Zen Head SPA" variant={CARDS_CONTENT[0].massage_headspa} variantTitle="Rodzaj Head SPA" isWarmingVariant={true} isReversedVariant={true}/>
+        <PricingCard title="Nieinwazyjny lifting twarzy - Kobido Up" variant={CARDS_CONTENT[0].massage_kobido} variantTitle="Rodzaj" isWarmingVariant={true} isReversedVariant={true}/>
         <div class="flex flex-col gap-4 md:flex-row">
           <div class=" md:w-1/2">
           <PricingCard title="Karnety na Masaże/Rytuały" variant={CARDS_CONTENT[0].massage_carnet} variantTitle="Rodzaj karnetu" isCarnet={true} isadditionalDescription additionalTitle="(Jeden rodzaj masażu/rytuału)" />
