@@ -12,5 +12,6 @@ export const ROUTES = {
     massagesRelaxtion: "/masaze-relaksacyjne",
     massagesWarming: "/masaze-rozgrzewajace",
     massagesRituals: "/rytualy",
+    headSpa: "/head-spa",
     massagesTreatments: "/masaze-zabiegi",
 }

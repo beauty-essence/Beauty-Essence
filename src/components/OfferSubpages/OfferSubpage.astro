@@ -5,7 +5,6 @@ import { Image } from "astro:assets"
 import OfferSubpageCard from "./OfferSubpageCard.astro"
 import neckline_massage from "assets/photos/offer/oriental/neckline-massage.jpg"
 import OfferCard from "components/Offer/OfferCard/OfferCard.astro"
-// import head_spa_additional_photo from "assets/photos/offer/spa/head_spa_additional.jpeg"
 import head_spa_additional_photo from "assets/photos/offer/spa/head_spa_additional2.jpg"
 
 
@@ -96,18 +95,19 @@ const { title, firstImage, firstAlt, firstDescription, secondDescription, second
 <!-- Beginning -->
   <div class=`${isRitualMassage ? "" : "hidden"}`>
 
-    <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
+    <!-- <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
         <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
             <Image src={head_spa_additional_photo} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
         </div>
         <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
             <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Zen Head SPA</h6>
-            <!-- <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p> -->
+            <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p>
             <p class="text-xl text-secondary-text leading-[130%] mb-6">
                 <p class="text-xl text-secondary-text leading-[130%] mb-6">
                   <ul class=` text-lg text-secondary-text leading-[130%] mb-6`>
                       <li>• aromaterapia antystresowa</li>
                       <li>• masaż głowy z elementami ajurwedy</li>
+                      <li>• masaż odcinka szyjnego i klatki piersiowej</li>
                       <li>• peeling enzymatyczny skóry głowy z masażem skalpu</li>
                       <li>• indywidualnie dobrana organiczna kąpiel włosów oraz dedykowana maska z sauną parową, oparte na naturalnych produktach z biodynamicznych upraw</li>
                       <li>• rytuał ciepłymi ręcznikami z aromaterapią energetyzującą</li>
@@ -116,17 +116,17 @@ const { title, firstImage, firstAlt, firstDescription, secondDescription, second
                       <p>*produkty do pielęgnacji włosów bazują na olejkach eterycznych i hydrolatach m.in rozmarynu, lawendy, wyciągu z oliwek, olejku makadamia, orzecha włoskiego, bergamotki, pomarańczy, kopru włoskiego.</p>
                   </ul>
                 </p>
-              <p class="font-secondary text-button-dark text-2xl font-regulary">349 PLN (75 min)</p>
+              <p class="font-secondary text-button-dark text-2xl font-regulary">349 PLN (1h 15 min)</p>
         </div>
-      </div>
+      </div> -->
 
-      <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
+      <!-- <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
         <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
           <Image src={head_spa_additional_photo} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
         </div>
         <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
             <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Harmony Head SPA</h6>
-            <!-- <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p> -->
+            <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p>
             <p class="text-xl text-secondary-text leading-[130%] mb-6">
                 <p class="text-xl text-secondary-text leading-[130%] mb-6">
                   <ul class=` text-lg text-secondary-text leading-[130%] mb-6`>
@@ -143,24 +143,24 @@ const { title, firstImage, firstAlt, firstDescription, secondDescription, second
                     <p>*produkty do pielęgnacji włosów bazują na olejkach eterycznych i hydrolatach m.in rozmarynu, lawendy, wyciągu z oliwek, olejku makadamia, orzecha włoskiego, bergamotki, pomarańczy, kopru włoskiego.</p>
                 </ul>
               </p>
-            <p class="font-secondary text-button-dark text-2xl font-regulary">439 PLN (105 min)</p>
+            <p class="font-secondary text-button-dark text-2xl font-regulary">439 PLN (1h 45 min)</p>
         </div>
-      </div>
+      </div> -->
 
-      <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
+      <!-- <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
         <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
           <Image src={head_spa_additional_photo} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
         </div>
         <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
             <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Oriental Face Head SPA</h6>
-            <!-- <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p> -->
+            <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p>
             <p class="text-xl text-secondary-text leading-[130%] mb-6">
                 <p class="text-xl text-secondary-text leading-[130%] mb-6">
                   <ul class=` text-lg text-secondary-text leading-[130%] mb-6`>
                     <li>• aromaterapia antystresowa</li>
                     <li>• masaż głowy z elementami ajurwedy</li>
                     <li>• masaż odcinka szyjnego i klatki piersiowej</li>
-                    <li>• demakijaż spa + autorska pielęgnacja twarzy</li>
+                    <li>• demakijaż spa + autorska pielęgnacja twarzy z masażem liftingującym, peelingiem oczyszczająco- rozświetlającym z ekstraktem z kawioru roślinnego, oleju z awokado i bogatą w polifenole herbatą matcha</li>
                     <li>• płatki nawilżające pod oczy z kolagenem, kwasem hialuronowym i kompleksem wodorostów + maska na usta z matchą, olejem arganowym, witaminą E</li>
                     <li>• peeling enzymatyczny skóry głowy z masażem skalpu</li>
                     <li>• indywidualnie dobrana organiczna kąpiel włosów oraz dedykowana maska z sauną parową, oparte na naturalnych produktach z biodynamicznych upraw</li>
@@ -170,17 +170,17 @@ const { title, firstImage, firstAlt, firstDescription, secondDescription, second
                     <p>*produkty do pielęgnacji włosów bazują na olejkach eterycznych i hydrolatach m.in rozmarynu, lawendy, wyciągu z oliwek, olejku makadamia, orzecha włoskiego, bergamotki, pomarańczy, kopru włoskiego.</p>
                 </ul>
               </p>
-            <p class="font-secondary text-button-dark text-2xl font-regulary">549 PLN (120 min)</p>
+            <p class="font-secondary text-button-dark text-2xl font-regulary">549 PLN (2h)</p>
         </div>
-      </div>
+      </div> -->
 
-      <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
+      <!-- <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
         <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
           <Image src={head_spa_additional_photo} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
         </div>
         <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
             <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Bali Head SPA Essence</h6>
-            <!-- <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p> -->
+            <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p>
             <p class="text-xl text-secondary-text leading-[130%] mb-6">
                 <p class="text-xl text-secondary-text leading-[130%] mb-6">
                   <ul class=` text-lg text-secondary-text leading-[130%] mb-6`>
@@ -188,7 +188,7 @@ const { title, firstImage, firstAlt, firstDescription, secondDescription, second
                     <li>• aromaterapia antystresowa </li>
                     <li>• masaż głowy z elementami ajurwedy</li>
                     <li>• masaż odcinka szyjnego i klatki piersiowej</li>
-                    <li>• demakijaż spa + autorska pielęgnacja twarzy</li>
+                    <li>• demakijaż SPA + autorska pielęgnacja twarzy z masażem liftingującym, wykończona maską hydrożelową z algami i 8 rodzajami płatków róż</li>
                     <li>• organiczny peeling enzymatyczny skóry głowy z masażem skalpu</li>
                     <li>• indywidualnie dobrana organiczna kąpiel oraz dedykowana maska z sauną dla włosów, oparte na naturalnych produktach z biodynamicznych upraw </li>
                     <li>• rytuał energetyzujący z ciepłymi ręcznikami z aromaterapią </li>
@@ -197,9 +197,9 @@ const { title, firstImage, firstAlt, firstDescription, secondDescription, second
                     <p>*produkty do pielęgnacji włosów bazują na olejkach eterycznych i hydrolatach m.in rozmarynu, lawendy, wyciągu z oliwek, olejku makadamia, orzecha włoskiego, bergamotki, pomarańczy, kopru włoskiego.</p>
                 </ul>
               </p>
-            <p class="font-secondary text-button-dark text-2xl font-regulary">599 PLN (150 min)</p>
+            <p class="font-secondary text-button-dark text-2xl font-regulary">599 PLN (2h 30 min)</p>
         </div>
-      </div>
+      </div> -->
 
     </div>
   </div>
