@@ -19,6 +19,38 @@ const { title, variant, variantTitle, isadditionalDescription, isCarnet, isWarmi
         {title}
         {additionalTitle && <p class="font-secondary text-base text-black">{additionalTitle}</p>}
     </h6>
+    <div class={`${isRitualVariant ? "" : "hidden"} -mt-1`}>
+        <table class="rounded-lg border-separate border-spacing-1 w-full md:max-w-[800px]">
+            <thead>
+                <tr>
+                    <th class={`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light text-left ${isDuoMassage ? "hidden" : ""} ${isadditionalDescription ? "md:w-[350px]" : ""}`}>Rodzaj rytuału</th>
+                    <th class="font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet ? 'hidden' : ''}">45 min</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-left w-1/2">Indonezyjski masaż twarzy i dekoltu</td>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center w-1/2">179 zł</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- <div class={`${isRitualVariant ? "" : "hidden"} -mt-1`}>
+        <table class="rounded-lg border-separate border-spacing-1 w-full md:max-w-[800px]">
+            <thead>
+                <tr>
+                    <th class={`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light text-left ${isDuoMassage ? "hidden" : ""} ${isadditionalDescription ? "md:w-[350px]" : ""}`}>Rodzaj rytuału</th>
+                    <th class="font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet ? 'hidden' : ''}">60 min</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-left w-1/2">Orientalna pielęgnacja twarzy z masażem</td>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center w-1/2">249 zł</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
     <table class="rounded-lg border-separate border-spacing-1 w-full md:max-w-[800px]">
         <thead>
             <tr>
@@ -114,7 +146,7 @@ const { title, variant, variantTitle, isadditionalDescription, isCarnet, isWarmi
             </tbody>
         </table>
     </div> -->
-    <div class={`${isRitualVariant ? "" : "hidden"} -mt-1`}>
+    <!-- <div class={`${isRitualVariant ? "" : "hidden"} -mt-1`}>
         <table class="rounded-lg border-separate border-spacing-1 w-full md:max-w-[800px]">
             <thead>
                 <tr>
@@ -129,5 +161,5 @@ const { title, variant, variantTitle, isadditionalDescription, isCarnet, isWarmi
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
 </div>
