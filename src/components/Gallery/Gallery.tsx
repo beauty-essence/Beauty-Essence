@@ -1,6 +1,7 @@
 import React from "react"
 import Masonry from "react-responsive-masonry"
 import photo_014 from "assets/gallery/BeautyEssence_014-min.jpg"
+import abousus_photo from "assets/aboutus-photo.jpg"
 import photo_045 from "assets/gallery/BeautyEssence_045-min.jpg"
 import photo_047 from "assets/gallery/BeautyEssence_047-min.jpg"
 import photo_051 from "assets/gallery/BeautyEssence_051-min.jpg"
@@ -28,7 +29,7 @@ import { twMerge } from "tailwind-merge"
 
 const Gallery = (props: { isGalleryPage?: boolean }) => {
   const images = [
-    photo_014,
+    abousus_photo,
     photo_045,
     photo_047,
     photo_051,

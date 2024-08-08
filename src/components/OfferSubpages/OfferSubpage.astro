@@ -6,6 +6,8 @@ import OfferSubpageCard from "./OfferSubpageCard.astro"
 import neckline_massage from "assets/photos/offer/oriental/neckline-massage.jpg"
 import OfferCard from "components/Offer/OfferCard/OfferCard.astro"
 import head_spa_additional_photo from "assets/photos/offer/spa/head_spa_additional2.jpg"
+import spa_first_new_photo from "assets/photos/offer/spa/first_new.webp"
+import spa_second_new_photo from "assets/photos/offer/spa/second_new.webp"
 
 
 interface OfferSubpageProps {
@@ -77,7 +79,7 @@ const { title, firstImage, firstAlt, firstDescription, secondDescription, second
   <div class=`container mx-auto w-full md:py-10 flex flex-col justify-center items-center gap-10`>
     <div class=`${isRitualMassage ? "" : "hidden"} flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px]`>
       <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
-          <Image src={neckline_massage} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
+          <Image src={spa_first_new_photo} alt={"massage"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
       </div>
       <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
           <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Indonezyjski zabieg twarzy i dekoltu</h6>
@@ -90,7 +92,7 @@ const { title, firstImage, firstAlt, firstDescription, secondDescription, second
   </div>
   <div class=`${isRitualMassage ? "" : "hidden"} flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px]`>
     <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
-        <Image src={neckline_massage} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
+        <Image src={spa_second_new_photo} alt={"massage"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
     </div>
     <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
         <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Orientalna pielęgnacja twarzy z masażem</h6>

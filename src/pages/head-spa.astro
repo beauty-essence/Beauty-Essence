@@ -1,53 +1,17 @@
 ---
-import OfferSubpage from "components/OfferSubpages/OfferSubpage.astro"
 import Layout from "../layouts/Layout.astro"
-import orient_massage from "assets/photos/offer/spa/orient-massage.jpg"
-import silk_massage from "assets/photos/offer/spa/silk-massage.jpg"
-import titanium_massage from "assets/photos/offer/spa/titanium-massage.jpg"
-import wine_massage from "assets/photos/offer/spa/wine-massage.jpg"
-import oil_massage from "assets/photos/offer/spa/oil-massage.jpg"
-import amber_massage from "assets/photos/offer/spa/amber-massage.jpg"
-import withoutwine_massage from "assets/photos/offer/spa/withoutwine_massage.jpg"
-import neckline_massage from "assets/photos/offer/oriental/neckline-massage.jpg"
 import photo_052 from "assets/photos/offer/spa/BeautyEssence_052-min.webp"
 import photo_89 from "assets/photos/offer/spa/BeautyEssence_089-min.webp"
-import photo_122 from "assets/photos/offer/spa/BeautyEssence_122-min.webp"
 import photo_87 from "assets/photos/offer/spa/BeautyEssence_087-min.webp"
 import head_spa_additional_photo from "assets/photos/offer/spa/head_spa_additional2.jpg"
+import head_spa_photo_213 from "assets/photos/offer/headspa/BeautyEssence_213-min.webp"
+import head_spa_photo_209 from "assets/photos/offer/headspa/BeautyEssence_209-min.webp"
+import head_spa_photo_200 from "assets/photos/offer/headspa/BeautyEssence_200-min.webp"
+import head_spa_photo_229 from "assets/photos/offer/headspa/BeautyEssence_229-min.webp"
 import { Image } from "astro:assets"
 
-const MASSAGES_DATA =
-    {
-    title: "Rytuały SPA",
-    firstImage: photo_052,
-    firstAlt: "Masowana osoba",
-    firstDescription: "Przywitaj się z magicznym światem relaksu i luksusu dzięki rytuałom SPA. Nasze wykwalifikowane terapeutki serdecznie zapraszają do wyjątkowej podróży, która wprowadzi Cię w głęboki stan błogiego odprężenia i przywróci harmonię dla ciała i umysłu.",
-    secondDescription: "Nasze rytuały SPA to niezwykłe doświadczenie, które łączy w sobie starożytne tajniki masażu, aromaterapii i pielęgnacji skóry. Każdy krok tego wyjątkowego rytuału jest zaprojektowany tak, aby dostarczyć Ci niezapomnianych chwil relaksu i regeneracji. Pozwól sobie na oderwanie się od codziennego zgiełku i zanurz się w luksusie rytuału SPA.",
-    thirdDescription: "To idealny wybór dla tych, którzy pragną doświadczyć prawdziwego relaksu na najwyższym poziomie.",
-    secondImage: photo_89,
-    secondAlt: "Masowana osoba",
-    }
-
-const OFFER_CONTENT = [
-{
-    image: photo_87,
-    alt: "Masowana osoba",
-    title: "Rytuał „Bursztyn”",
-    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
-    description: `· aromaterapia antystresowa
-· masaż głowy z elementami ajurwedy
-· masaż odcinka szyjnego i klatki piersiowej
-· peeling enzymatyczny skóry głowy z masażem skalpu
-· indywidualnie dobrana organiczna kąpiel włosów oraz dedykowana maska z sauną parową, oparte na naturalnych produktach z biodynamicznych upraw 
-· rytuał ciepłymi ręcznikami z aromaterapią energetyzującą
-· wzmacniający masaż pleców w pozycji siedzącej
-· suszenie włosów suszarką Dyson`,
-    price: "390 PLN",
-    firstBadge: "równowaga, lekkość, radość życia, relaks",
-    secondBadge: "gładkie, zregenerowane ciało",
-    thirdBadge: "radość, fascynacja",
-}
-]
+const MASSAGES_DATA = {}
+const OFFER_CONTENT = [{}]
 ---
 
 <Layout>
@@ -100,7 +64,7 @@ const OFFER_CONTENT = [
 
         <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
             <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
-                <Image src={head_spa_additional_photo} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
+                <Image src={head_spa_photo_213} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
             </div>
             <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
                 <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Zen Head SPA</h6>
@@ -125,7 +89,7 @@ const OFFER_CONTENT = [
 
           <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
             <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
-                <Image src={head_spa_additional_photo} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
+                <Image src={head_spa_photo_209} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
             </div>
             <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
                 <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Harmony Head SPA</h6>
@@ -152,7 +116,7 @@ const OFFER_CONTENT = [
 
           <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
             <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
-                <Image src={head_spa_additional_photo} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
+                <Image src={head_spa_photo_200} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
             </div>
             <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
                 <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Oriental Face Head SPA</h6>
@@ -179,7 +143,7 @@ const OFFER_CONTENT = [
 
           <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
             <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
-                <Image src={head_spa_additional_photo} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
+                <Image src={head_spa_photo_229} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
             </div>
             <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
                 <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Bali Head SPA Essence</h6>

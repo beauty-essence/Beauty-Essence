@@ -15,6 +15,8 @@ import photo_122 from "assets/photos/offer/spa/BeautyEssence_122-min.webp"
 import photo_87 from "assets/photos/offer/spa/BeautyEssence_087-min.webp"
 import head_spa_additional_photo from "assets/photos/offer/spa/head_spa_additional2.jpg"
 import kobido_photo from "assets/photos/offer/kobido.webp"
+import kobido_first_photo from "assets/photos/offer/kobido/kobido_first.webp"
+import kobido_second_photo from "assets/photos/offer/kobido/kobido_second.webp"
 import { Image } from "astro:assets"
 
 const MASSAGES_DATA = {}
@@ -71,7 +73,7 @@ const OFFER_CONTENT = [{}]
 
         <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
             <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
-                <Image src={kobido_photo} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
+                <Image src={kobido_first_photo} alt={"massage"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
             </div>
             <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
                 <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Kobido Up</h6>
@@ -92,12 +94,12 @@ const OFFER_CONTENT = [{}]
                           <li>• głęboki relaks, rozluźnienie</li>
                       </ul>
                     </p>
-                  <p class="font-secondary text-button-dark text-2xl font-regulary">349 PLN (1h 15min )</p>
+                  <p class="font-secondary text-button-dark text-2xl font-regulary">299 PLN (1h 15min )</p>
             </div>
           </div>
           <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
             <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
-                <Image src={kobido_photo} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
+                <Image src={kobido_second_photo} alt={"massage"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
             </div>
             <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
                 <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Kobido Up + Taping</h6>
@@ -118,7 +120,7 @@ const OFFER_CONTENT = [{}]
                           <p>• głęboki relaks, rozluźnienie</p>
                       </ul>
                     </p>
-                  <p class="font-secondary text-button-dark text-2xl font-regulary">349 PLN (1h 15 min)</p>
+                  <p class="font-secondary text-button-dark text-2xl font-regulary">339 PLN (1h 30 min)</p>
             </div>
           </div>
         </div>
