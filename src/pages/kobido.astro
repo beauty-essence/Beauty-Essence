@@ -1,22 +1,11 @@
 ---
-import OfferSubpage from "components/OfferSubpages/OfferSubpage.astro"
 import Layout from "../layouts/Layout.astro"
-import orient_massage from "assets/photos/offer/spa/orient-massage.jpg"
-import silk_massage from "assets/photos/offer/spa/silk-massage.jpg"
-import titanium_massage from "assets/photos/offer/spa/titanium-massage.jpg"
-import wine_massage from "assets/photos/offer/spa/wine-massage.jpg"
-import oil_massage from "assets/photos/offer/spa/oil-massage.jpg"
-import amber_massage from "assets/photos/offer/spa/amber-massage.jpg"
-import withoutwine_massage from "assets/photos/offer/spa/withoutwine_massage.jpg"
-import neckline_massage from "assets/photos/offer/oriental/neckline-massage.jpg"
 import photo_052 from "assets/photos/offer/spa/BeautyEssence_052-min.webp"
 import photo_89 from "assets/photos/offer/spa/BeautyEssence_089-min.webp"
-import photo_122 from "assets/photos/offer/spa/BeautyEssence_122-min.webp"
-import photo_87 from "assets/photos/offer/spa/BeautyEssence_087-min.webp"
-import head_spa_additional_photo from "assets/photos/offer/spa/head_spa_additional2.jpg"
 import kobido_photo from "assets/photos/offer/kobido.webp"
 import kobido_first_photo from "assets/photos/offer/kobido/kobido_first.webp"
 import kobido_second_photo from "assets/photos/offer/kobido/kobido_second.webp"
+import BeautyEssence_190 from "assets/photos/offer/kobido/BeautyEssence_190.webp"
 import { Image } from "astro:assets"
 
 const MASSAGES_DATA = {}
@@ -33,7 +22,7 @@ const OFFER_CONTENT = [{}]
           <div class="relative">
             <div class="relative justify-center items-start hidden xl:flex">
               <div class="w-[612px] h-[573px] overflow-hidden flex justify-center">
-                <Image src={photo_052} alt="Masowana osoba" class="w-full h-full object-cover" />
+                <Image src={BeautyEssence_190} alt="Masowana osoba" class="w-full h-full object-cover" />
               </div>
               <div class="-z-10 max-w-[548px] lg:max-w-xl bg-primary-light pt-24 pr-10 pb-96 pl-40 -translate-x-24 translate-y-24">
               <p class="text-xl text-secondary-text leading-[130%] mb-5" >
@@ -60,7 +49,7 @@ const OFFER_CONTENT = [{}]
               </div>
               <div class="-z-10 md:max-w-[548px] bg-primary-light p-10">
                 <p class="text-xl text-secondary-text leading-[130%] mb-5">
-                  Wypróbuj Kobido w Beauty Essence. Zabieg wykonywany przez certyfikowane terapeutki z międzynarodowym certyfikatem Akademii Pan Kobido. Oddaj się autorskiej wersji intensywnego masażu twarzy, który jest rewitalizujący i liftingujący, niczym trening twarzy. 
+                  Wypróbuj Kobido w Beauty Essence. Zabieg wykonywany przez certyfikowane terapeutki z międzynarodowym certyfikatem Akademii Pan Kobido. Oddaj się autorskiej wersji intensywnego masażu twarzy, który jest rewitalizujący i liftingujący, niczym trening twarzy.
                 </p>
                 <!-- <p class="text-xl text-secondary-text leading-[130%] mb-12">
                   Nasze rytuały Kobido to niezwykłe doświadczenie, które łączy w sobie starożytne tajniki japońskiego masażu twarzy, aromaterapii i pielęgnacji skóry. Każdy krok tego wyjątkowego rytuału jest zaprojektowany tak, aby dostarczyć Ci niezapomnianych chwil relaksu i regeneracji. Pozwól sobie na oderwanie się od codziennego zgiełku i zanurz się w luksusie rytuału Kobido.
