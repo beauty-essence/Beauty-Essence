@@ -68,7 +68,6 @@ const Contact = () => {
     } catch (error) {
       setIsError(true)
     }
-    // If you're reading this: I know that tanstack react query would be better, but there was to many issues with it in astro + react :/
   }
   return (
     <section className="relative w-full flex justify-center items-center pt-36 lg:pb-16 lg:pt-48">
@@ -78,7 +77,7 @@ const Contact = () => {
             Kontakt
           </h1>
 
-          <p>W razie pytań, nie wachaj się napisać!</p>
+          <p>W razie pytań, nie wahaj się napisać!</p>
 
           <div>
             <p>

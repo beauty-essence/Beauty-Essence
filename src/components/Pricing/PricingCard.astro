@@ -24,7 +24,7 @@ const { title, variant, variantTitle, isadditionalDescription, isCarnet, isWarmi
             <tr>
                 <th class={`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light text-left ${isDuoMassage ? "hidden" : ""} ${isadditionalDescription ? "md:w-[350px]" : ""}`}>{variantTitle}</th>
                 <th class={`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet || isWarmingVariant || isRitualVariant ? "hidden" : ""}`}>30 min</th>
-                <th class={`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet || isWarmingVariant || isRitualVariant ? "hidden" : ""}`}>45 min</th>
+                <!-- <th class={`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet || isWarmingVariant || isRitualVariant ? "hidden" : ""}`}>45 min</th> -->
                 <th class={`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet || isRitualVariant ? "hidden" : ""}`}>{isReversedVariant ? "Cena" : "60 min"}</th>
                 <th class={`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet ? "hidden" : ""}`}>{isReversedVariant ? "Czas trwania" : "90 min"}</th>
             </tr>
@@ -42,7 +42,7 @@ const { title, variant, variantTitle, isadditionalDescription, isCarnet, isWarmi
                         </p>
                     </td>
                     <td class={`font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center ${ isCarnet || isWarmingVariant || isRitualVariant ? "hidden" : ""}`}>{item.firstPrice}</td>
-                    <td class={`font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center ${ isCarnet || isWarmingVariant || isRitualVariant ? "hidden" : ""}`}>{item.secondPrice}</td>
+
                     <td class={`font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center ${ isCarnet || isRitualVariant ? "hidden" : ""}`}>{item.thirdPrice}</td>
                     <td class={`font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center ${ isCarnet ? "hidden" : ""}`}>{item.fourthPrice}</td>
                 </tr>
