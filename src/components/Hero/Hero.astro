@@ -1,0 +1,56 @@
+---
+import HeroBackgroundImage from "assets/HeroBackgroundImage.png"
+import { Image } from "astro:assets"
+import facebook_icon from "assets/icons/FacebookIcon.svg"
+import instagram_icon from "assets/icons/InstagramIcon.svg"
+import arrowsdown_icon from "assets/icons/ArrowsDownIcon.svg"
+import whatsapp_icon from "assets/icons/WhatsappIcon.svg"
+---
+
+<header class="relative w-full">
+  <Image
+    src={HeroBackgroundImage}
+    alt="Kobieta na której wykonywany jest masaż"
+    class="w-full h-screen object-cover"
+  />
+
+  <div
+    class="h-full absolute top-0 flex flex-col items-start justify-center ml-10 md:ml-20 before:content-[''] before:absolute before:h-72 before:w-[2px] before:-left-6 before:bg-white"
+  >
+    <p class="font-secondary text-white text-xl leading-[132.9%]">
+      Tajemnice wschodniego relaksu
+    </p>
+    <h1
+      class="font-primary text-white text-5xl md:text-6xl my-5 font-bold leading-[1.1] md:leading-tight tracking-wider"
+    >
+      Twoje chwile spokoju <br /> w zgiełku dnia.
+    </h1>
+    <a href="#offer">
+    <button
+      class="bg-primary py-4 md:py-5 px-16 md:px-20 text-button-dark font-medium text-xl- leading-[132.9%] border-primary border-2
+       hover:bg-white hover:transition hover:duration-200 hover:ease-in-out"
+      >Zobacz ofertę</button
+    >
+  </a>
+  </div>
+  <div
+    class="w-full absolute bottom-0 pl-8 pb-8 pr-8 flex justify-between flex-row"
+  >
+    <div class="flex gap-3 self-end w-1/2">
+      <a href="https://www.facebook.com/BeautyEssenceTorun?locale=pl_PL" target="_blank">
+        <img src={facebook_icon.src} alt="Ikona Facebook" />
+      </a>
+      <a href="https://www.instagram.com/beautyessence_torun/" target="_blank">
+        <img src={instagram_icon.src} alt="Ikona Instagram" />
+      </a>
+      <a href="https://wa.me/48789585586" target="_blank">
+        <img src={whatsapp_icon.src} alt="Ikona Whatsapp" class="max-w-[19px]" />
+      </a>
+    </div>
+    <div class="w-1/2 align-center">
+      <a href="#about">
+        <img src={arrowsdown_icon.src} alt="Ikona Scrollowania" />
+      </a>
+    </div>
+  </div>
+</header>

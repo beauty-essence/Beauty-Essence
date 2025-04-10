@@ -1,0 +1,117 @@
+---
+import Layout from "../layouts/Layout.astro"
+import photo_052 from "assets/photos/offer/spa/BeautyEssence_052-min.webp"
+import photo_89 from "assets/photos/offer/spa/BeautyEssence_089-min.webp"
+import kobido_photo from "assets/photos/offer/kobido.webp"
+import kobido_first_photo from "assets/photos/offer/kobido/kobido_first.webp"
+import kobido_second_photo from "assets/photos/offer/kobido/kobido_second.webp"
+import BeautyEssence_190 from "assets/photos/offer/kobido/BeautyEssence_190.webp"
+import { Image } from "astro:assets"
+
+const MASSAGES_DATA = {}
+const OFFER_CONTENT = [{}]
+---
+
+<Layout>
+    <!-- <OfferSubpage title={MASSAGES_DATA.title} firstImage={MASSAGES_DATA.firstImage} firstAlt={MASSAGES_DATA.firstAlt} firstDescription={MASSAGES_DATA.firstDescription} secondDescription={MASSAGES_DATA.secondDescription} secondImage={MASSAGES_DATA.secondImage} secondAlt={MASSAGES_DATA.secondAlt} offerContent={OFFER_CONTENT} isRitualMassage={true} thirdDescription={MASSAGES_DATA.thirdDescription} idAdditionalMassage={true} /> -->
+    <section class="w-full flex flex-col justify-center items-center lg:pt-64">
+        <div class="container mx-auto w-full md:py-10 flex flex-col justify-center">
+          <h3 class="text-7xl font-primary font-bold text-button-dark mb-12 text-center xl:text-left mt-32 xl:mt-[unset] ml-[4%] xl:ml-[11%]">
+            KOBIDO UP
+          </h3>
+          <div class="relative">
+            <div class="relative justify-center items-start hidden xl:flex">
+              <div class="w-[612px] h-[573px] overflow-hidden flex justify-center">
+                <Image src={BeautyEssence_190} alt="Masowana osoba" class="w-full h-full object-cover" />
+              </div>
+              <div class="-z-10 max-w-[548px] lg:max-w-xl bg-primary-light pt-24 pr-10 pb-96 pl-40 -translate-x-24 translate-y-24">
+              <p class="text-xl text-secondary-text leading-[130%] mb-5" >
+                Wypróbuj Kobido w Beauty Essence. Zabieg wykonywany przez certyfikowane terapeutki z międzynarodowym certyfikatem Akademii Pan Kobido. Oddaj się autorskiej wersji intensywnego masażu twarzy, który jest rewitalizujący i liftingujący, niczym trening twarzy.
+              </p>
+              <!-- <p class="text-xl text-secondary-text leading-[130%]">
+                Nasze rytuały Kobido to niezwykłe doświadczenie, które łączy w sobie starożytne tajniki japońskiego masażu twarzy, aromaterapii i pielęgnacji skóry. Każdy krok tego wyjątkowego rytuału jest zaprojektowany tak, aby dostarczyć Ci niezapomnianych chwil relaksu i regeneracji. Pozwól sobie na oderwanie się od codziennego zgiełku i zanurz się w luksusie rytuału Kobido.
+               <br><br>
+               <p class="text-xl text-secondary-text leading-[130%]">
+                To idealny wybór dla tych, którzy pragną doświadczyć prawdziwego relaksu na najwyższym poziomie.
+                <br>
+              </p> -->
+            </div>
+            </div>
+            <div class="relative justify-center items-start hidden xl:flex ">
+              <div class="hidden lg:block absolute w-full max-w-sm before:h-full h-96 rounded-full bg-primary-light -z-10 left-64 -top-72"></div>
+              <div class="w-[658px] h-[495px] overflow-hidden flex justify-center -translate-y-64">
+                <Image src={photo_89} alt="Masowana osoba" class="w-full h-full object-cover" />
+              </div>
+            </div>
+            <div class="flex flex-col items-center p-4 xl:hidden">
+              <div class="w-[382px] h-[288px] overflow-hidden flex justify-center">
+                <Image src={photo_89} alt="Masowana osoba" class="w-full h-full object-cover" />
+              </div>
+              <div class="-z-10 md:max-w-[548px] bg-primary-light p-10">
+                <p class="text-xl text-secondary-text leading-[130%] mb-5">
+                  Wypróbuj Kobido w Beauty Essence. Zabieg wykonywany przez certyfikowane terapeutki z międzynarodowym certyfikatem Akademii Pan Kobido. Oddaj się autorskiej wersji intensywnego masażu twarzy, który jest rewitalizujący i liftingujący, niczym trening twarzy.
+                </p>
+                <!-- <p class="text-xl text-secondary-text leading-[130%] mb-12">
+                  Nasze rytuały Kobido to niezwykłe doświadczenie, które łączy w sobie starożytne tajniki japońskiego masażu twarzy, aromaterapii i pielęgnacji skóry. Każdy krok tego wyjątkowego rytuału jest zaprojektowany tak, aby dostarczyć Ci niezapomnianych chwil relaksu i regeneracji. Pozwól sobie na oderwanie się od codziennego zgiełku i zanurz się w luksusie rytuału Kobido.
+                </p> -->
+              </div>
+            </div>
+        </div>
+    </section>
+    <section class="w-full flex flex-col justify-center items-center py-10 lg:py-28 bg-primary-light">
+
+        <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
+            <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
+                <Image src={kobido_first_photo} alt={"massage"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
+            </div>
+            <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
+                <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Kobido Up</h6>
+                <!-- <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p> -->
+                <p class="text-xl text-secondary-text leading-[130%] mb-6">
+                    <p class="text-lg text-secondary-text leading-[130%] mb-1">
+                      To rewitalizująco liftingujący rytuał masażu twarzy. Jest to autorska wersja intensywnego masażu kobido. Procedura: <br>
+                      <ul class=` text-lg text-secondary-text leading-[130%] mb-6`>
+                          <li>• głęboki drenaż limfatyczny</li>
+                          <li>• rozbudowana akupresura twarzy</li>
+                          <li class="mb-1">• oklejanie taśmami (kinezjotaping estetyczny, w oznaczonym pakiecie z tapingiem)</li>
+                          Czym jest i co daje masaż Kobido Up: <br>
+                          <li class="mt-1">• masaż tkanek głębokich (skóry, mięśni i przyczepów mięśniowych)</li>
+                          <li>• intensywna stymulacja i odżywienie skóry</li>
+                          <li>• spłycenie zmarszczek i bruzd mimicznych</li>
+                          <li>• intensywny drenaż limfatyczny</li>
+                          <li>• lifting i poprawa owalu</li>
+                          <li>• głęboki relaks, rozluźnienie</li>
+                      </ul>
+                    </p>
+                  <p class="font-secondary text-button-dark text-2xl font-regulary">299 PLN (1h 15min )</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
+            <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
+                <Image src={kobido_second_photo} alt={"massage"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
+            </div>
+            <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
+                <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Kobido Up + Taping</h6>
+                <!-- <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p> -->
+                <p class="text-xl text-secondary-text leading-[130%] mb-6">
+                    <p class="text-lg text-secondary-text leading-[130%] mb-1">
+                      To rewitalizująco liftingujący rytuał masażu twarzy. Jest to autorska wersja intensywnego masażu kobido. Procedura: <br>
+                      <ul class=` text-lg text-secondary-text leading-[130%] mb-6`>
+                          <li>• głęboki drenaż limfatyczny</li>
+                          <li>• rozbudowana akupresura twarzy</li>
+                          <li class="mb-1">• oklejanie taśmami (kinezjotaping estetyczny, w oznaczonym pakiecie z tapingiem)</li>
+                          Czym jest i co daje masaż Kobido Up: <br>
+                          <li class="mt-1">• masaż tkanek głębokich (skóry, mięśni i przyczepów mięśniowych)u</li>
+                          <li>• intensywna stymulacja i odżywienie skóry</li>
+                          <li>• spłycenie zmarszczek i bruzd mimicznych</li>
+                          <li>• intensywny drenaż limfatyczny</li>
+                          <li>• lifting i poprawa owalu</li>
+                          <p>• głęboki relaks, rozluźnienie</p>
+                      </ul>
+                    </p>
+                  <p class="font-secondary text-button-dark text-2xl font-regulary">339 PLN (1h 30 min)</p>
+            </div>
+          </div>
+        </div>
+    </section>
+</Layout>

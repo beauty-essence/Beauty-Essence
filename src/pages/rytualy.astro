@@ -1,0 +1,133 @@
+---
+import OfferSubpage from "components/OfferSubpages/OfferSubpage.astro"
+import Layout from "../layouts/Layout.astro"
+import orient_massage from "assets/photos/offer/spa/orient-massage.jpg"
+import silk_massage from "assets/photos/offer/spa/silk-massage.jpg"
+import titanium_massage from "assets/photos/offer/spa/titanium-massage.jpg"
+import wine_massage from "assets/photos/offer/spa/wine-massage.jpg"
+import oil_massage from "assets/photos/offer/spa/oil-massage.jpg"
+import amber_massage from "assets/photos/offer/spa/amber-massage.jpg"
+import withoutwine_massage from "assets/photos/offer/spa/withoutwine_massage.jpg"
+import neckline_massage from "assets/photos/offer/oriental/neckline-massage.jpg"
+import photo_052 from "assets/photos/offer/spa/BeautyEssence_052-min.webp"
+import photo_89 from "assets/photos/offer/spa/BeautyEssence_089-min.webp"
+import photo_122 from "assets/photos/offer/spa/BeautyEssence_122-min.webp"
+import photo_87 from "assets/photos/offer/spa/BeautyEssence_087-min.webp"
+import rokitnik_photo from "assets/photos/offer/spa/rokitnik.jpg"
+
+
+
+const MASSAGES_DATA =
+    {
+    title: "Rytuały SPA",
+    firstImage: photo_052,
+    firstAlt: "Masowana osoba",
+    firstDescription: "Przywitaj się z magicznym światem relaksu i luksusu dzięki rytuałom SPA. Nasze wykwalifikowane terapeutki serdecznie zapraszają do wyjątkowej podróży, która wprowadzi Cię w głęboki stan błogiego odprężenia i przywróci harmonię dla ciała i umysłu.",
+    secondDescription: "Nasze rytuały SPA to niezwykłe doświadczenie, które łączy w sobie starożytne tajniki masażu, aromaterapii i pielęgnacji skóry. Każdy krok tego wyjątkowego rytuału jest zaprojektowany tak, aby dostarczyć Ci niezapomnianych chwil relaksu i regeneracji. Pozwól sobie na oderwanie się od codziennego zgiełku i zanurz się w luksusie rytuału SPA.",
+    thirdDescription: "To idealny wybór dla tych, którzy pragną doświadczyć prawdziwego relaksu na najwyższym poziomie.",
+    secondImage: photo_89,
+    secondAlt: "Masowana osoba",
+    }
+
+const OFFER_CONTENT = [
+    {
+    image: orient_massage,
+    alt: "Masowana osoba",
+    title: "Rytuał „Orient”",
+    subtitle: "Pełen relaks dla ciała i duszy",
+    description: "Produkty do rytuału Orient to wyjątkowo bogata kompozycja orientalnych ziół, naturalnych przypraw i drogocennych mieszanek olejowych z jojoby i migdałów. Odżywia, nawilża i rewitalizuje. Rytuał ten pobudza przemianę materii, poprawia krążenie krwi, usuwa toksyny z organizmu i równoważy przepływ energii. Kojarzy się z ciepłymi, egzotycznymi wakacjami, przepełnionymi relaksem, witalnością i swobodą. Orientalne aromaty to naturalne wyciągi z: wanilii, cynamonu, goździków, drzewa herbacianego - działają jak afrodyzjak, który daje siłę i energię dla obu płci, łagodzi depresję, melancholię i codzienny stres.",
+    price: "390 PLN (1h 30 min)",
+    firstBadge: "ciepło, seksapil i wyzwolenie",
+    secondBadge: "zadbana, głęboko nawilżona i zregenerowana skóra",
+    thirdBadge: "orientalne zapachy, afrodyzjak, tajemniczość",
+},
+{
+    image: silk_massage,
+    alt: "Masowana osoba",
+    title: "Rytuał „Jedwab”",
+    subtitle: "Odprężenie z aromatem natury",
+    description: "W tym luksusowym zabiegu wykorzystany jest najwyższej jakości hydrolizat jedwabiu. Proteiny jedwabiu są doskonałym materiałem budulcowym, a dzięki swej niskiej masie cząsteczkowej są zdolne przenikać do warstw naskórka, scalając je i poprawiając poziom nawilżenia. Głównymi aminokwasami jedwabiu są alanina i glicyna – mające dobre właściwości nawilżające i regeneracyjne. Trzecim znaczącym aminokwasem jedwabiu jest seryna, posiadająca zdolność wiązania wody i tworzenia ochronnego i nieokluzyjnego filmu na powierzchni skóry. Jedwab poprawia metabolizm komórek skóry, przeciwdziała przebarwieniom, nadaje skórze gładkość, a w połączeniu z bogactwem olei roślinnych działa regenerująco i nawilżająco. Produkty zostawiają na skórze delikatną, jedwabną poświatę co czyni ten zabieg wyjątkowo luksusowym.",
+    price: "390 PLN (1h 30 min)",
+    firstBadge: "lekkość, delikatny dotyk",
+    secondBadge: "głębokie nawilżenie i odmłodzenie, jedwabisty połysk skóry",
+    thirdBadge: "zapach morza i świeżość lasu",
+},
+{
+    image: titanium_massage,
+    alt: "Masowana osoba",
+    title: "Rytuał „Tytan”",
+    subtitle: "Odbudowa wewnętrznego spokoju",
+    description: "Produkty do rytuału z linii Tytan, adresowane są dla mężczyzn. Zapach oraz dobór składników aktywnych dbają o regenerację męskiej skóry. Oleje roślinne z: sezamu indyjskiego, pestek winogron, słodkich migdałów i nasion rzepaku odżywiają oraz długotrwale utrzymują odpowiednie nawilżenie skóry. Zabieg ten wpływa na lepsze krążenie. Aromat rytuału oparty jest na nutach ziemi i drewna, które cudownie relaksują i wpływają na dobre samopoczucie każdego mężczyzny.",
+    price: "390 PLN (1h 30 min)",
+    firstBadge: "moc, witalność",
+    secondBadge: "regeneracja, nawilżenie",
+    thirdBadge: "świeży męski zapach z nutami ziemi",
+},
+{
+    image: photo_122,
+    alt: "Masowana osoba",
+    title: "Rytuał „Czerwone Wino”",
+    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+    description: "Ujędrniające kosmetyki do rytuału „Czerwone Wino” nasycone wyciągami z winogron cudownie wygładzą skórę. Ekstrakt z pestek winogron, wyciąg z wina i mieszanka olei intensywnie działają na wolne rodniki, regenerują i z prawdziwą mocą witalności odżywiają skórę, rozjaśniają cerę, łagodzą zaczerwienienia skóry, działają przeciwzapalnie, opóźniają starzenie się. Z pozostałości po fermentacji wina uzyskuje się wiele cennych substancji korzystnie wpływających na stan skóry: peptydy, witaminy, polifenole. Zawarte w naszych produktach witaminy tworzą miękką i gładką skórę, przywracają jej elastyczność, dając blask, zmysłowość i tajemniczość. „In vino veritas, in aqua sanitas” – w winie prawda, w wodzie zdrowie, głosi znana łacińska sentencja, która doskonale wpisuje się w ten zdrowotno – relaksujący zabieg SPA.",
+    price: "390 PLN (1h 30 min)",
+    firstBadge: "energia, witalność",
+    secondBadge: "ujędrniona, miękka, gładka i odmłodzona skóra",
+    thirdBadge: "zapach winogron, ziemi, wina",
+},
+{
+    image: rokitnik_photo,
+    alt: "Masowana osoba",
+    title: "Rytuał „Rokitnik”",
+    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+    description: 'Produkty z rokitnikiem to doskonała pielęgnacja, oparta na naturalnych właściwościach owoców rokitnika oraz innych roślinnych składników. Produkty z tej linii dostarczają skórze intensywne odżywienie, regenerację i ochronę. Owoce rokitnika, bogate w antyoksydanty, beta-karoten i witaminy, są znane ze swoich właściwości przeciwstarzeniowych oraz regeneracyjnych. Oleje roślinne, takie jak olej z pestek winogron i olej sezamowy, wspomagają regenerację skóry i wzmacniają jej barierę ochronną. Ekstrakt z buraka cukrowego oraz lecytyna dodatkowo poprawiają nawilżenie i elastyczność skóry. Peeling ciała z solą z Morza Północnego i ekstraktem z rokitnika delikatnie złuszcza naskórek, pozostawiając skórę gładką i odświeżoną. Rokitnik, zwany "złotem Syberii", był od wieków używany w tradycyjnej medycynie i kosmetyce. Kobiety w Europie Wschodniej stosowały miazgę z owoców rokitnika do pielęgnacji skóry, aby chronić ją przed surowymi warunkami klimatycznymi.',
+    price: "390 PLN (1h 30 min)",
+    firstBadge: "witaminowa regeneracja",
+    secondBadge: "regeneracja i wzmocnienie bariery ochronnej skóry",
+    thirdBadge: "owocowe, słodkie nuty rokitnika",
+},
+// {
+//     image: oil_massage,
+//     alt: "Masowana osoba",
+//     title: "Rytuał „Rajski Grapefruit”",
+//     subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+//     description: "Rytuał „Rajski Grejpfrut” zapobiega zmęczeniu psychicznemu, ponieważ olejek eteryczny z grejpfruta, który jest używany w tym rytuale, jest uznany za jeden z najbardziej skutecznych naturalnych leków antydepresyjnych. Zabieg rytualny zwiększa odporność i aktywnie wpływa na eliminację toksyn z organizmu. Należy go stosować w terapii nadwagi i w celu wymodelowania ciała. Regularne wykonywane zabiegi na tych produktach przyczynią się do korzystnego wpływu na redukcję cellulitu.",
+//     price: "390 PLN (1h 30 min)",
+//     firstBadge: "energia, lekkość, radość życia",
+//     secondBadge: "głęboko nawilżona, gładka, odmłodzona skóra; zredukowany kształt ciała",
+//     thirdBadge: "świeżość, radość, inspiracja",
+// },
+// {
+//     image: photo_87,
+//     alt: "Masowana osoba",
+//     title: "Rytuał „Bursztyn”",
+//     subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+//     description: "Zabieg na produktach z wyciągiem z bursztynu rozluźnia mięśnie i umysł od stresu. Bursztyn ogrzewa ciało i stan emocjonalny. Jest nośnikiem energii i równowagi. Daje moc, która ma pozytywny wpływ na ludzkie ciało i skórę. Rytuał ten pobudza siłę fizyczną i psychiczną, zwiększa pewność siebie. W preparatach do zabiegu wykorzystujemy puder i ekstrakt bursztynowy który wraz z cennymi olejami roślinnymi bardzo korzystnie wpływa nie tylko na skórę ale również na cały organizm, dodając mu mocy.",
+//     price: "390 PLN (1h 30 min)",
+//     firstBadge: "równowaga, lekkość, radość życia, relaks",
+//     secondBadge: "gładkie, zregenerowane ciało",
+//     thirdBadge: "radość, fascynacja",
+// },
+// {
+//     image: photo_87,
+//     alt: "Masowana osoba",
+//     title: "Rytuał „Bursztyn”",
+//     subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+//     description: `· aromaterapia antystresowa
+// · masaż głowy z elementami ajurwedy
+// · masaż odcinka szyjnego i klatki piersiowej
+// · peeling enzymatyczny skóry głowy z masażem skalpu
+// · indywidualnie dobrana organiczna kąpiel włosów oraz dedykowana maska z sauną parową, oparte na naturalnych produktach z biodynamicznych upraw 
+// · rytuał ciepłymi ręcznikami z aromaterapią energetyzującą
+// · wzmacniający masaż pleców w pozycji siedzącej
+// · suszenie włosów suszarką Dyson`,
+//     price: "390 PLN",
+//     firstBadge: "równowaga, lekkość, radość życia, relaks",
+//     secondBadge: "gładkie, zregenerowane ciało",
+//     thirdBadge: "radość, fascynacja",
+// }
+]
+---
+
+<Layout>
+    <OfferSubpage title={MASSAGES_DATA.title} firstImage={MASSAGES_DATA.firstImage} firstAlt={MASSAGES_DATA.firstAlt} firstDescription={MASSAGES_DATA.firstDescription} secondDescription={MASSAGES_DATA.secondDescription} secondImage={MASSAGES_DATA.secondImage} secondAlt={MASSAGES_DATA.secondAlt} offerContent={OFFER_CONTENT} isRitualMassage={true} thirdDescription={MASSAGES_DATA.thirdDescription} idAdditionalMassage={true} />
+</Layout>

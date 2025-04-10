@@ -1,0 +1,223 @@
+---
+import massager_photo from "assets/photos/offer/massager.png"
+import human_back_photo from "assets/photos/offer/human-back.png"
+import { Image } from "astro:assets"
+import OfferSubpageCard from "./OfferSubpageCard.astro"
+import neckline_massage from "assets/photos/offer/oriental/neckline-massage.jpg"
+import OfferCard from "components/Offer/OfferCard/OfferCard.astro"
+import head_spa_additional_photo from "assets/photos/offer/spa/head_spa_additional2.jpg"
+import spa_first_new_photo from "assets/photos/offer/spa/first_new.webp"
+import spa_second_new_photo from "assets/photos/offer/spa/second_new.webp"
+
+
+interface OfferSubpageProps {
+  title: string
+  firstImage: ImageMetadata
+  firstAlt: string
+  firstDescription: string
+  secondDescription: string
+  thirdDescription?: string
+  secondImage: ImageMetadata
+  secondAlt: string
+  offerContent: any
+  isRitualMassage?: boolean
+  isStampMassage?: boolean
+  isHotstoneMassage?: boolean
+  isAdditionalMassage?: boolean
+  isRitualList?: boolean
+}
+
+const { title, firstImage, firstAlt, firstDescription, secondDescription, secondImage, secondAlt, offerContent, isRitualMassage, isStampMassage, isHotstoneMassage, thirdDescription, isAdditionalMassage, isRitualList } = Astro.props
+---
+
+
+<section class="w-full flex flex-col justify-center items-center lg:pt-64">
+    <div class="container mx-auto w-full md:py-10 flex flex-col justify-center">
+      <h3 class="text-7xl font-primary font-bold text-button-dark mb-12 text-center xl:text-left mt-32 xl:mt-[unset] ml-[4%] xl:ml-[11%]">
+        {title}
+      </h3>
+      <div class="relative">
+        <div class="relative justify-center items-start hidden xl:flex">
+          <div class="w-[612px] h-[573px] overflow-hidden flex justify-center">
+            <Image src={firstImage} alt={firstAlt} class="w-full h-full object-cover" />
+          </div>
+          <div class="-z-10 max-w-[548px] lg:max-w-xl bg-primary-light pt-24 pr-10 pb-96 pl-40 -translate-x-24 translate-y-24">
+          <p class="text-xl text-secondary-text leading-[130%] mb-5" >
+            {firstDescription}
+          </p>
+          <p class="text-xl text-secondary-text leading-[130%]">
+           {secondDescription}
+           <br><br>
+           <p class="text-xl text-secondary-text leading-[130%]">
+            {thirdDescription}
+            <br>
+          </p>
+        </div>
+        </div>
+        <div class="relative justify-center items-start hidden xl:flex ">
+          <div class="hidden lg:block absolute w-full max-w-sm before:h-full h-96 rounded-full bg-primary-light -z-10 left-64 -top-72"></div>
+          <div class="w-[658px] h-[495px] overflow-hidden flex justify-center -translate-y-64">
+            <Image src={secondImage} alt={secondAlt} class="w-full h-full object-cover" />
+          </div>
+        </div>
+        <div class="flex flex-col items-center p-4 xl:hidden">
+          <div class="w-[382px] h-[288px] overflow-hidden flex justify-center">
+            <Image src={secondImage} alt={secondAlt} class="w-full h-full object-cover" />
+          </div>
+          <div class="-z-10 md:max-w-[548px] bg-primary-light p-10">
+            <p class="text-xl text-secondary-text leading-[130%] mb-5">
+              {firstDescription}
+            </p>
+            <p class="text-xl text-secondary-text leading-[130%] mb-12">
+             {secondDescription}
+            </p>
+          </div>
+        </div>
+    </div>
+</section>
+<section class="w-full flex flex-col justify-center items-center py-10 lg:py-28 bg-primary-light">
+  <div class=`container mx-auto w-full md:py-10 flex flex-col justify-center items-center gap-10`>
+    <div class=`${isRitualMassage ? "" : "hidden"} flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px]`>
+      <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
+          <Image src={spa_first_new_photo} alt={"massage"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
+      </div>
+      <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
+          <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Indonezyjski zabieg twarzy i dekoltu</h6>
+          <!-- <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p> -->
+          <p class="text-xl text-secondary-text leading-[130%] mb-6">
+            Zabieg pielęgnacyjny stymulujący przepływ krwi i limfy obszaru twarzy i dekoltu. Pobudza tkanki do produkcji kolagenu poprzez terapeutyczne ruchy z elementami akupresury. W pierwszej kolejności terapeutka wykonuje demakijaż twarzy i oczu delikatną emulsją, bogatą w oleje roślinne, pantenol i aloes, która zmiękcza, nawilża i uspokaja skórę. Następnie stosuje tonik, hydrolat rumianku rzymskiego i szałwii, daje to uczucie świeżości, nawilżenia i złagodzenia. Do zabiegu używany jest olejek, który dzięki zawartości olejów roślinnych - odżywia, pantenolu i aloesu - wycisza, witamin - dba o zdrowie skóry oraz dzięki zawartości kombuchy wpłynie na gładkość i przyspieszy regenerację naskórka, spowolni procesy starzenia i poprawi koloryt skóry. Skład olejku do zabiegu twarzy: olej z pestek winogron, olej rzepakowy, pantenol, kombucha, wyciąg z liści aloesu, wit E, C, D i B5, antyutleniacz.
+            </p>
+            <p class="font-secondary text-button-dark text-2xl font-regulary">179 PLN (45min)</p>
+      </div>
+  </div>
+  <div class=`${isRitualMassage ? "" : "hidden"} flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px]`>
+    <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
+        <Image src={spa_second_new_photo} alt={"massage"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
+    </div>
+    <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
+        <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Orientalna pielęgnacja twarzy z masażem</h6>
+        <!-- <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p> -->
+        <p class="text-xl text-secondary-text leading-[130%] mb-6">
+          Ten wyjątkowy zabieg pozwala krok po kroku uzyskać nieskazitelnie czystą skórę przy użyciu najlepszej jakości naturalnych produktów marki Norden. Całość składa się z demakijażu mleczkiem, wieloetapowego tonizowania skóry twarzy z aromaterapią, peelingu enzymatycznego, oleju do masażu twarzy, dedykowanej maski, silnie nawilżającego kremu. Na każdym etapie terapeutka masuje wybraną część: twarz, głowa, uszy. To idealne połączenie odżywienia oraz masażu stymulującego tkanki. Całość składa się z demakijażu mleczkiem, wieloetapowego tonizowania skóry twarzy z aromaterapią, peelingu enzymatycznego, oleju do masażu twarzy, dedykowanej maski, silnie nawilżającego kremu. Na każdym etapie terapeutka masuje wybraną część: twarz, głowa, uszy. To idealne połączenie odżywienia oraz masażu stymulującego tkanki.
+          </p>
+          <p class="font-secondary text-button-dark text-2xl font-regulary">249 PLN (1h)</p>
+    </div>
+</div>
+    {offerContent.map((item: any) => (
+    <OfferSubpageCard image={item.image} alt={item.alt} title={item.title} subtitle={item.subtitle} description={item.description}  price={item.price} isOilMassage={item.isOilMassage} isCandleMassage={item.isCandleMassage} isRitualMassage={isRitualMassage} firstBadge={item.firstBadge} secondBadge={item.secondBadge} thirdBadge={item.thirdBadge} isStampMassage={item.isStampMassage} isHotstoneMassage={item.isHotstoneMassage} isAdditionalMassage={item.isAdditionalMassage}/>
+    ))}
+
+<!-- Beginning -->
+  <div class=`${isRitualMassage ? "" : "hidden"}`>
+
+    <!-- <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
+        <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
+            <Image src={head_spa_additional_photo} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
+        </div>
+        <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
+            <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Zen Head SPA</h6>
+            <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p>
+            <p class="text-xl text-secondary-text leading-[130%] mb-6">
+                <p class="text-xl text-secondary-text leading-[130%] mb-6">
+                  <ul class=` text-lg text-secondary-text leading-[130%] mb-6`>
+                      <li>• aromaterapia antystresowa</li>
+                      <li>• masaż głowy z elementami ajurwedy</li>
+                      <li>• masaż odcinka szyjnego i klatki piersiowej</li>
+                      <li>• peeling enzymatyczny skóry głowy z masażem skalpu</li>
+                      <li>• indywidualnie dobrana organiczna kąpiel włosów oraz dedykowana maska z sauną parową, oparte na naturalnych produktach z biodynamicznych upraw</li>
+                      <li>• rytuał ciepłymi ręcznikami z aromaterapią energetyzującą</li>
+                      <li>• wzmacniający masaż pleców w pozycji siedzącej</li>
+                      <li>• suszenie włosów suszarką Dyson</li>
+                      <p>*produkty do pielęgnacji włosów bazują na olejkach eterycznych i hydrolatach m.in rozmarynu, lawendy, wyciągu z oliwek, olejku makadamia, orzecha włoskiego, bergamotki, pomarańczy, kopru włoskiego.</p>
+                  </ul>
+                </p>
+              <p class="font-secondary text-button-dark text-2xl font-regulary">349 PLN (1h 15 min)</p>
+        </div>
+      </div> -->
+
+      <!-- <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
+        <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
+          <Image src={head_spa_additional_photo} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
+        </div>
+        <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
+            <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Harmony Head SPA</h6>
+            <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p>
+            <p class="text-xl text-secondary-text leading-[130%] mb-6">
+                <p class="text-xl text-secondary-text leading-[130%] mb-6">
+                  <ul class=` text-lg text-secondary-text leading-[130%] mb-6`>
+                    <li>• aromaterapia antystresowa</li>
+                    <li>• masaż głowy z elementami ajurwedy</li>
+                    <li>• masaż odcinka szyjnego i klatki piersiowej</li>
+                    <li>• demakijaż spa + autorska pielęgnacja twarzy</li>
+                    <li>• płatki nawilżające pod oczy z kolagenem, kwasem hialuronowym i kompleksem wodorostów + maska na usta z matchą, olejem arganowym, witaminą E</li>
+                    <li>• peeling enzymatyczny skóry głowy z masażem skalpu</li>
+                    <li>• indywidualnie dobrana organiczna kąpiel włosów oraz dedykowana maska z sauną parową, oparte na naturalnych produktach z biodynamicznych upraw</li>
+                    <li>• rytuał energetyzujący z ciepłymi ręcznikami z aromaterapią</li>
+                    <li>• wzmacniający masaż pleców w pozycji siedzącej</li>
+                    <li>• suszenie włosów suszarką Dyson</li>
+                    <p>*produkty do pielęgnacji włosów bazują na olejkach eterycznych i hydrolatach m.in rozmarynu, lawendy, wyciągu z oliwek, olejku makadamia, orzecha włoskiego, bergamotki, pomarańczy, kopru włoskiego.</p>
+                </ul>
+              </p>
+            <p class="font-secondary text-button-dark text-2xl font-regulary">439 PLN (1h 45 min)</p>
+        </div>
+      </div> -->
+
+      <!-- <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
+        <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
+          <Image src={head_spa_additional_photo} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
+        </div>
+        <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
+            <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Oriental Face Head SPA</h6>
+            <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p>
+            <p class="text-xl text-secondary-text leading-[130%] mb-6">
+                <p class="text-xl text-secondary-text leading-[130%] mb-6">
+                  <ul class=` text-lg text-secondary-text leading-[130%] mb-6`>
+                    <li>• aromaterapia antystresowa</li>
+                    <li>• masaż głowy z elementami ajurwedy</li>
+                    <li>• masaż odcinka szyjnego i klatki piersiowej</li>
+                    <li>• demakijaż spa + autorska pielęgnacja twarzy z masażem liftingującym, peelingiem oczyszczająco- rozświetlającym z ekstraktem z kawioru roślinnego, oleju z awokado i bogatą w polifenole herbatą matcha</li>
+                    <li>• płatki nawilżające pod oczy z kolagenem, kwasem hialuronowym i kompleksem wodorostów + maska na usta z matchą, olejem arganowym, witaminą E</li>
+                    <li>• peeling enzymatyczny skóry głowy z masażem skalpu</li>
+                    <li>• indywidualnie dobrana organiczna kąpiel włosów oraz dedykowana maska z sauną parową, oparte na naturalnych produktach z biodynamicznych upraw</li>
+                    <li>• rytuał energetyzujący z ciepłymi ręcznikami z aromaterapią</li>
+                    <li>• wzmacniający masaż pleców w pozycji siedzącej</li>
+                    <li>• suszenie włosów suszarką Dyson</li>
+                    <p>*produkty do pielęgnacji włosów bazują na olejkach eterycznych i hydrolatach m.in rozmarynu, lawendy, wyciągu z oliwek, olejku makadamia, orzecha włoskiego, bergamotki, pomarańczy, kopru włoskiego.</p>
+                </ul>
+              </p>
+            <p class="font-secondary text-button-dark text-2xl font-regulary">549 PLN (2h)</p>
+        </div>
+      </div> -->
+
+      <!-- <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
+        <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
+          <Image src={head_spa_additional_photo} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
+        </div>
+        <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
+            <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Bali Head SPA Essence</h6>
+            <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p>
+            <p class="text-xl text-secondary-text leading-[130%] mb-6">
+                <p class="text-xl text-secondary-text leading-[130%] mb-6">
+                  <ul class=` text-lg text-secondary-text leading-[130%] mb-6`>
+                    <li>• masaż balijski</li>
+                    <li>• aromaterapia antystresowa </li>
+                    <li>• masaż głowy z elementami ajurwedy</li>
+                    <li>• masaż odcinka szyjnego i klatki piersiowej</li>
+                    <li>• demakijaż SPA + autorska pielęgnacja twarzy z masażem liftingującym, wykończona maską hydrożelową z algami i 8 rodzajami płatków róż</li>
+                    <li>• organiczny peeling enzymatyczny skóry głowy z masażem skalpu</li>
+                    <li>• indywidualnie dobrana organiczna kąpiel oraz dedykowana maska z sauną dla włosów, oparte na naturalnych produktach z biodynamicznych upraw </li>
+                    <li>• rytuał energetyzujący z ciepłymi ręcznikami z aromaterapią </li>
+                    <li>• wzmacniający masaż pleców w pozycji siedzącej</li>
+                    <li>• suszenie włosów suszarką Dyson</li>
+                    <p>*produkty do pielęgnacji włosów bazują na olejkach eterycznych i hydrolatach m.in rozmarynu, lawendy, wyciągu z oliwek, olejku makadamia, orzecha włoskiego, bergamotki, pomarańczy, kopru włoskiego.</p>
+                </ul>
+              </p>
+            <p class="font-secondary text-button-dark text-2xl font-regulary">599 PLN (2h 30 min)</p>
+        </div>
+      </div> -->
+
+    </div>
+  </div>
+</section>
+
+

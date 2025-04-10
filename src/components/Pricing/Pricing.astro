@@ -1,0 +1,297 @@
+---
+import PricingCard from "./PricingCard.astro"
+
+const CARDS_CONTENT = [
+  {
+    massage_oriental: [
+      {
+        variant: "Masaż tajski",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "209 zł",
+        fourthPrice: "269 zł"
+      },
+      {
+        variant: "Masaż sportowo-leczniczy",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "239 zł",
+        fourthPrice: "279 zł"
+      },
+      {
+        variant: "Masaż balijski",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "239 zł",
+        fourthPrice: "279 zł"
+      },
+      {
+        variant: "Masaż Lomi Lomi",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "239 zł",
+        fourthPrice: "279 zł"
+      },
+      {
+        variant: "Masaż olejkami aromatycznymi",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "229 zł",
+        fourthPrice: "269 zł"
+      },
+      {
+        variant: "Balijski masaż na 4 ręce",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "339 zł",
+        fourthPrice: "389 zł"
+      },
+      {
+        variant: "Refleksologia",
+        firstPrice: "150 zł",
+        secondPrice: "-",
+        thirdPrice: "199 zł",
+        fourthPrice: "-"
+      },
+      {
+        variant: "Masaż górnych części ciała",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "199 zł",
+        fourthPrice: "-"
+      },
+      {
+        variant: "Masaż dolnych części ciała",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "199 zł",
+        fourthPrice: "-"
+      },
+      {
+        variant: "Masaż dla kobiet w ciąży",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "229 zł",
+        fourthPrice: "-"
+      }
+    ],
+    massage_warming: [
+      {
+        variant: "Masaż gorącymi kamieniami bazaltowymi",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "-",
+        fourthPrice: "309 zł"
+      },
+      {
+        variant: "Masaż świecą aromatyczną",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "229 zł",
+        fourthPrice: "259 zł"
+      },
+      {
+        variant: "Masaż gorącymi stemplami ziołowymi",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "-",
+        fourthPrice: "289 zł"
+      },
+    ],
+    massage_rituals: [
+    {
+        variant: "Indonezyjski zabieg twarzy i dekoltu",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "179 zł",
+        fourthPrice: "45 min",
+        // additionalDescription: "Peeling + masaż orientalny maską do ciała bursztyn.",
+        // secondAdditionalDescription: "Odczucia: równowaga duchowa, energia młodości"
+      },
+      {
+        variant: "Orientalna pielęgnacja twarzy z masażem",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "249 zł",
+        fourthPrice: "1h",
+        // additionalDescription: "Peeling + masaż orientalny maską do ciała bursztyn.",
+        // secondAdditionalDescription: "Odczucia: równowaga duchowa, energia młodości"
+      },
+      {
+        variant: "Rytuał Orient",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "390 zł",
+        fourthPrice: "1h 30 min",
+        additionalDescription: "Peeling + masaż orientalny ciała olejem orient",
+        secondAdditionalDescription: "Odczucia: pobudzenie, tajemniczość"
+      },
+      {
+        variant: "Rytuał Jedwab",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "390 zł",
+        fourthPrice: "1h 30 min",
+        additionalDescription: "Peeling + masaż orientalny ciała jedwabnym mleczkiem do masażu",
+        secondAdditionalDescription: "Odczucia: odmłodzenie i jedwabisty blask"
+      },
+      {
+        variant: "Rytuał Tytan",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "390 zł",
+        fourthPrice: "1h 30 min",
+        additionalDescription: "Peeling + masaż orientalny ciała olejem tytan",
+        secondAdditionalDescription: "Odczucia: siła, witalność, męska energia"
+      },
+      {
+        variant: "Rytuał Czerwone Wino",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "390 zł",
+        fourthPrice: "1h 30 min",
+        additionalDescription: "Peeling + masaż orientalny masłem shea do ciała",
+        secondAdditionalDescription: "Efekty: ujędrnienie, rewitalizacja"
+      },
+      {
+        variant: "Rytuał Rokitnik",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "390 zł",
+        fourthPrice: "1h 30 min",
+        additionalDescription: "Peeling + masaż orientalny olejem rokitnik",
+        secondAdditionalDescription: " Efekty: regeneracja i wzmocnienie bariery ochronnej skóry"
+      },
+      // {
+      //   variant: "Rytuał Rajski Grapefruit",
+      //   firstPrice: "-",
+      //   secondPrice: "-",
+      //   thirdPrice: "390 zł",
+      //   fourthPrice: "1h 30 min",
+      //   additionalDescription: "Peeling + masaż orientalny olejem rajski grapefruit.",
+      //   secondAdditionalDescription: " Efekty: lekkość, działanie antycellulitowe"
+      // },
+      // {
+      //   variant: "Rytuał Bursztyn",
+      //   firstPrice: "-",
+      //   secondPrice: "-",
+      //   thirdPrice: "390 zł",
+      //   fourthPrice: "1h 30 min",
+      //   additionalDescription: "Peeling + masaż orientalny maską do ciała bursztyn.",
+      //   secondAdditionalDescription: "Odczucia: równowaga duchowa, energia młodości"
+      // },
+    ],
+    massage_headspa: [
+      {
+        variant: "Zen Head SPA",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "349 zł",
+        fourthPrice: "1h 15 min",
+        additionalDescription: "Peeling + masaż orientalny maską do ciała bursztyn.",
+        secondAdditionalDescription: "Odczucia: równowaga duchowa, energia młodości"
+      },
+      {
+        variant: "Harmony Head SPA",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "439 zł",
+        fourthPrice: "1h 45 min",
+        additionalDescription: "Peeling + masaż orientalny maską do ciała bursztyn.",
+        secondAdditionalDescription: "Odczucia: równowaga duchowa, energia młodości"
+      },
+      {
+        variant: "Oriental Head SPA",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "549 zł",
+        fourthPrice: "2h",
+        additionalDescription: "Peeling + masaż orientalny maską do ciała bursztyn.",
+        secondAdditionalDescription: "Odczucia: równowaga duchowa, energia młodości"
+      },
+      {
+        variant: "Bali Head SPA Essence",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "599 zł",
+        fourthPrice: "2h 30 min",
+        additionalDescription: "Peeling + masaż orientalny maską do ciała bursztyn.",
+        secondAdditionalDescription: "Odczucia: równowaga duchowa, energia młodości"
+      },
+    ],
+    massage_kobido: [
+      {
+        variant: "Kobido Up",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "299 zł",
+        fourthPrice: "1h 15 min",
+        additionalDescription: "Peeling + masaż orientalny maską do ciała bursztyn.",
+        secondAdditionalDescription: "Odczucia: równowaga duchowa, energia młodości"
+      },
+      {
+        variant: "Kobido Up + Taping",
+        firstPrice: "-",
+        secondPrice: "-",
+        thirdPrice: "339 zł",
+        fourthPrice: "1h 30 min",
+        additionalDescription: "Peeling + masaż orientalny maską do ciała bursztyn.",
+        secondAdditionalDescription: "Odczucia: równowaga duchowa, energia młodości"
+      },
+    ],
+    massage_carnet: [
+      {
+        variant: "5 masaży -> rabat 10% ",
+        additionalDescription: "Okres ważności: 3 miesiące"
+      },
+      {
+        variant: "10 masaży -> rabat 20% ",
+        additionalDescription: "Okres ważności: 6 miesięcy"
+      },
+    ],
+    massage_carnetPriced: [
+      {
+        variant: "1000 zł + 150 zł gratis",
+        additionalDescription: "Okres ważności: 3 miesiące"
+      },
+      {
+        variant: "2000 zł + 350 zł gratis",
+        additionalDescription: "Okres ważności: 6 miesięcy"
+      },
+    ],
+    massage_duo: [
+      {
+        variant: "Wybierz dowolny masaż lub rytuał z oferty, otrzymasz -10% od wartości masaży/ rytuałów w pakiecie dla 2 osób",
+      },
+    ],
+  }
+]
+---
+<section class="relative w-full flex justify-center items-center  lg:py-28 overflow-scroll">
+    <div class="md:py-10 flex flex-col justify-center items-center md:items-start mb-10 md:mb-[unset] max-w-[400px] md:max-w-[unset]">
+      <div class="mb-10">
+        <h3 class="text-7xl font-primary font-bold text-center md:text-left text-button-dark my-6">
+          Cennik
+        </h3>
+        <p class="text-secondary-text font-secondary text-xl font-medium">Sprawdź cenę naszych usług</p>
+      </div>
+      <div class="flex flex-col justify-center lg:justify-start gap-11 md:p-0 md:max-w-[1000px] overflow-hidden max-w-[400px]">
+        <PricingCard title="Masaże orientalne" variant={CARDS_CONTENT[0].massage_oriental} variantTitle="Rodzaj masażu" isOrientalVariant />
+        <div class="flex flex-col gap-11">
+        <PricingCard title="Masaże rozgrzewające" variant={CARDS_CONTENT[0].massage_warming} variantTitle="Rodzaj masażu" isWarmingVariant={true} />
+        <PricingCard title="Rytuały SPA" variant={CARDS_CONTENT[0].massage_rituals} variantTitle="Rodzaj rytuału" isadditionalDescription isWarmingVariant={true} isReversedVariant={true}/>
+        <PricingCard title="Head SPA" variant={CARDS_CONTENT[0].massage_headspa} variantTitle="Rodzaj Head SPA" isWarmingVariant={true} isReversedVariant={true}/>
+        <PricingCard title="Nieinwazyjny lifting twarzy - Kobido Up" variant={CARDS_CONTENT[0].massage_kobido} variantTitle="Rodzaj" isWarmingVariant={true} isReversedVariant={true}/>
+        <div class="flex flex-col gap-4 md:flex-row">
+          <div class=" md:w-1/2">
+          <PricingCard title="Karnety na Masaże/Rytuały" variant={CARDS_CONTENT[0].massage_carnet} variantTitle="Rodzaj karnetu" isCarnet={true} isadditionalDescription additionalTitle="(Jeden rodzaj masażu/rytuału)" />
+          </div>
+          <div class="md:w-1/2">
+          <PricingCard title="Karnety kwotowe" variant={CARDS_CONTENT[0].massage_carnetPriced} variantTitle="Rodzaj karnetu" isCarnet={true} isadditionalDescription additionalTitle="(Dowolne masaże/rytuały)" />
+          </div>
+        </div>
+        <PricingCard title="Masaże dla dwojga" variant={CARDS_CONTENT[0].massage_duo} variantTitle="Rodzaj karnetu" isCarnet={true} isadditionalDescription isDuoMassage />
+      </div>
+      </div>
+    </div>
+  </section>

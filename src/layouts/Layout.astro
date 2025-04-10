@@ -1,39 +1,62 @@
---- 
-interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
+---
+import Footer from "components/Footer/Footer.astro"
+import Navigation from "components/Navigation/Navigation"
+import "@fontsource/cormorant-garamond"
+import "@fontsource/jost"
+import Preloader from "components/Preloader/Preloader"
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<!doctype html>
+<html lang="pl">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      ;(function (w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" })
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : ""
+        j.async = true
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl
+        f.parentNode.insertBefore(j, f)
+      })(window, document, "script", "dataLayer", "GTM-ML7MH2M3")
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Za naszymi drzwiami odkryjesz inny wymiar codzienności. Zatrzymujemy tu czas, by w każdym detalu wydobyć piękno. Używając energii dłoni, cudotwórczej mocy masażu, naturalnych składników i orientalnych aromatów, tworzymy symfonię dla Twojego ciała i duszy. Światło i muzyka dopełniają tego zaklęcia, a nasze profesjonalne zabiegi to esencja wiedzy połączona z mądrością życiową. W każdym zabiegu kierujemy się głęboką wiedzą i intuicją, rozumiejąc indywidualne potrzeby każdego klienta. W Beauty Essence uczymy Cię, jak głęboko dbać o siebie i znaleźć wewnętrzne piękno. Dla ciała. Dla zmysłów. Dla duszy. Zapraszamy na niezwykłą podróż w głąb siebie."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>Beauty Essence - Twoje chwile spokoju w zgiełku dnia.</title>
+    <!-- Cookies Script Section  -->
+    <!-- <script
+      id="CookieDeclaration"
+      src="https://consent.cookiebot.com/9d9b1bd2-f818-4aba-9dfb-d1a12427a55d/cd.js"
+      type="text/javascript"></script> -->
+    <!-- Cookies Script Section End -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-ML7MH2M3"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+    <Preloader client:only="react" />
+    <Navigation client:only="react" />
+    <slot />
+    <Footer />
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151A;
-		background-size: 224px;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+
+<style>
+  * {
+    scroll-behavior: smooth;
+  }
 </style>

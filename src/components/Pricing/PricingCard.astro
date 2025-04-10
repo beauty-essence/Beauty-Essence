@@ -1,0 +1,133 @@
+---
+interface PricingProps {
+    title: string
+    variant: object[]
+    variantTitle: string
+    isadditionalDescription?: boolean
+    additionalTitle?: string
+    isCarnet?: boolean
+    isWarmingVariant?: boolean
+    isRitualVariant?: boolean
+    isDuoMassage?: boolean
+    isReversedVariant?: boolean
+}
+
+const { title, variant, variantTitle, isadditionalDescription, isCarnet, isWarmingVariant, isRitualVariant, isDuoMassage, additionalTitle, isReversedVariant } = Astro.props
+---
+<div>
+    <h6 class="font-primary text-3xl text-button-dark font-bold pb-6 text-center md:text-left">
+        {title}
+        {additionalTitle && <p class="font-secondary text-base text-black">{additionalTitle}</p>}
+    </h6>
+    <table class="rounded-lg border-separate border-spacing-1 w-full md:max-w-[800px]">
+        <thead>
+            <tr>
+                <th class={`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light text-left ${isDuoMassage ? "hidden" : ""} ${isadditionalDescription ? "md:w-[350px]" : ""}`}>{variantTitle}</th>
+                <th class={`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet || isWarmingVariant || isRitualVariant ? "hidden" : ""}`}>30 min</th>
+                <!-- <th class={`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet || isWarmingVariant || isRitualVariant ? "hidden" : ""}`}>45 min</th> -->
+                <th class={`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet || isRitualVariant ? "hidden" : ""}`}>{isReversedVariant ? "Cena" : "60 min"}</th>
+                <th class={`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet ? "hidden" : ""}`}>{isReversedVariant ? "Czas trwania" : "90 min"}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {variant.map((item: any) => (
+                <tr>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light w-1/2">
+                        {item.variant}
+                        <br/>
+                        <p class={`${isadditionalDescription ? "text-xs leading-none italic pt-2" : "hidden"}`}>
+                            {item.additionalDescription}
+                            <br/>
+                            {item.secondAdditionalDescription}
+                        </p>
+                    </td>
+                    <td class={`font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center ${ isCarnet || isWarmingVariant || isRitualVariant ? "hidden" : ""}`}>{item.firstPrice}</td>
+
+                    <td class={`font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center ${ isCarnet || isRitualVariant ? "hidden" : ""}`}>{item.thirdPrice}</td>
+                    <td class={`font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center ${ isCarnet ? "hidden" : ""}`}>{item.fourthPrice}</td>
+                </tr>
+            ))}
+        </tbody>
+    </table>
+    <!-- <div class={`${isRitualVariant ? "" : "hidden"} -mt-1`}>
+        <table class="rounded-lg border-separate border-spacing-1 w-full md:max-w-[800px]">
+            <thead>
+                <tr>
+                    <th class={`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light text-left ${isDuoMassage ? "hidden" : ""} ${isadditionalDescription ? "md:w-[350px]" : ""}`}>Rodzaj rytuału</th>
+                    <th class="font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet ? 'hidden' : ''}">75 min</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-left w-1/2">Zen Head SPA</td>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center w-1/2">349 zł</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+    <!-- <div class={`${isRitualVariant ? "" : "hidden"} -mt-1`}>
+        <table class="rounded-lg border-separate border-spacing-1 w-full md:max-w-[800px]">
+            <thead>
+                <tr>
+                    <th class={`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light text-left ${isDuoMassage ? "hidden" : ""} ${isadditionalDescription ? "md:w-[350px]" : ""}`}>Rodzaj rytuału</th>
+                    <th class="font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet ? 'hidden' : ''}">105 min</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-left w-1/2">Harmony Head SPA</td>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center w-1/2">439 zł</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+
+    <!-- <div class={`${isRitualVariant ? "" : "hidden"} -mt-1`}>
+        <table class="rounded-lg border-separate border-spacing-1 w-full md:max-w-[800px]">
+            <thead>
+                <tr>
+                    <th class={`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light text-left ${isDuoMassage ? "hidden" : ""} ${isadditionalDescription ? "md:w-[350px]" : ""}`}>Rodzaj rytuału</th>
+                    <th class="font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet ? 'hidden' : ''}">120 min</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-left w-1/2">Oriental Face Head SPA</td>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center w-1/2">549 zł</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+    <!-- <div class={`${isRitualVariant ? "" : "hidden"} -mt-1`}>
+        <table class="rounded-lg border-separate border-spacing-1 w-full md:max-w-[800px]">
+            <thead>
+                <tr>
+                    <th class={`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light text-left ${isDuoMassage ? "hidden" : ""} ${isadditionalDescription ? "md:w-[350px]" : ""}`}>Rodzaj rytuału</th>
+                    <th class="font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet ? 'hidden' : ''}">150 min</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-left w-1/2">Bali Head SPA Essence</td>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center w-1/2">599 zł</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+    <!-- <div class={`${isRitualVariant ? "" : "hidden"} -mt-1`}>
+        <table class="rounded-lg border-separate border-spacing-1 w-full md:max-w-[800px]">
+            <thead>
+                <tr>
+                    <th class={`font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light text-left ${isDuoMassage ? "hidden" : ""} ${isadditionalDescription ? "md:w-[350px]" : ""}`}>Rodzaj rytuału</th>
+                    <th class="font-secondary text-lg text-secondary-text font-semibold md:py-3 px-4 bg-primary-light ${ isCarnet ? 'hidden' : ''}">45 min</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-left w-1/2">Indonezyjski masaż twarzy i dekoltu</td>
+                    <td class="font-secondary text-lg text-secondary-text font-medium py-3 px-4 bg-primary-light text-center w-1/2">179 zł</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+</div>

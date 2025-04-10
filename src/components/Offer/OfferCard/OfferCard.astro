@@ -1,0 +1,31 @@
+---
+interface Props {
+  image: string
+  alt: string
+  title: string
+  description: string
+  destination: string
+}
+
+const { image, alt, title, description, destination } = Astro.props
+---
+
+<div
+  class="relative flex flex-col items-center justify-center gap-14 w-1/5 px-3 min-w-[206px] h-[520px]"
+>
+  <img src={image} alt={alt} class="h-32" />
+  <div class="w-full flex flex-col items-center justify-center gap-4">
+    <h4 class="text-3xl font-primary font-bold text-button-dark text-center">
+      {title}
+    </h4>
+    <p class="font-primary text-secondary font-medium text-base text-center mb-12 2xl:mb-2">
+      {description}
+    </p>
+  </div>
+  <a
+    href={destination}
+    class="bg-primary p-5 2xl:px-12 text-button-dark font-medium absolute bottom-0 border-primary border-2
+    hover:bg-white hover:transition hover:duration-200 hover:ease-in-out"
+    >Zobacz więcej</a
+  >
+</div>

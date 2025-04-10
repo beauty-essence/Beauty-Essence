@@ -1,0 +1,75 @@
+---
+import OfferCard from "./OfferCard/OfferCard.astro"
+import candles_icon from "assets/icons/Offer/candles-icon.svg"
+import hands_icon from "assets/icons/Offer/hands-icon.svg"
+import foot_icon from "assets/icons/Offer/foot-icon.svg"
+import olive_icon from "assets/icons/Offer/olive-icon.svg"
+import face_icon from "assets/icons/Offer/face-icon.svg"
+import { ROUTES } from "helpers/ROUTES"
+
+const CARDS_CONTENT = [
+  {
+    image: candles_icon,
+    alt: "Ikona świeczek",
+    title: "Masaże orientalne",
+    description:
+      "Odkryj moc głębokiej regeneracji. Nasza terapia dla zmęczonych mięśni przynosi uczucie odnowy i ulgi. Doświadcz wyciszenia.",
+    destination: `${ROUTES.massagesOriental}`
+  },
+  {
+    image: hands_icon,
+    alt: "Ikona dłoni i ludzkiego torsu",
+    title: "Masaże rozgrzewające",
+    description:
+      "Delikatne ruchy, które uspokoją Twój umysł. Zanurz się w błogości, odczuj prawdziwy relaks i odprężenie.",
+    destination: `${ROUTES.massagesWarming}`
+  },
+  {
+    image: olive_icon,
+    alt: "Ikona oliwy",
+    title: "Rytuały SPA",
+    description:
+      "Odkryj magiczne Rytuały SPA. Ciało i dusza w harmonii. Zapraszamy na wyjątkową podróż do relaksu i odnowy.",
+    destination: `${ROUTES.massagesRituals}`
+  },
+  {
+    image: face_icon,
+    alt: "Ikona twarzy",
+    title: "Head SPA",
+    description:
+      "Doświadcz magii masażu i pielęgnacji skóry głowy i włosów. Aromaterapia i masaż wprowadzą Cię w błogi stan.",
+    destination: `${ROUTES.headSpa}`
+  },
+  {
+    image: face_icon,
+    alt: "Ikona twarzy",
+    title: "Kobido Up",
+    description:
+      "Nieinwazyjny lifting twarzy to harmonia pomiędzy sobą i efektywnym działaniem masażu antiaging, w naturalny sposób.",
+    destination: `${ROUTES.kobido}`
+  },
+]
+---
+
+<section class="w-full bg-primary-light p-10 lg:py-32 lg:px-40" id="offer">
+  <div class="container mx-auto">
+    <h3
+      class="text-7xl font-primary font-bold text-button-dark mb-12 text-center md: text"
+    >
+      Oferta
+    </h3>
+    <div class="flex flex-wrap justify-center gap-16 xl:gap-0">
+      {
+        CARDS_CONTENT.map((card, index) => (
+          <OfferCard
+            image={card.image.src}
+            alt={card.alt}
+            title={card.title}
+            description={card.description}
+            destination={card.destination}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

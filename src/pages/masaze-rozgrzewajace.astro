@@ -1,0 +1,56 @@
+---
+import OfferSubpage from "components/OfferSubpages/OfferSubpage.astro"
+import Layout from "../layouts/Layout.astro"
+import massanger_photo from "assets/photos/offer/massager.png"
+import human_back_photo from "assets/photos/offer/human-back.png"
+import aromaticcandle_massage from "assets/photos/offer/warming/aromaticcandle-massage.jpg"
+import herbal_massage from "assets/photos/offer/warming/herbal-massage.jpg"
+import hotstone_massage from "assets/photos/offer/warming/hotstone-massage.jpg"
+import warmingadditional_photo from "assets/photos/offer/warming/warmingadditional-photo.jpg"
+
+
+const MASSAGES_DATA =
+    {
+        title: "Masaże rozgrzewające",
+        firstImage: hotstone_massage,
+        firstAlt: "Masowana osoba",
+        firstDescription: "Zanurz się w przyjemnym cieple i rozkoszuj masażami rozgrzewającymi. Nasze doświadczone terapeutki zapraszają Cię do odkrycia magicznej mocy ciepła i dotyku, które pomogą Ci w rozluźnieniu ciała i odprężeniu umysłu.",
+        secondDescription: "Wykorzystują one specjalne techniki, które poprawiają krążenie krwi, rozluźniają mięśnie i przywracają odczucie ciepła w całym ciele. To doskonała propozycja dla wszystkich, którzy chcą poczuć wewnętrzne rozgrzanie podczas relaksującej sesji masażu.",
+        secondImage: warmingadditional_photo,
+        secondAlt: "Masowana osoba",
+    }
+
+const OFFER_CONTENT = [
+    {
+    image: hotstone_massage,
+    alt: "Masowana osoba",
+    title: "Masaż gorącymi kamieniami bazaltowymi",
+    subtitle: "Pełen relaks dla ciała i duszy",
+    description: "Masaż gorącymi kamieniami bazaltowymi - to wyjątkowy masaż z elementami akupresury i ciepłolecznictwa. Wpływa pozytywnie na cały organizm, powodując rozluźnienie napiętych mięśni. Podgrzane kamienie bazaltowe oddają ciepło przy kontakcie z ciałem wspomagając przepływ krwi i limfy. Masaż ten zredukuje stres, rozluźni i wpłynie na relaks całego ciała. Niweluje ból kręgosłupa i stawów. Terapeutka odpowiednio układa kamienie na tzw. mapie ciała.",
+    price: "309 PLN",
+    isHotstoneMassage: true
+},
+{
+    image: aromaticcandle_massage,
+    alt: "Masowana osoba",
+    title: "Masaż świecą aromatyczną",
+    subtitle: "Odprężenie z aromatem natury",
+    description: "Masaż świecą aromatyczną – to silnie nawilżający i odprężający masaż. Aromaterapia pochodząca ze świecy wpływa na zmysły, a skład naturalnej świecy sojowej, wraz z olejkami, wpływa na odżywienie skóry. To wszystko za sprawą zawartości masła shea, oleju kokosowego czy oleju arganowego w świecy. Masaż przyniesie ulgę napiętym mięśniom.",
+    price: "229 PLN - 259 PLN",
+    isCandleMassage: true
+},
+{
+    image: herbal_massage,
+    alt: "Masowana osoba",
+    title: "Masaż gorącymi stemplami ziołowymi",
+    subtitle: "Odprężenie z aromatem natury",
+    description: "Wykonywany jest za pomocą specjalnie przygotowanych bawełnianych stempli (woreczków), w których znajdują się rozdrobnione zioła i przyprawy z Tajlandii, między innymi: kurkuma, cynamonowiec kamforowy, trawa cytrynowa, liście kaffiru, liście eukaliptusa i tamaryndowiec. Stemple podgrzewa się aby uwolnić zawarte w ziołach olejki eteryczne, a następnie masuje się nimi ciało. W miarę jak stają się coraz chłodniejsze, rośnie intensywność masażu, co powoduje, że uwalniają się i wchłaniają w rozgrzaną skórę zawarte w roślinach substancje czynne. Masaż ziołowy pozytywnie wpływa na stawy i mięśnie. Działa również przeciwbólowo. Poprawia krążenie krwi i limfy dzięki czemu pobudza przemianę materii i usuwa z organizmu toksyny. Zabieg ten jest niezwykle relaksujący i pachnący!",
+    price: "289 PLN",
+    isStampMassage: true
+},
+]
+---
+
+<Layout>
+    <OfferSubpage title={MASSAGES_DATA.title} firstImage={MASSAGES_DATA.firstImage} firstAlt={MASSAGES_DATA.firstAlt} firstDescription={MASSAGES_DATA.firstDescription} secondDescription={MASSAGES_DATA.secondDescription} secondImage={MASSAGES_DATA.secondImage} secondAlt={MASSAGES_DATA.secondAlt} offerContent={OFFER_CONTENT}  />
+</Layout>
