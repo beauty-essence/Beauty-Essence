@@ -146,7 +146,6 @@ export const ProductDetails = (props) => {
                   type="submit"
                   className="bg-primary font-primary self-end px-10 py-2 text-lg mt-8 border-primary border-2
                   hover:bg-white hover:transition hover:duration-200 hover:ease-in-out"
-                  //onClick={form.handleSubmit(onSubmit)}
                 >
                   Przejdź do płatności
                 </button>
