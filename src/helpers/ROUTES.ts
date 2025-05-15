@@ -15,4 +15,5 @@ export const ROUTES = {
     headSpa: "/head-spa",
     kobido: "/kobido",
     massagesTreatments: "/masaze-zabiegi",
+    shop: "/sklep"
 }
