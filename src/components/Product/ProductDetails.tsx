@@ -69,17 +69,15 @@ export const ProductDetails = (props) => {
   const onSubmit: SubmitHandler<defaultFormValuesTypes> = async (data) => {
     try {
       const response = await axios.post(
-        //"https://beauty-essence-backend-dev.vearcel.app/api/generate-payment",
-        "http://localhost:3001/api/generate-payment",
+        "https://beauty-essence-backend-dev.vearcel.app/api/generate-payment",
         {
-          slug: data.slug,     // identyfikator produktu, np. "thai-massage"
+          slug: data.slug,     // product identifier, e.g. "thai-massage"
           duration: data.duration,
           productName: data.productName,
         }
       )
       if (response.status === 200) {
-        const paymentLinkUrl = response.data.url
-        window.location.href = paymentLinkUrl
+        window.location.href = response.data.url
         return response.data
       }
     } catch (error) {
