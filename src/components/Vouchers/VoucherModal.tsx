@@ -55,7 +55,8 @@ const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
     console.log(ParsedData)
     try {
       const response = await axios.post(
-        "https://beautyessence-backend.vercel.app/api/generate-payment",
+        //"https://beauty-essence-backend-dev.vearcel.app/api/generate-payment",
+        "http://localhost:3001/api/generate-payment",
         {
           variant: ParsedData
         }

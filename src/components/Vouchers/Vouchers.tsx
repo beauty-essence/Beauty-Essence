@@ -32,18 +32,13 @@ const Vouchers = () => {
               Zamów voucher
             </button>
           </div>
-          <div class="max-w-[262px] md:w-[393px] overflow-hidden hidden md:flex justify-center">
+          <div className="max-w-[262px] md:w-[393px] overflow-hidden hidden md:flex justify-center">
             <img
               src={voucher_photo.src}
               alt="Masażysta"
               className="w-full h-full object-cover"
             />
           </div>
-          {/* <img
-            src={voucher_photo.src}
-            alt="Masażysta"
-            className="w-full h-full object-cover"
-          /> */}
         </div>
       </section>
       {isPopupOpen && (

@@ -1,0 +1,21 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+import { Products } from '../../helpers/products';
+import { ProductDetails } from '../../components/Product/ProductDetails'
+
+export async function getStaticPaths() {
+  return Products.map((product) => ({
+    params: { slug: product.slug },
+    props: { product },
+  }));
+}
+
+console.log('getStaticPaths::', getStaticPaths);
+
+const { product } = Astro.props;
+---
+
+<Layout>
+  <ProductDetails client:load product={product} />
+</Layout>

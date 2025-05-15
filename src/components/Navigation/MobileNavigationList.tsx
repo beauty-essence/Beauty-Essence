@@ -26,9 +26,9 @@ const MobileNavigationList = ({
             Cennik
           </li>
         </a>
-        <a href={ROUTES.vouchers}>
+        <a href={ROUTES.shop}>
           <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
-            Kup voucher
+            Sklep
           </li>
         </a>
         <a href={ROUTES.contact}>
