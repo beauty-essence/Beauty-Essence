@@ -69,7 +69,7 @@ export const ProductDetails = (props) => {
   const onSubmit: SubmitHandler<defaultFormValuesTypes> = async (data) => {
     try {
       const response = await axios.post(
-        "https://beauty-essence-backend-dev.vearcel.app/api/generate-payment",
+        "https://beauty-essence-backend.vercel.app/api/generate-payment",
         {
           slug: data.slug,     // product identifier, e.g. "thai-massage"
           duration: data.duration,
