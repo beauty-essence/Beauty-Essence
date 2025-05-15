@@ -8,6 +8,7 @@ import OfferCard from "components/Offer/OfferCard/OfferCard.astro"
 import head_spa_additional_photo from "assets/photos/offer/spa/head_spa_additional2.jpg"
 import spa_first_new_photo from "assets/photos/offer/spa/first_new.webp"
 import spa_second_new_photo from "assets/photos/offer/spa/second_new.webp"
+import spa_fuoco_photo from "assets/photos/offer/spa/fuoco_ritual_photo.jpg"
 
 
 interface OfferSubpageProps {
@@ -110,30 +111,35 @@ const { title, firstImage, firstAlt, firstDescription, secondDescription, second
 <!-- Beginning -->
   <div class=`${isRitualMassage ? "" : "hidden"}`>
 
-    <!-- <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
+    <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
         <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
-            <Image src={head_spa_additional_photo} alt={"something"} class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" />
+            <Image src={spa_fuoco_photo} alt={"something"} class="w-full h-full object-cover object-[center_-10px] cursor-pointer hover:scale-110 transition-transform duration-300" />
         </div>
         <div class="p-4 md:pt-0 w-full max-w-[400px] lg:max-w-[512px]">
-            <h6 class="font-primary text-button-dark text-4xl font-bold mb-2">Zen Head SPA</h6>
-            <p class="font-secondary text-button-dark text-base font-bold mb-2">{subtitle}</p>
-            <p class="text-xl text-secondary-text leading-[130%] mb-6">
-                <p class="text-xl text-secondary-text leading-[130%] mb-6">
-                  <ul class=` text-lg text-secondary-text leading-[130%] mb-6`>
-                      <li>• aromaterapia antystresowa</li>
-                      <li>• masaż głowy z elementami ajurwedy</li>
-                      <li>• masaż odcinka szyjnego i klatki piersiowej</li>
-                      <li>• peeling enzymatyczny skóry głowy z masażem skalpu</li>
-                      <li>• indywidualnie dobrana organiczna kąpiel włosów oraz dedykowana maska z sauną parową, oparte na naturalnych produktach z biodynamicznych upraw</li>
-                      <li>• rytuał ciepłymi ręcznikami z aromaterapią energetyzującą</li>
-                      <li>• wzmacniający masaż pleców w pozycji siedzącej</li>
-                      <li>• suszenie włosów suszarką Dyson</li>
-                      <p>*produkty do pielęgnacji włosów bazują na olejkach eterycznych i hydrolatach m.in rozmarynu, lawendy, wyciągu z oliwek, olejku makadamia, orzecha włoskiego, bergamotki, pomarańczy, kopru włoskiego.</p>
+            <h6 class="font-primary text-button-dark text-4xl font-bold">Fuoco Body Wrapping</h6>
+            <p class="text-xl text-secondary-text leading-[130%] mb-3">
+                <p class="text-xl text-secondary-text leading-[130%]">
+                  W naszej ofercie rytuał Spa Fuoco Body Wrapping to nowoczesna forma zabiegu, który oprócz elementów niwelujących niedoskonałości, da Ci wytchnienie z dbałością o siebie samą. Tkanki skóry dotknięte cellulitem i otyłością doświadczają znacznego zatrucia, co prowadzi do przedwczesnego starzenia się komórek, drastycznego zmniejszenia potencjału usuwania niedoskonałości i ogólnego pogorszenia ich stanu. Innowacyjność Fuoco wynika z koncepcji opracowywania kosmetyków, które łączą działanie redukujące ze wzmocnionym działaniem przeciwstarzeniowym , zapewniając intensywny, natychmiastowy i bardziej skuteczny efekt. <br/> <br/>
+                  <b>Zabieg składa się z kilku etapów:</b>
+                  <ul class=`text-lg text-secondary-text leading-[130%] mb-6`>
+                      <li><b>• Kwasowy eksfoliator do ciała</b> - Wygładzenie, głęboka odnowa i natychmiastowe ujędrnienie skóry</li>
+                      <li><b>• Intensywny koncentrat - Sculpting Drops</b>, profesjonalny produkt z ekstraktem z czarnego prawoślazu i „smoczego oka" o działaniu redukującym niedoskonałości ciała i „lipomodelującym".</li>
+                      <li><b>• Masaż antygrawitacyjny</b> - Innowacyjna konsystencja do masażu ssącego, rozprężającego tkanki, podnoszącego i ujędrniającego w celu redukcji i konturowania całego ciała</li>
+                      <li><b>• Intensywny zabieg na ciepło/zimno</b>, który redukuje niedoskonałości spowodowane cellulitem i złogami tłuszczu, rozjaśnia i rzeźbi sylwetkę.</li>
+                      <li><b>• Czarny krem z minerałami wulkanicznymi</b>, o aksamitnej, rozpływającej się konsystencji, który zwalcza cellulit; Malvarosa pomaga blokować starzenie się skóry, podczas gdy ekstrakt ze „smoczego oka" działa redukująco z efektem „lipomodelowania" profilu ciała.</li> <br/>
+                      <p>*do zabiegu używane są specjalistyczne folie do body wrappingu*</p>
                   </ul>
+                  <b class="text-xl text-secondary-text leading-[130%] mb-6">Przeciwwskazania do zabiegu:</b> <br/>
+                  <ul class=`text-lg text-secondary-text leading-[130%] mb-6`>
+                    <li>• Ciąża i okres laktacji</li>
+                    <li>• Opryszczka oraz inne aktywne zmiany grzybicze lub wirusowe</li>
+                    <li>• Alergie na składniki zawarte w produktach</li>
+                </ul>
                 </p>
-              <p class="font-secondary text-button-dark text-2xl font-regulary">349 PLN (1h 15 min)</p>
+              <p class="font-secondary text-button-dark text-2xl font-regulary">350 PLN (1h 30 min)</p>
+</p>
         </div>
-      </div> -->
+      </div>
 
       <!-- <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-11 max-w-[1000px] pb-10">
         <div class="w-[360px] h-[337px] mx-auto overflow-hidden flex justify-center ">
