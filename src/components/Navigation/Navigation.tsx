@@ -59,9 +59,9 @@ const Navigation = () => {
               Cennik
             </li>
           </a>
-          <a href={ROUTES.vouchers}>
+          <a href={ROUTES.shop}>
             <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform">
-              Kup voucher
+              Sklep
             </li>
           </a>
         </ul>
@@ -83,6 +83,7 @@ const Navigation = () => {
           <a
             href="https://booksy.com/pl-pl/210989_beauty-essence-torun_masaz_22875_torun#ba_s=sh_1"
             target="_blank"
+            rel="nofollow"
           >
             <li className="font-detail text-white text-lg font-medium hover:scale-110 transition-transform animate-pulse-rotate animation-delay-2s">
               Zarezerwuj
