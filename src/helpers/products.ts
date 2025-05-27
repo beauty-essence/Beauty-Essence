@@ -16,6 +16,7 @@ import titanium_massage from "assets/photos/offer/spa/titanium-massage.jpg";
 import oil_massage from "assets/photos/offer/spa/oil-massage.jpg";
 import photo_122 from "assets/photos/offer/spa/BeautyEssence_122-min.webp";
 import rokitnik_photo from "assets/photos/offer/spa/rokitnik.jpg";
+import fuoco_ritual_photo from "assets/photos/offer/spa/fuoco_ritual_photo.jpg";
 import BeautyEssence_215 from "assets/photos/offer/spa/BeautyEssence_215.webp";
 import head_spa_photo_209 from "assets/photos/offer/headspa/BeautyEssence_209-min.webp";
 import head_spa_photo_200 from "assets/photos/offer/headspa/BeautyEssence_200-min.webp";
@@ -399,6 +400,28 @@ export const Products = [
       },
     ],
     slug: 'rytual-rokitnik',
+  },
+  {
+    image: fuoco_ritual_photo,
+    alt: "Masowana osoba",
+    title: "Fuoco Body Wrapping",
+    subtitle: "Rozluźnienie napiętych mięśni i umysłu",
+    description: 'W naszej ofercie rytuał Spa Fuoco Body Wrapping to nowoczesna forma zabiegu, który oprócz elementów niwelujących niedoskonałości, da Ci wytchnienie z dbałością o siebie samą. Tkanki skóry dotknięte cellulitem i otyłością doświadczają znacznego zatrucia, co prowadzi do przedwczesnego starzenia się komórek, drastycznego zmniejszenia potencjału usuwania niedoskonałości i ogólnego pogorszenia ich stanu. Innowacyjność Fuoco wynika z koncepcji opracowywania kosmetyków, które łączą działanie redukujące ze wzmocnionym działaniem przeciwstarzeniowym, zapewniając intensywny, natychmiastowy i bardziej skuteczny efekt. Zabieg składa się z kilku etapów:',
+    descriptionList: [
+      'Kwasowy eksfoliator do ciała - Wygładzenie, głęboka odnowa i natychmiastowe ujędrnienie skóry',
+      'Intensywny koncentrat - Sculpting Drops, profesjonalny produkt z ekstraktem z czarnego prawoślazu i „smoczego oka" o działaniu redukującym niedoskonałości ciała i „lipomodelującym"',
+      'Masaż antygrawitacyjny - Innowacyjna konsystencja do masażu ssącego, rozprężającego tkanki, podnoszącego i ujędrniającego w celu redukcji i konturowania całego ciała',
+      'Intensywny zabieg na ciepło/zimno, który redukuje niedoskonałości spowodowane cellulitem i złogami tłuszczu, rozjaśnia i rzeźbi sylwetkę',
+      'Czarny krem z minerałami wulkanicznymi, o aksamitnej, rozpływającej się konsystencji, który zwalcza cellulit; Malvarosa pomaga blokować starzenie się skóry, podczas gdy ekstrakt ze „smoczego oka" działa redukująco z efektem „lipomodelowania" profilu ciała.',
+    ],
+    detailsPrice: [
+      {
+        slug: 'fuoco-body-wrapping',
+        price: 350,
+        time: 90
+      },
+    ],
+    slug: 'fuoco-body-wrapping',
   },
   {
     image: BeautyEssence_215,
