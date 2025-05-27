@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useForm, FormProvider, SubmitHandler } from "react-hook-form"
 import { yupResolver } from '@hookform/resolvers/yup';
-import {ROUTES} from '../../helpers/ROUTES';
+import { ROUTES } from '../../helpers/ROUTES';
 import axios from 'axios';
 import * as yup from 'yup';
 
