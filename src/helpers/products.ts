@@ -23,8 +23,67 @@ import head_spa_photo_200 from "assets/photos/offer/headspa/BeautyEssence_200-mi
 import head_spa_photo_229 from "assets/photos/offer/headspa/BeautyEssence_229-min.webp";
 import kobido_first_photo from "assets/photos/offer/kobido/kobido_first.webp";
 import kobido_second_photo from "assets/photos/offer/kobido/kobido_second.webp";
+import spa_first_new_photo from "assets/photos/offer/spa/first_new.webp";
+import spa_second_new_photo from "assets/photos/offer/spa/second_new.webp";
+import voucher from "assets/photos/offer/voucher.png";
 
 export const Products = [
+  {
+    image: voucher,
+    alt: "Bon podarunkowy",
+    title: "Bon podarunkowy",
+    subtitle: "Bon podarunkowy",
+    description: "Podaruj więcej niż rzecz – podaruj niezapomniane doświadczenie. Nasz voucher prezentowy to idealna propozycja dla kogoś wyjątkowego. Przemyślane zabiegi, ciepła atmosfera i chwile relaksu tworzą niezrównane wrażenia. Pokaż bliskim, że zasługują na specjalne momenty pełne odprężenia. Nasz zespół ekspertów zadba o każdy detal, gwarantując satysfakcję i uśmiech na twarzy obdarowanej osoby.",
+    detailsPrice: [
+      {
+        slug: 'voucher-150',
+        price: 150,
+      },
+    ],
+    slug: 'voucher-150',
+  },
+  {
+    image: voucher,
+    alt: "Bon podarunkowy",
+    title: "Bon podarunkowy",
+    subtitle: "Bon podarunkowy",
+    description: "Podaruj więcej niż rzecz – podaruj niezapomniane doświadczenie. Nasz voucher prezentowy to idealna propozycja dla kogoś wyjątkowego. Przemyślane zabiegi, ciepła atmosfera i chwile relaksu tworzą niezrównane wrażenia. Pokaż bliskim, że zasługują na specjalne momenty pełne odprężenia. Nasz zespół ekspertów zadba o każdy detal, gwarantując satysfakcję i uśmiech na twarzy obdarowanej osoby.",
+    detailsPrice: [
+      {
+        slug: 'voucher-200',
+        price: 200,
+      },
+    ],
+    slug: 'voucher-200',
+  },
+  {
+    image: voucher,
+    alt: "Bon podarunkowy",
+    title: "Bon podarunkowy",
+    subtitle: "Bon podarunkowy",
+    description: "Podaruj więcej niż rzecz – podaruj niezapomniane doświadczenie. Nasz voucher prezentowy to idealna propozycja dla kogoś wyjątkowego. Przemyślane zabiegi, ciepła atmosfera i chwile relaksu tworzą niezrównane wrażenia. Pokaż bliskim, że zasługują na specjalne momenty pełne odprężenia. Nasz zespół ekspertów zadba o każdy detal, gwarantując satysfakcję i uśmiech na twarzy obdarowanej osoby.",
+    detailsPrice: [
+      {
+        slug: 'voucher-300',
+        price: 300,
+      },
+    ],
+    slug: 'voucher-300',
+  },
+  {
+    image: voucher,
+    alt: "Bon podarunkowy",
+    title: "Bon podarunkowy",
+    subtitle: "Bon podarunkowy",
+    description: "Podaruj więcej niż rzecz – podaruj niezapomniane doświadczenie. Nasz voucher prezentowy to idealna propozycja dla kogoś wyjątkowego. Przemyślane zabiegi, ciepła atmosfera i chwile relaksu tworzą niezrównane wrażenia. Pokaż bliskim, że zasługują na specjalne momenty pełne odprężenia. Nasz zespół ekspertów zadba o każdy detal, gwarantując satysfakcję i uśmiech na twarzy obdarowanej osoby.",
+    detailsPrice: [
+      {
+        slug: 'voucher-500',
+        price: 500,
+      },
+    ],
+    slug: 'voucher-500',
+  },
   {
     image: test,
     alt: "Masowana osoba",
@@ -272,7 +331,7 @@ export const Products = [
     slug: 'masaz-goracymi-stemplami-ziolowymi',
   },
   {
-    image: orient_massage,
+    image: spa_first_new_photo,
     alt: "Masowana osoba",
     title: "Indonezyjski zabieg twarzy i dekoltu",
     subtitle: "Pełen relaks dla ciała i duszy",
@@ -287,7 +346,7 @@ export const Products = [
     slug: 'indonezyjski-zabieg-twarzy-i-dekoltu',
   },
   {
-    image: orient_massage,
+    image: spa_second_new_photo,
     alt: "Masowana osoba",
     title: "Orientalna pielęgnacja twarzy z masażem",
     subtitle: "Pełen relaks dla ciała i duszy",

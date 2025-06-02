@@ -66,6 +66,8 @@ export const ProductDetails = (props) => {
     setSelectedVariant(price)
   }
 
+  console.log('product::', product)
+
   const onSubmit: SubmitHandler<defaultFormValuesTypes> = async (data) => {
     try {
       const response = await axios.post(
@@ -115,7 +117,7 @@ export const ProductDetails = (props) => {
                         </p>
                       </div>
                       <div>
-                        {selectedVariant === detailsPrice.price && <p className="font-primary text-center text-button-dark mt-2">{detailsPrice.time} minut</p>}
+                        {selectedVariant === detailsPrice.price && detailsPrice.time && <p className="font-primary text-center text-button-dark mt-2">{detailsPrice.time} minut</p>}
                       </div>
                     </div>
                   ))}
