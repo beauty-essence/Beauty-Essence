@@ -52,7 +52,6 @@ const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
     Pick<defaultFormValuesTypes, "variant">
   > = async data => {
     const ParsedData = parseInt(data.variant)
-    console.log(ParsedData)
     try {
       const response = await axios.post(
         "https://beauty-essence-backend.vercel.app/api/generate-payment",
@@ -181,19 +180,20 @@ const VoucherModal = ({ onCloseModal }: VoucherModalTypes) => {
                   id="acceptTerms"
                   {...register("acceptTerms")}
                 />
-
-                <p className="font-primary text-md text-secondary">
-                  Akceptuję
-                  <a
-                    href={ROUTES.regulations}
-                    className="font-bold underline ml-1"
-                  >
-                    regulamin sklepu
-                  </a>
-                </p>
+                <label htmlFor="acceptTerms" className="font-primary text-md text-secondary">
+                  <p className="font-primary text-md text-secondary">
+                    Akceptuję
+                    <a
+                      href={ROUTES.regulations}
+                      className="font-bold underline ml-1"
+                    >
+                      regulamin sklepu
+                    </a>
+                  </p>
+                </label>
               </div>
               <p className="font-primary text-md text-[#ff0000]">
-                {errors.acceptTerms?.message}
+              {errors.acceptTerms?.message}
               </p>
               <button
                 type="submit"

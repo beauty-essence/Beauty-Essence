@@ -9,7 +9,7 @@ const Popup = () => {
   return (
     <div
       className={`w-full bg flex justify-center
-      ${isPopupOpened ? "opacity-100" : "opacity-0"}
+      ${isPopupOpened ? "block" : "hidden"}
       `}
     >
       <div className="w-[330px] h-[330px] md:w-[500px] md:h-[500px] fixed z-40 translate-y-[80%] md:translate-y-[20%]">

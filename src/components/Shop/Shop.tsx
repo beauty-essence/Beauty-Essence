@@ -18,7 +18,10 @@ const Shop = () => {
                 />
               </div>
               <h2 className="mt-4 text-2xl font-semibold text-center font-primary">{product.title}</h2>
-              <p className="text-center mb-[15px] font-primary text-xl">od {product.detailsPrice[0].price} zł</p>
+              <p className="text-center mb-[15px] font-primary text-xl">
+                {product.detailsPrice.length > 1 && <>od </>}{product.detailsPrice[0].price} zł
+              </p>
+
               <a
                 href={`/produkty/${product.slug}`}
                 className="mt-auto bg-primary inline-block p-5 2xl:px-12 text-button-dark font-medium border-primary border-2
